@@ -6,6 +6,9 @@ public class CharacterMovement : MonoBehaviour {
 	public float forceMultiplier;
 	public float jumpForce;
 
+	private Vector3 movementDirection;
+	private Vector3 input;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -20,21 +23,26 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		// If the player presses the jump button apply the jumping force
-		if(Input.GetButtonDown("Jump"))
-			this.rigidbody.AddForce(0, jumpForce, 0);
-	}
 
-	void FixedUpdate() {
 		// Calculate the forward direction under current camera rotation
-		Vector3 movementDirection = cameraPosition.position - this.transform.position;
+		movementDirection = cameraPosition.position - this.transform.position;
 		movementDirection.y = 0;
 		movementDirection.Normalize ();
 
 		// Get the input (in world coordinates)
-		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		
+		// If the player presses the jump button apply the jumping force
+		if(Input.GetButtonDown("Jump"))
+			this.rigidbody.AddForce(0, jumpForce, 0);
 
+		// TODO: add calulation so that the player smears to the edge of their light radius
+		if(Input.GetButtonDown("Smear")){
+			this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * 300);
+		}
+	}
+
+	void FixedUpdate() {
 		// Rotate the character to face the direction it is moving in
 		if (Vector3.Magnitude(this.rigidbody.velocity) >= 0.1) {
 			Vector3 temp = this.transform.forward;
