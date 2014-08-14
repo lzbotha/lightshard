@@ -16,6 +16,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 		if(Input.GetAxis("ThrowRight") > 0){
 			// Disable player movement
 			characterState.canMove = false;
+		} 
+		// Right trigger has been released
+		else if (characterState.canMove == false){
+			characterState.canMove = true;
 		}
 	}
 }
