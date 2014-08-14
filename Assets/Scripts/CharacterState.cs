@@ -7,7 +7,9 @@ public class CharacterState : MonoBehaviour {
 	// by multiple scripts or objects
 	
 	public float lightRadius = 0.0f;
-	public float lightRegenRate = 0.5f;
+	public float lightRegenRate;
+	public float flashMinimumRadius;
+	public float minLightRadius = 2.0f;
 	
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
