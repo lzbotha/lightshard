@@ -12,6 +12,11 @@ public class CharacterLightAbilities : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// If the player activates flash and there is no current flash active
+		if(Input.GetButtonDown("Flash")){
+			
+		}
+
 		// Right/Left trigger is down
 		if(Input.GetAxis("ThrowRight") > 0 || Input.GetAxis("ThrowLeft") > 0){
 			// Lock the characters movementDirection
