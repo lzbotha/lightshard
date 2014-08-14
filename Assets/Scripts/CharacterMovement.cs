@@ -24,6 +24,12 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		
+		
+		
+	}
+
+	void FixedUpdate() {
 		// Calculate the forward direction under current camera rotation
 		movementDirection = cameraPosition.position - this.transform.position;
 		movementDirection.y = 0;
@@ -31,18 +37,7 @@ public class CharacterMovement : MonoBehaviour {
 
 		// Get the input (in world coordinates)
 		input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-		
-		// If the player presses the jump button apply the jumping force
-		if(Input.GetButtonDown("Jump"))
-			this.rigidbody.AddForce(0, jumpForce, 0);
 
-		// TODO: add calulation so that the player smears to the edge of their light radius
-		if(Input.GetButtonDown("Smear")){
-			this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * 300);
-		}
-	}
-
-	void FixedUpdate() {
 		// Rotate the character to face the direction it is moving in
 		if (Vector3.Magnitude(this.rigidbody.velocity) >= 0.1) {
 			Vector3 temp = this.transform.forward;
@@ -53,5 +48,14 @@ public class CharacterMovement : MonoBehaviour {
 
 		// Rotate the input from world space to camera space and apply a force in the appropriate direction
 		this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * forceMultiplier);
+
+		// If the player presses the jump button apply the jumping force
+		if(Input.GetButtonDown("Jump"))
+			this.rigidbody.AddForce(0, jumpForce, 0);
+
+		// TODO: add calulation so that the player smears to the edge of their light radius
+		if(Input.GetButtonDown("Smear")){
+			this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * 300);
+		}
 	}
 }
