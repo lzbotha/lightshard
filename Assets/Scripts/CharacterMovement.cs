@@ -8,10 +8,11 @@ public class CharacterMovement : MonoBehaviour {
 
 	private Vector3 movementDirection;
 	private Vector3 input;
+	private CharacterState characterState;
 
 	// Use this for initialization
 	void Start () {
-	
+		characterState = gameObject.GetComponent<CharacterState>();
 	}
 
 	bool IsGrounded() {
@@ -32,15 +33,19 @@ public class CharacterMovement : MonoBehaviour {
 		movementDirection.y = 0;
 		movementDirection.Normalize ();
 
-		// Get the input (in world coordinates)
-		input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		
+		// If the character can currently move on the XZ plane
+		if(characterState.canMove == true){
+			// Get the input (in world coordinates)
+			input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
 
-		// Rotate the character to face the direction it is moving in
-		if (Vector3.Magnitude(this.rigidbody.velocity) >= 0.1) {
-			Vector3 temp = this.transform.forward;
-			temp.x = this.rigidbody.velocity.x;
-			temp.z = this.rigidbody.velocity.z;
-			this.transform.forward = temp;
+			// Rotate the character to face the direction it is moving in
+			if (Vector3.Magnitude(this.rigidbody.velocity) >= 0.1) {
+				Vector3 temp = this.transform.forward;
+				temp.x = this.rigidbody.velocity.x;
+				temp.z = this.rigidbody.velocity.z;
+				this.transform.forward = temp;
+			}			
 		}
 
 		// Rotate the input from world space to camera space and apply a force in the appropriate direction

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterLightAbilities : MonoBehaviour {
 
-	CharacterState characterState;
+	private CharacterState characterState;
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +21,6 @@ public class CharacterLightAbilities : MonoBehaviour {
 		else if (characterState.canMove == false){
 			characterState.canMove = true;
 		}
+
 	}
 }
