@@ -18,12 +18,12 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void Update () {
 		// If the player activates flash and there is no current flash active
 		if(Input.GetButtonDown("Flash") && characterState.lightRegenRate > 0 && characterState.lightRadius - flashCost >= characterState.minLightRadius){
+			// Set the minimum flash radius to the characters preflash minus flashcost
+			characterState.flashMinimumRadius = characterState.lightRadius - flashCost;
 			// Increase the characters light radius
 			characterState.lightRadius += flashLightRadiusIncrease;
 			// Apply the debuff to the characters light regen rate
 			characterState.lightRegenRate = flashLightRegenDebuff;
-
-			characterState.flashMinimumRadius = characterState.lightRadius - flashCost;
 		}
 
 		// Right/Left trigger is down
