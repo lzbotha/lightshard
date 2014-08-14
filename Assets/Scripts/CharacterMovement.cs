@@ -20,6 +20,13 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+
+		if(Input.GetButtonDown("Jump"))
+			this.rigidbody.AddForce(0, jumpForce, 0);
+	}
+
+	void FixedUpdate() {
 		// Calculate the forward direction under current camera rotation
 		Vector3 movementDirection = cameraPosition.position - this.transform.position;
 		movementDirection.y = 0;
@@ -38,12 +45,5 @@ public class CharacterMovement : MonoBehaviour {
 
 		// Rotate the input from world space to camera space and apply a force in the appropriate direction
 		this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * forceMultiplier);
-
-		if(Input.GetButtonDown("Jump"))
-			this.rigidbody.AddForce(0, jumpForce, 0);
-	}
-
-	void FixedUpdate() {
-		
 	}
 }
