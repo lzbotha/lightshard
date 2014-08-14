@@ -7,4 +7,11 @@ public class CharacterState : MonoBehaviour {
 	// by multiple scripts or objects
 	
 	public float lightRadius;
+
+	// Can the character currently move in the XZ plane
+	public bool canMove;
+
+	void Start() {
+		canMove = true;
+	}
 }
