@@ -31,7 +31,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 			// Lock the characters movementDirection
 			characterState.movementDirectionLocked = true;
 		} 
-		// All triggers have been released
+		// All triggers have been released and movement is still locked
 		else if (characterState.movementDirectionLocked == true){
 			// Unlock the characters movement direction
 			characterState.movementDirectionLocked = false;
