@@ -5,6 +5,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	private CharacterState characterState;
 
+	public GameObject lightShard;
+	public Transform cameraPosition;
+
 	public float flashLightRadiusIncrease = 2.0f;
 	public float flashLightRegenDebuff = -0.5f;
 	public float flashCost = 2.0f;
@@ -33,6 +36,19 @@ public class CharacterLightAbilities : MonoBehaviour {
 		} 
 		// All triggers have been released and movement is still locked
 		else if (characterState.movementDirectionLocked == true){
+			// Calculate the direction to throw the lightshard
+			Vector3 throwDirection = cameraPosition.position - this.transform.position;
+			throwDirection.y = 0;
+			throwDirection.Normalize();
+			Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+			throwDirection = Quaternion.LookRotation (throwDirection) * input;
+
+			// TODO: add this to an array of lightShard objects
+			GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
+			ls.rigidbody.AddForce(300 * throwDirection);
+			ls.rigidbody.AddForce(400 * Vector3.up);
+			Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
+
 			// Unlock the characters movement direction
 			characterState.movementDirectionLocked = false;
 		}
