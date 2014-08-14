@@ -13,6 +13,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 	public float flashCost = 2.0f;
 
 	private bool wasRightAxisDown;
+	private bool wasLeftAxisDown;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void updateFlash() {
 		// If the player activates flash and there is no current flash active
-		if(Input.GetButtonDown("Flash") && characterState.lightRegenRate > 0 && characterState.lightRadius - flashCost >= characterState.minLightRadius){
+		if(Input.GetButtonDown("Flash") && characterState.isLightRegenPositive() && characterState.canUseAbility(flashCost)){
 			// Set the minimum flash radius to the characters preflash minus flashcost
 			characterState.flashMinimumRadius = characterState.lightRadius - flashCost;
 			// Increase the characters light radius
@@ -60,11 +61,16 @@ public class CharacterLightAbilities : MonoBehaviour {
 		if (this.wasRightAxisDown && !isAxisDown ("ThrowRight")) {
 			throwLightShard();
 		}
+		if (this.wasLeftAxisDown && !isAxisDown ("ThrowLeft")) {
+			throwLightShard();
+		}
 		this.wasRightAxisDown = isAxisDown("ThrowRight");
+		this.wasLeftAxisDown = isAxisDown("ThrowLeft");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// NOTE: do not change the order of these methods else everything will break
 		updateFlash ();
 
 		updateThrowLightShard ();

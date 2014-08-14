@@ -20,6 +20,14 @@ public class CharacterState : MonoBehaviour {
 
 	public Dictionary<string, GameObject> lightshards;
 
+	public bool isLightRegenPositive() {
+		return lightRegenRate > 0;
+	}
+
+	public bool canUseAbility(float cost) {
+		return lightRadius - cost >= minLightRadius;
+	}
+
 	void Start() {
 		movementDirectionLocked = false;
 	}
