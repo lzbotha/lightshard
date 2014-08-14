@@ -8,6 +8,8 @@ public class CharacterState : MonoBehaviour {
 	
 	// These values are determined elsewhere and set in the Start() method
 	// Changing them here will have no effect
+
+	public bool inAir = false;
 	public float lightRadius;
 	public float lightRegenRate;	
 	public float flashMinimumRadius;
