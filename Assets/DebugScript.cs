@@ -10,6 +10,6 @@ public class DebugScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (this.transform.forward);
+		// Debug.Log (this.transform.forward);
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CharacterLightAbilities : MonoBehaviour {
 
+	public float flashLightRadiusIncrease = 2.0f;
 	private CharacterState characterState;
 
 	// Use this for initialization
@@ -13,8 +14,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// If the player activates flash and there is no current flash active
-		if(Input.GetButtonDown("Flash")){
-			
+		if(Input.GetButtonDown("Flash") && characterState.lightRegenRate > 0){
+			characterState.lightRadius += flashLightRadiusIncrease;
+			characterState.lightRegenRate = -1 * characterState.lightRegenRate;
 		}
 
 		// Right/Left trigger is down

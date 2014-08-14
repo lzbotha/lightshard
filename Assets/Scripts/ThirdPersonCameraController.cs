@@ -16,8 +16,6 @@ public class ThirdPersonCameraController : MonoBehaviour {
 		phi += Input.GetAxis ("CameraVertical") * controllerSensitivity;
 		theta += Input.GetAxis ("CameraHorizontal") * controllerSensitivity;
 
-		print (Input.GetAxis ("CameraVertical"));
-
 		phi = Mathf.Clamp (phi, Mathf.Deg2Rad * phiLowerBound, Mathf.Deg2Rad * phiUpperBound);
 		theta %= Mathf.Deg2Rad * 360;
 
