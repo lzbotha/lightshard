@@ -21,7 +21,7 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-
+		// If the player presses the jump button apply the jumping force
 		if(Input.GetButtonDown("Jump"))
 			this.rigidbody.AddForce(0, jumpForce, 0);
 	}
