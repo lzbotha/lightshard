@@ -14,12 +14,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void Update () {
 		// Right trigger is down
 		if(Input.GetAxis("ThrowRight") > 0){
-			// Disable player movement
-			characterState.canMove = false;
+			// Lock the characters movementDirection
+			characterState.movementDirectionLocked = true;
 		} 
 		// Right trigger has been released
-		else if (characterState.canMove == false){
-			characterState.canMove = true;
+		else if (characterState.movementDirectionLocked == true){
+			// Unlock the characters movement direction
+			characterState.movementDirectionLocked = false;
 		}
 
 	}

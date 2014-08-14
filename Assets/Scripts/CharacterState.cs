@@ -9,9 +9,9 @@ public class CharacterState : MonoBehaviour {
 	public float lightRadius;
 
 	// Can the character currently move in the XZ plane
-	public bool canMove;
+	public bool movementDirectionLocked;
 
 	void Start() {
-		canMove = true;
+		movementDirectionLocked = false;
 	}
 }

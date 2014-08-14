@@ -34,8 +34,8 @@ public class CharacterMovement : MonoBehaviour {
 		movementDirection.Normalize ();
 
 		
-		// If the character can currently move on the XZ plane
-		if(characterState.canMove == true){
+		// If the characters movementDirection is not locked
+		if(characterState.movementDirectionLocked == false){
 			// Get the input (in world coordinates)
 			input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
 
