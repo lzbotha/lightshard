@@ -41,6 +41,9 @@ public class CharacterMovement : MonoBehaviour {
 
 		if(Input.GetButtonDown("Jump"))
 			this.rigidbody.AddForce(0, jumpForce, 0);
+	}
 
+	void FixedUpdate() {
+		
 	}
 }
