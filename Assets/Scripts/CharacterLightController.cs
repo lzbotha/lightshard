@@ -16,16 +16,7 @@ public class CharacterLightController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(characterState.lightRegenRate > 0 && characterState.lightRadius < normalLightRadius){
-			characterState.lightRadius += characterState.lightRegenRate * Time.deltaTime;
-		} 
-		else if (characterState.lightRegenRate < 0){
-			if(characterState.lightRadius + characterState.lightRegenRate <= minLightRadius){
-				characterState.lightRadius = minLightRadius;
-				characterState.lightRegenRate = normalLightRegenRate;
-			}
-			characterState.lightRadius += characterState.lightRegenRate * Time.deltaTime;
-		}
+		
 		gameObject.light.range = characterState.lightRadius;
 	}
 }

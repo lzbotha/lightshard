@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterLightAbilities : MonoBehaviour {
 
 	public float flashLightRadiusIncrease = 2.0f;
+	public float flashLightRegenDebuff = -0.5f;
 	private CharacterState characterState;
 
 	// Use this for initialization
@@ -16,7 +17,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// If the player activates flash and there is no current flash active
 		if(Input.GetButtonDown("Flash") && characterState.lightRegenRate > 0){
 			characterState.lightRadius += flashLightRadiusIncrease;
-			characterState.lightRegenRate = -1 * characterState.lightRegenRate;
+			characterState.lightRegenRate = flashLightRegenDebuff;
 		}
 
 		// Right/Left trigger is down
