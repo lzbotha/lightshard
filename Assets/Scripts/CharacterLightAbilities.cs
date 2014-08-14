@@ -12,13 +12,18 @@ public class CharacterLightAbilities : MonoBehaviour {
 	public float flashLightRegenDebuff = -0.5f;
 	public float flashCost = 2.0f;
 
+	private bool wasRightAxisDown;
+
 	// Use this for initialization
 	void Start () {
 		characterState = gameObject.GetComponent<CharacterState>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	bool isAxisDown(string axis) {
+		return Input.GetAxis (axis) > 0;
+	}
+
+	void updateFlash() {
 		// If the player activates flash and there is no current flash active
 		if(Input.GetButtonDown("Flash") && characterState.lightRegenRate > 0 && characterState.lightRadius - flashCost >= characterState.minLightRadius){
 			// Set the minimum flash radius to the characters preflash minus flashcost
@@ -28,30 +33,43 @@ public class CharacterLightAbilities : MonoBehaviour {
 			// Apply the debuff to the characters light regen rate
 			characterState.lightRegenRate = flashLightRegenDebuff;
 		}
+	}
 
-		// Right/Left trigger is down
-		if(Input.GetAxis("ThrowRight") > 0 || Input.GetAxis("ThrowLeft") > 0){
-			// Lock the characters movementDirection
-			characterState.movementDirectionLocked = true;
-		} 
-		// All triggers have been released and movement is still locked
-		else if (characterState.movementDirectionLocked == true){
-			// Calculate the direction to throw the lightshard
-			Vector3 throwDirection = cameraPosition.position - this.transform.position;
-			throwDirection.y = 0;
-			throwDirection.Normalize();
-			Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-			throwDirection = Quaternion.LookRotation (throwDirection) * input;
+	void updateLockMovement() {
+		// Lock the character's movement if the Right or Left trigger is down.
+		characterState.movementDirectionLocked = isAxisDown("ThrowRight") || isAxisDown("ThrowLeft");
+	}
 
-			// TODO: add this to an array of lightShard objects
-			GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
-			ls.rigidbody.AddForce(300 * throwDirection);
-			ls.rigidbody.AddForce(400 * Vector3.up);
-			Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
+	void throwLightShard() {
+		// Calculate the direction to throw the lightshard
+		Vector3 throwDirection = cameraPosition.position - this.transform.position;
+		throwDirection.y = 0;
+		throwDirection.Normalize();
+		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		throwDirection = Quaternion.LookRotation (throwDirection) * input;
+		
+		// TODO: add this to an array of lightShard objects
+		GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
+		ls.rigidbody.AddForce(300 * throwDirection);
+		ls.rigidbody.AddForce(400 * Vector3.up);
+		Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
+	}
 
-			// Unlock the characters movement direction
-			characterState.movementDirectionLocked = false;
+	void updateThrowLightShard() {
+		// If the player has just released the right axis.
+		if (this.wasRightAxisDown && !isAxisDown ("ThrowRight")) {
+			throwLightShard();
 		}
+		this.wasRightAxisDown = isAxisDown("ThrowRight");
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		updateFlash ();
+
+		updateThrowLightShard ();
+		
+		updateLockMovement ();
 
 	}
 }

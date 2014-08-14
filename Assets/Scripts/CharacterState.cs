@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterState : MonoBehaviour {
 	// Class to hold all state of the character that needs to be accessed
@@ -16,6 +17,8 @@ public class CharacterState : MonoBehaviour {
 	
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
+
+	public Dictionary<string, GameObject> lightshards;
 
 	void Start() {
 		movementDirectionLocked = false;
