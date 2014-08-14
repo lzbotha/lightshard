@@ -10,9 +10,9 @@ public class CharacterLightController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		RenderSettings.ambientLight = Color.black;
 		characterState = this.transform.parent.GetComponent<CharacterState>();
 		characterState.lightRegenRate = normalLightRegenRate;
+		characterState.lightRadius = normalLightRadius;
 	}
 	
 	void Update () {
