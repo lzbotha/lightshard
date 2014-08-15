@@ -25,6 +25,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+//		Debug.Log(characterState.inAir+"\n"+this.rigidbody.velocity.y+" => "+Physics.gravity.y);
 
 		if (characterState.inAir && this.rigidbody.velocity.y <=0 && Physics.gravity.y > heavyGravityY && this.transform.position.y > 1f) {
 			Debug.Log("gravity = "+Physics.gravity.y);

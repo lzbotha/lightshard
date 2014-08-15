@@ -35,7 +35,7 @@ public class SmearChecker : MonoBehaviour {
 
 		if(target != Vector3.zero){
 			Debug.Log("target not zero = "+Vector3.Distance(transform.parent.position, target));
-			if(Vector3.Distance(transform.parent.position, target) > 0.1f){
+			if(Mathf.Abs(transform.parent.position.x - target.x) > 0.01f || Mathf.Abs(transform.parent.position.z - target.z) > 0.01f){
 				transform.parent.position = Vector3.Lerp(transform.parent.position, target, smearSpeed*Time.deltaTime);
 			}else{
 				Debug.Log("changing target to zero");
