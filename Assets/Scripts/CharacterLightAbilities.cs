@@ -57,12 +57,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// cast it
 		LightShardController lsc = ls.GetComponent<LightShardController>();
 		lsc.character = this.gameObject;
+		lsc.key = characterState.lightShards.addLightShard(ls);
 
 		ls.rigidbody.AddForce(300 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
 		Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
 
-		characterState.lightShards.addLightShard("test", ls);
+		
 	}
 
 	void updateThrowLightShard() {
