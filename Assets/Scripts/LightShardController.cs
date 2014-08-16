@@ -10,20 +10,17 @@ public class LightShardController : MonoBehaviour {
 
 	// Method to remove/destroy LightShard
 	void cleanUp() {
-
+		print("Destroying LightShard");
 	}
 
 	// Use this for initialization
 	void Start () {
-		
+		// Destroy this LightShard in lifeTime seconds
+		Invoke("cleanUp", lifeTime);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		lifeTime -= Time.deltaTime;
-		if(lifeTime <= 0){
-			// TODO: change this to not suck
-			Destroy(gameObject);
-		}
+		
 	}
 }

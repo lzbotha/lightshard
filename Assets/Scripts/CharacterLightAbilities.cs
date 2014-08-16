@@ -55,7 +55,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// Set the character which cast this LightShard on the LightShardController script
 		// this allows the LightShard access to the characterState of the character that 
 		// cast it
-		ls.GetComponent<LightShardController>().character = gameObject;
+		LightShardController lsc = ls.GetComponent<LightShardController>();
+		lsc.character = this.gameObject;
 
 		ls.rigidbody.AddForce(300 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
