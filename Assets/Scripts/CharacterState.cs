@@ -48,6 +48,7 @@ public class CharacterState : MonoBehaviour {
 
 	void Start() {
 		movementDirectionLocked = false;
+		flashDeactivationRadius = 0;
 	}
 
 }
