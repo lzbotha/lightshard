@@ -10,17 +10,17 @@ public class LightShardController : MonoBehaviour {
 	private int key;
 
 	// Mutator method for character
-	void setCharacter(GameObject character) {
+	public void setCharacter(GameObject character) {
 		this.character = character;
 	}
 
 	// Mutator method for key
-	void setKey(int key) {
+	public void setKey(int key) {
 		this.key = key;
 	}
 
 	// Method to remove/destroy LightShard
-	void cleanUp() {
+	public void cleanUp() {
 		// Remove LightShard from the light shard container of the appropriate character
 		character.GetComponent<CharacterState>().lightShards.removeLightShard(key);
 		Destroy(gameObject);
