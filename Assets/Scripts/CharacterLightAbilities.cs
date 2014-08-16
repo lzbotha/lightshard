@@ -28,11 +28,11 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// If the player activates flash and there is no current flash active
 		if(Input.GetButtonDown("Flash") && characterState.isLightRegenPositive() && characterState.canUseAbility(flashCost)){
 			// Set the minimum flash radius to the characters preflash minus flashcost
-			characterState.flashMinimumRadius = characterState.lightRadius - flashCost;
+			characterState.flashDeactivationRadius = characterState.lightRadius - flashCost;
 			// Increase the characters light radius
-			characterState.lightRadius += flashLightRadiusIncrease;
+			characterState.changeLightRadiusBy(flashLightRadiusIncrease);
 			// Apply the debuff to the characters light regen rate
-			characterState.lightRegenRate = flashLightRegenDebuff;
+			characterState.setLightRegenRate(flashLightRegenDebuff);
 		}
 	}
 
