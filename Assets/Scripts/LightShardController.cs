@@ -10,7 +10,9 @@ public class LightShardController : MonoBehaviour {
 
 	// Method to remove/destroy LightShard
 	void cleanUp() {
-		print("Destroying LightShard");
+		// Remove LightShard from the light shard container of the appropriate character
+		character.GetComponent<CharacterState>().lightShards.removeLightShard("test");
+		Destroy(GameObject);
 	}
 
 	// Use this for initialization

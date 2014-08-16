@@ -49,9 +49,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
 		throwDirection = Quaternion.LookRotation (throwDirection) * input;
 		
-		// TODO: add this to an array of lightShard objects
 		GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
 		
+
 		// Set the character which cast this LightShard on the LightShardController script
 		// this allows the LightShard access to the characterState of the character that 
 		// cast it
@@ -61,6 +61,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 		ls.rigidbody.AddForce(300 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
 		Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
+
+		characterState.lightShards.addLightShard("test", ls);
 	}
 
 	void updateThrowLightShard() {
