@@ -20,7 +20,7 @@ public class CharacterState : MonoBehaviour {
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
 
-	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer();
+	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
 
 	public bool isLightRegenPositive() {
 		return lightRegenRate > 0;

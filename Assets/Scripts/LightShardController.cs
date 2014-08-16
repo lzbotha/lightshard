@@ -21,6 +21,8 @@ public class LightShardController : MonoBehaviour {
 
 	// Method to remove/destroy LightShard
 	public void cleanUp() {
+		// If this method is invoked in a way other than a lifetime time out cancel the interval
+		CancelInvoke();
 		// Remove LightShard from the light shard container of the appropriate character
 		character.GetComponent<CharacterState>().lightShards.removeLightShard(key);
 		Destroy(gameObject);

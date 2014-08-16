@@ -6,11 +6,13 @@ using System.Collections.Generic;
 public class CharacterLightShardContainer{
 	private Dictionary<int, GameObject> lightShards = new Dictionary<int, GameObject>();
 
-	// TODO: make a constructor so that this value can be assigned with a bit of sorcery
-	// from the inspector
-	int maxNumberOfLightShards = 8;
+	private int maxNumberOfLightShards;
 	private int largestKey = -1;
 	private int numberOfLightShards = 0;
+
+	public CharacterLightShardContainer(int capacity){
+		maxNumberOfLightShards = capacity;
+	}
 
 	public bool removeLightShard(int key) {
 		bool removed = lightShards.Remove(key);
