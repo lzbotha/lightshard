@@ -5,10 +5,19 @@ public class LightShardController : MonoBehaviour {
 
 	public float lifeTime = 15.0f;
 	// The character that cast this LightShard
-	// TODO: make these friend variable since it should not be visible in the inspector
-	// OR stop being lazy and just make accessor and mutator methods like a normal human being
-	public GameObject character;
-	public int key;
+	private GameObject character;
+	// The key in the character owning this lightshards lightshard container
+	private int key;
+
+	// Mutator method for character
+	void setCharacter(GameObject character) {
+		this.character = character;
+	}
+
+	// Mutator method for key
+	void setKey(int key) {
+		this.key = key;
+	}
 
 	// Method to remove/destroy LightShard
 	void cleanUp() {
