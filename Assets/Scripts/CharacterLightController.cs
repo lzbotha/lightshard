@@ -17,6 +17,8 @@ public class CharacterLightController : MonoBehaviour {
 	
 	void Update () {
 		// If a Flash is in progress
+		// Both a check for negative regen and a non zero flashDeactivationRadius are necessary
+		// incase the player has a negative light regen rate because of level stuff
 		if(!characterState.isLightRegenPositive() && characterState.flashDeactivationRadius > 0){
 			// Decrease light radius
 			characterState.lightRadius += characterState.lightRegenRate * Time.deltaTime;
@@ -24,6 +26,7 @@ public class CharacterLightController : MonoBehaviour {
 			// radius, restore the characters light regen to normal
 			if(characterState.lightRadius <= characterState.flashDeactivationRadius){
 				characterState.setLightRegenRate(normalLightRegenRate);
+				characterState.flashDeactivationRadius = 0;
 			}
 		}
 		// If no flash is in progress and the character has a light regen
