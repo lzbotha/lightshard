@@ -19,6 +19,12 @@ public class LightShardController : MonoBehaviour {
 		this.key = key;
 	}
 
+	public void setLifeTime(float time){ 
+		CancelInvoke();
+		lifeTime = time;
+		Invoke("cleanUp", lifeTime);
+	}
+
 	// Method to remove/destroy LightShard
 	public void cleanUp() {
 		// If this method is invoked in a way other than a lifetime time out cancel the interval
@@ -31,7 +37,8 @@ public class LightShardController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Destroy this LightShard in lifeTime seconds
-		Invoke("cleanUp", lifeTime);
+		if(lifeTime > 0)
+			Invoke("cleanUp", lifeTime);
 	}
 	
 	// Update is called once per frame

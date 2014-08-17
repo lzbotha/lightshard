@@ -11,11 +11,10 @@ public class CharacterState : MonoBehaviour {
 
 	public bool inAir = false;
 	public float lightRadius;
+	private float minLightRadius = 2.0f;
 	private float lightRegenRate;	
 	private float flashDeactivationRadius;
-
-	// This value must be set here
-	public float minLightRadius = 2.0f;
+	
 	
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
@@ -25,6 +24,9 @@ public class CharacterState : MonoBehaviour {
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
 	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
+
+	public float getMinLightRadius(){ return minLightRadius; }
+	public void setMinLightRadius(float radius){ minLightRadius = radius; }
 
 	public float getLightRegenRate(){ return lightRegenRate; }
 	public bool isLightRegenPositive() { return lightRegenRate > 0; }

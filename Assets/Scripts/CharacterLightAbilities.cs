@@ -61,7 +61,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		ls.rigidbody.AddForce(300 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
-		Physics.IgnoreCollision(ls.collider, GetComponentInChildren<SphereCollider>());
+		// This appears to no be working
+		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());
 
 		
 	}

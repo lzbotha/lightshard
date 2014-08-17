@@ -6,6 +6,7 @@ public class CharacterLightController : MonoBehaviour {
 	private CharacterState characterState;
 
 	public float normalLightRadius = 5.0f;
+	public float minLightRadius = 2.0f;
 	public float normalLightRegenRate = 0.5f;
 
 	// Use this for initialization
@@ -13,6 +14,7 @@ public class CharacterLightController : MonoBehaviour {
 		characterState = this.transform.parent.GetComponent<CharacterState>();
 		characterState.setLightRegenRate(normalLightRegenRate);
 		characterState.setLightRadius(normalLightRadius);
+		characterState.setMinLightRadius(minLightRadius);
 	}
 	
 	void Update () {
@@ -34,7 +36,7 @@ public class CharacterLightController : MonoBehaviour {
 		// 			can't be in an else
 		else if (characterState.isLightRegenPositive()) {
 			// Restore the characters light radius up to the normal value
-			characterState.setLightRadius(Mathf.Clamp(characterState.getLightRadius() + characterState.getLightRegenRate() * Time.deltaTime, characterState.minLightRadius, normalLightRadius));
+			characterState.setLightRadius(Mathf.Clamp(characterState.getLightRadius() + characterState.getLightRegenRate() * Time.deltaTime, characterState.getMinLightRadius(), normalLightRadius));
 		}
 		gameObject.light.range = characterState.getLightRadius();
 	}
