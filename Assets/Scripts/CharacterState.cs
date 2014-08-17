@@ -11,8 +11,8 @@ public class CharacterState : MonoBehaviour {
 
 	public bool inAir = false;
 	public float lightRadius;
-	public float lightRegenRate;	
-	public float flashDeactivationRadius;
+	private float lightRegenRate;	
+	private float flashDeactivationRadius;
 
 	// This value must be set here
 	public float minLightRadius = 2.0f;
@@ -22,25 +22,17 @@ public class CharacterState : MonoBehaviour {
 
 	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
 
-	public float getLightRadius(){
-		return lightRadius;
-	}
+	public float getLightRadius(){ return lightRadius; }
+	public void setLightRadius(float radius){ lightRadius = radius; }
+	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
 
-	public float getLightRegenRate(){
-		return lightRegenRate;
-	}
+	public float getLightRegenRate(){ return lightRegenRate; }
+	public bool isLightRegenPositive() { return lightRegenRate > 0; }
+	public bool isLightRegenNegative() { return lightRegenRate < 0;	}
+	public void setLightRegenRate(float regen){ lightRegenRate = regen;	}
 
-	public bool isLightRegenPositive() {
-		return lightRegenRate > 0;
-	}
-
-	public void setLightRegenRate(float regen){
-		lightRegenRate = regen;
-	}
-
-	public void changeLightRadiusBy(float amount){
-		lightRadius += amount;
-	}
+	public void setFlashDeactivationRadius(float radius){ flashDeactivationRadius = radius; }
+	public float getFlashDeactivationRadius(){ return flashDeactivationRadius; }
 
 	public bool canUseAbility(float cost) {
 		return lightRadius - cost >= minLightRadius;
