@@ -15,9 +15,10 @@ public class CharacterState : MonoBehaviour {
 	private float lightRegenRate;	
 	private float flashDeactivationRadius;
 	
-	
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
+
+	private bool cameraDirectionLocked;
 
 	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
 
@@ -39,6 +40,9 @@ public class CharacterState : MonoBehaviour {
 	public bool isMovementDirectionLocked(){ return movementDirectionLocked; }
 	public void setMovementDirectionLocked(bool locked){ movementDirectionLocked = locked; }
 
+	public void setCameraDirectionLocked(bool locked) { cameraDirectionLocked = locked; }
+	public bool isCameraDirectionLocked() {return cameraDirectionLocked; }
+
 	public bool canUseAbility(float cost) {
 		return lightRadius - cost >= minLightRadius;
 	}
@@ -46,6 +50,7 @@ public class CharacterState : MonoBehaviour {
 	void Start() {
 		movementDirectionLocked = false;
 		flashDeactivationRadius = 0;
+		cameraDirectionLocked = false;
 	}
 
 }

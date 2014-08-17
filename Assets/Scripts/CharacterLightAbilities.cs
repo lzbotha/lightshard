@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class CharacterLightAbilities : MonoBehaviour {
-
 	private CharacterState characterState;
 
 	public GameObject lightShard;
@@ -14,6 +13,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	private bool wasRightAxisDown;
 	private bool wasLeftAxisDown;
+
+	private bool shouldDrawTeleportOptions = false;
 
 	// Use this for initialization
 	void Start () {
@@ -79,16 +80,23 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void handleTeleport(string button){
 		if(Input.GetButton(button)) {
+			characterState.setCameraDirectionLocked(true);
+			shouldDrawTeleportOptions = true;
 			// Display the directions of all LightShards of the appropriate type
-			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
+			Vector3 directionToCamera = cameraPosition.position - this.transform.position;
+			print(directionToCamera);
 		}
+		else if (Input.GetButtonUp(button)) {
+			characterState.setCameraDirectionLocked(false);
+			shouldDrawTeleportOptions = false;
+		}
+
 	}
 
 	void OnGUI() {
-		// TODO: move these out of OnGUI and into update
-		// easier to code it this way for now
-		handleTeleport("TeleportRight");
-		handleTeleport("TeleportLeft");
+		if(shouldDrawTeleportOptions){
+			// GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
+		}
 	}
 	
 	// Update is called once per frame
@@ -100,6 +108,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		
 		updateLockMovement ();
 
-		
+		handleTeleport("TeleportRight");
+		handleTeleport("TeleportLeft");
 	}
 }
