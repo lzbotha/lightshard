@@ -36,6 +36,9 @@ public class CharacterState : MonoBehaviour {
 	public void setFlashDeactivationRadius(float radius){ flashDeactivationRadius = radius; }
 	public float getFlashDeactivationRadius(){ return flashDeactivationRadius; }
 
+	public bool isMovementDirectionLocked(){ return movementDirectionLocked; }
+	public void setMovementDirectionLocked(bool locked){ movementDirectionLocked = locked; }
+
 	public bool canUseAbility(float cost) {
 		return lightRadius - cost >= minLightRadius;
 	}
