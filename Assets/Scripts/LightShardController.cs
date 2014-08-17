@@ -4,6 +4,9 @@ using System.Collections;
 public class LightShardController : MonoBehaviour {
 
 	public float lifeTime = 15.0f;
+	// The radius in which the fear/attract effect takes place
+	public float effectRadius = 5.0f;
+
 	// The character that cast this LightShard
 	private GameObject character;
 	// The key in the character owning this lightshards lightshard container
@@ -39,10 +42,22 @@ public class LightShardController : MonoBehaviour {
 		// Destroy this LightShard in lifeTime seconds
 		if(lifeTime > 0)
 			Invoke("cleanUp", lifeTime);
+
+		this.GetComponent<SphereCollider>().radius = effectRadius;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if(other.tag == "Player")
+			print("entered trigger");
+	}
+
+	void OnTriggerExit(Collider other) {
+		if(other.tag == "Player")
+			print("left trigger");
 	}
 }
