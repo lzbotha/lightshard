@@ -38,7 +38,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void updateLockMovement() {
 		// Lock the character's movement if the Right or Left trigger is down.
-		characterState.movementDirectionLocked = isAxisDown("ThrowRight") || isAxisDown("ThrowLeft");
+		characterState.setMovementDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
 	}
 
 	void throwLightShard() {
@@ -62,9 +62,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		ls.rigidbody.AddForce(300 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
 		// This currently doesn't work because the smearChecker component of the character also has a collider attached to it
-		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());
-
-		
+		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
 
 	void updateThrowLightShard() {
@@ -78,6 +76,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 		this.wasRightAxisDown = isAxisDown("ThrowRight");
 		this.wasLeftAxisDown = isAxisDown("ThrowLeft");
 	}
+
+	void handleTeleport(string button){
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -88,5 +90,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		
 		updateLockMovement ();
 
+		handleTeleport("TeleportRight");
+		handleTeleport("TeleportLeft");
 	}
 }
