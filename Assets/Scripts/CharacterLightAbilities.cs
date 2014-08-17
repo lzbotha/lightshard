@@ -82,9 +82,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 		if(Input.GetButton(button)) {
 			characterState.setCameraDirectionLocked(true);
 			shouldDrawTeleportOptions = true;
-			// Display the directions of all LightShards of the appropriate type
-			Vector3 directionToCamera = cameraPosition.position - this.transform.position;
-			print(directionToCamera);
+			
+			// The direction from the camera is up
+			Vector3 directionFromCamera = cameraPosition.position - this.transform.position;
+			directionFromCamera.y = 0;
+			directionFromCamera.Normalize();
+
+			print(directionFromCamera);
 		}
 		else if (Input.GetButtonUp(button)) {
 			characterState.setCameraDirectionLocked(false);
@@ -95,7 +99,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void OnGUI() {
 		if(shouldDrawTeleportOptions){
-			// GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
+			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
 		}
 	}
 	
