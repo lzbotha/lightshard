@@ -78,7 +78,17 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void handleTeleport(string button){
-		
+		if(Input.GetButton(button)) {
+			// Display the directions of all LightShards of the appropriate type
+			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
+		}
+	}
+
+	void OnGUI() {
+		// TODO: move these out of OnGUI and into update
+		// easier to code it this way for now
+		handleTeleport("TeleportRight");
+		handleTeleport("TeleportLeft");
 	}
 	
 	// Update is called once per frame
@@ -90,7 +100,6 @@ public class CharacterLightAbilities : MonoBehaviour {
 		
 		updateLockMovement ();
 
-		handleTeleport("TeleportRight");
-		handleTeleport("TeleportLeft");
+		
 	}
 }
