@@ -14,6 +14,18 @@ public class CharacterLightShardContainer{
 		maxNumberOfLightShards = capacity;
 	}
 
+	public int getNumberOfLightShards(){ return numberOfLightShards; }
+
+	public List<Transform> getAllTransforms() {
+		List<Transform> result = new List<Transform>();
+		foreach(KeyValuePair<int, GameObject> entry in lightShards)
+		{
+		    // do something with entry.Value or entry.Key
+		    result.Add(entry.Value.transform);
+		}
+		return result;
+	}
+
 	public bool removeLightShard(int key) {
 		bool removed = lightShards.Remove(key);
 		if (removed)

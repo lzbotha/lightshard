@@ -87,6 +87,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 			Vector3 directionFromCamera = cameraPosition.position - this.transform.position;
 			directionFromCamera.y = 0;
 			directionFromCamera.Normalize();
+			if(characterState.lightShards.getNumberOfLightShards() > 0){
+				
+			}
+			// Vector3.Angle(from, to);
 
 			print(directionFromCamera);
 		}
