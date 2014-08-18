@@ -10,45 +10,65 @@ public class CharacterMovement2 : MonoBehaviour {
 
 	public ThirdPersonCameraController script;
 
+	private float smearTimeRemaining = 0.0f;
+	public float smearTime = 0.5f;
+
+	private Vector3 smearStartPosition = Vector3.zero;
+	private Vector3 smearEndPosition = Vector3.zero;
+
+	public CharacterState characterState;
+
 	void Update() {
 		CharacterController controller = GetComponent<CharacterController> ();
 
-		if (controller.isGrounded) {
-			Debug.Log ("Grounded.");
-			velocity.y = 0.0f;
-			if ( Input.GetButtonDown ("Jump")) {
-				velocity.y += jumpSpeed;
-			}
+		if (smearTimeRemaining > 0) {
+			float fraction = 1 - smearTimeRemaining / smearTime;
+
+			controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
+
+			smearTimeRemaining -= Time.deltaTime;
 		} else {
-			Debug.Log ("NOT GROUNDED.");
-			velocity.y -= gravity;
+
+			if (Input.GetButtonDown("Smear")) {
+				this.smearTimeRemaining = this.smearTime;
+				this.smearStartPosition = this.transform.position;
+				this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
+			}
+
+			if (controller.isGrounded) {
+				velocity.y = 0.0f;
+				if ( Input.GetButtonDown ("Jump")) {
+					velocity.y += jumpSpeed;
+				}
+			} else {
+				velocity.y -= gravity;
+			}
+
+			Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+
+			input.Normalize ();
+
+			// Calculate the forward direction under current camera rotation
+			Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
+			movementDirection.y = 0;
+			movementDirection.Normalize ();
+
+
+			var moveVector = Quaternion.LookRotation(movementDirection) * input * speed;
+
+			if (Vector3.Magnitude(moveVector) >= 0.1) {
+				Vector3 temp = this.transform.forward;
+				temp.x = moveVector.x;
+				temp.z = moveVector.z;
+				this.transform.forward = temp;
+			}
+
+			controller.Move (Time.deltaTime * (
+				moveVector +
+				// Stop from bouncing off floor constantly.
+				new Vector3 (0.0f, -0.01f, 0.0f) +
+				velocity
+			));
 		}
-
-		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-
-		input.Normalize ();
-
-		// Calculate the forward direction under current camera rotation
-		Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
-		movementDirection.y = 0;
-		movementDirection.Normalize ();
-
-
-		var moveVector = Quaternion.LookRotation(movementDirection) * input * speed;
-
-		if (Vector3.Magnitude(moveVector) >= 0.1) {
-			Vector3 temp = this.transform.forward;
-			temp.x = moveVector.x;
-			temp.z = moveVector.z;
-			this.transform.forward = temp;
-		}
-
-		controller.Move (Time.deltaTime * (
-			moveVector +
-			// Stop from bouncing off floor constantly.
-			new Vector3 (0.0f, -0.01f, 0.0f) +
-			velocity
-		));
 	}
-
 }
