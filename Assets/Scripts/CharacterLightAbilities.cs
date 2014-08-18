@@ -64,7 +64,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		lsc.setKey(characterState.lightShards.addLightShard(ls));
 
 		ls.rigidbody.AddForce(3000 * throwDirection);
-		ls.rigidbody.AddForce(4000 * Vector3.up);
+		ls.rigidbody.AddForce(400 * Vector3.up);
 		// This currently doesn't work because the smearChecker component of the character also has a collider attached to it
 		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
@@ -103,9 +103,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if(shouldDrawTeleportOptions){
-			// GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "XxX");
-			GUI.Box(new Rect(Screen.width/2 + crz[0].Value.x * 100, Screen.height/2 - crz[0].Value.z * 100, 10, 10), "X");
+		if(shouldDrawTeleportOptions && characterState.lightShards.getNumberOfLightShards() > 0){
+			foreach(KeyValuePair<int, Vector3> shardDirection in crz){
+				GUI.Box(new Rect(Screen.width/2 + shardDirection.Value.x * 100, Screen.height/2 - shardDirection.Value.z * 100, 10, 10), "X");
+			}		
 		}
 	}
 	
