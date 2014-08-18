@@ -104,7 +104,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void OnGUI() {
 		if(shouldDrawTeleportOptions){
-			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "XxX");
+			// GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "XxX");
+			GUI.Box(new Rect(Screen.width/2 + crz[0].Value.x * 100, Screen.height/2 - crz[0].Value.z * 100, 10, 10), "X");
 		}
 	}
 	
