@@ -9,10 +9,17 @@ public class ThirdPersonCameraController : MonoBehaviour {
 	private float radius = 5.0f;
 	public float controllerSensitivity = 0.05f;
 
+	public float chaseFactor = 0.08f;
+	public float targetChaseFactor = 0.12f;
+
 	public float phiLowerBound = 10.0f;
 	public float phiUpperBound = 80.0f;
 
+	public Vector3 cameraTargetLocation = Vector3.zero;
+
 	public Transform target;
+
+	private Vector3 lookPosition;
 
 	void Start() {
 		characterState = target.gameObject.GetComponent<CharacterState>();
@@ -40,8 +47,13 @@ public class ThirdPersonCameraController : MonoBehaviour {
 			radius * Mathf.Sin (theta) * Mathf.Sin (phi)
 		);
 
-		this.transform.position = target.position + offset;
+		// Where the chase camera 'wants' to be.
+		cameraTargetLocation = target.position + offset;
 
-		this.transform.LookAt (target.position);
+		this.transform.position += (cameraTargetLocation - this.transform.position) * chaseFactor;
+
+		lookPosition += (target.position - this.lookPosition) * targetChaseFactor;
+
+		this.transform.LookAt (lookPosition);
 	}
 }
