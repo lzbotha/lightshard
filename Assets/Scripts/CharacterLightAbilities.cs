@@ -16,7 +16,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private bool wasLeftAxisDown;
 
 	private bool shouldDrawTeleportOptions = false;
-	private List<KeyValuePair<int, Vector3>> crz = new List<KeyValuePair<int, Vector3>>();
+	private List<KeyValuePair<int, Vector3>> directionsToLightShards = new List<KeyValuePair<int, Vector3>>();
 	
 
 	// Use this for initialization
@@ -92,7 +92,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 			directionToCamera.Normalize();
 
 			if(characterState.lightShards.getNumberOfLightShards() > 0){
-				crz = characterState.lightShards.getCRZ(directionToCamera, this.transform.position);
+				directionsToLightShards = characterState.lightShards.getDirectionsToLightShards(directionToCamera, this.transform.position);
 			}
 		}
 		else if (Input.GetButtonUp(button)) {
@@ -104,7 +104,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void OnGUI() {
 		if(shouldDrawTeleportOptions && characterState.lightShards.getNumberOfLightShards() > 0){
-			foreach(KeyValuePair<int, Vector3> shardDirection in crz){
+			foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
 				GUI.Box(new Rect(Screen.width/2 + shardDirection.Value.x * 100, Screen.height/2 - shardDirection.Value.z * 100, 10, 10), "X");
 			}		
 		}

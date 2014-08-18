@@ -26,7 +26,7 @@ public class CharacterLightShardContainer{
 	}
 
 	// TODO: rename this method to what it actually does
-	public List<KeyValuePair<int, Vector3>> getCRZ(Vector3 directionToCamera, Vector3 characterPosition){
+	public List<KeyValuePair<int, Vector3>> getDirectionsToLightShards(Vector3 directionToCamera, Vector3 characterPosition){
 		List<KeyValuePair<int, Vector3>> result = new List<KeyValuePair<int, Vector3>>();
 		foreach(KeyValuePair<int, GameObject> shard in lightShards) {
 			Vector3 directionToLightShard = shard.Value.transform.position - characterPosition;
