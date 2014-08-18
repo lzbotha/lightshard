@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterLightAbilities : MonoBehaviour {
 	private CharacterState characterState;
@@ -15,6 +16,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private bool wasLeftAxisDown;
 
 	private bool shouldDrawTeleportOptions = false;
+	private List<KeyValuePair<int, Vector3>> crz = new List<KeyValuePair<int, Vector3>>();
+	
 
 	// Use this for initialization
 	void Start () {
@@ -60,8 +63,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 		lsc.setCharacter(this.gameObject);
 		lsc.setKey(characterState.lightShards.addLightShard(ls));
 
-		ls.rigidbody.AddForce(300 * throwDirection);
-		ls.rigidbody.AddForce(400 * Vector3.up);
+		ls.rigidbody.AddForce(3000 * throwDirection);
+		ls.rigidbody.AddForce(4000 * Vector3.up);
 		// This currently doesn't work because the smearChecker component of the character also has a collider attached to it
 		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
@@ -83,16 +86,14 @@ public class CharacterLightAbilities : MonoBehaviour {
 			characterState.setCameraDirectionLocked(true);
 			shouldDrawTeleportOptions = true;
 			
-			// The direction from the camera is up
-			Vector3 directionFromCamera = cameraPosition.position - this.transform.position;
-			directionFromCamera.y = 0;
-			directionFromCamera.Normalize();
-			if(characterState.lightShards.getNumberOfLightShards() > 0){
-				
-			}
-			// Vector3.Angle(from, to);
+			// Direction from the player to the camera
+			Vector3 directionToCamera = cameraPosition.position - this.transform.position;
+			directionToCamera.y = 0;
+			directionToCamera.Normalize();
 
-			print(directionFromCamera);
+			if(characterState.lightShards.getNumberOfLightShards() > 0){
+				crz = characterState.lightShards.getCRZ(directionToCamera, this.transform.position);
+			}
 		}
 		else if (Input.GetButtonUp(button)) {
 			characterState.setCameraDirectionLocked(false);
@@ -103,7 +104,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void OnGUI() {
 		if(shouldDrawTeleportOptions){
-			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a title");
+			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "XxX");
 		}
 	}
 	

@@ -16,12 +16,25 @@ public class CharacterLightShardContainer{
 
 	public int getNumberOfLightShards(){ return numberOfLightShards; }
 
-	public List<Transform> getAllTransforms() {
-		List<Transform> result = new List<Transform>();
+	public List<Vector3> getAllPositions() {
+		List<Vector3> result = new List<Vector3>();
 		foreach(KeyValuePair<int, GameObject> entry in lightShards)
 		{
-		    // do something with entry.Value or entry.Key
-		    result.Add(entry.Value.transform);
+		    result.Add(entry.Value.transform.position);
+		}
+		return result;
+	}
+
+	// TODO: rename this method to what it actually does
+	public List<KeyValuePair<int, Vector3>> getCRZ(Vector3 directionToCamera, Vector3 characterPosition){
+		List<KeyValuePair<int, Vector3>> result = new List<KeyValuePair<int, Vector3>>();
+		foreach(KeyValuePair<int, GameObject> shard in lightShards) {
+			Vector3 directionToLightShard = shard.Value.transform.position - characterPosition;
+			directionToLightShard.y = 0;
+			directionToLightShard.Normalize();
+
+			directionToLightShard = Quaternion.LookRotation(directionToCamera) * directionToLightShard;
+			result.Add(new KeyValuePair<int, Vector3>(shard.Key, directionToLightShard));
 		}
 		return result;
 	}
