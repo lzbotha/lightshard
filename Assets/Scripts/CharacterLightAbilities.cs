@@ -95,6 +95,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 				if (Physics.Raycast(this.transform.position, input, out hit, 100, layerMask)){
             		GameObject hitMarker = hit.transform.gameObject;
             		hitMarkerLightShardID = hitMarker.GetComponent<LightShardMarker>().lightShardID;
+            		hitMarker.transform.position = hitMarker.transform.position + new Vector3(0.0f, 0.5f, 0.0f);
 				} else {
 					hitMarkerLightShardID = -1;
 				}
