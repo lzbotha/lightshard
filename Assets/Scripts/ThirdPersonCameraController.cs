@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ThirdPersonCameraController : MonoBehaviour {
-	private CharacterState characterState;
+	public CharacterState characterState;
 
 	private float theta = 0.0f;
 	private float phi = 0.0f;
@@ -20,10 +20,6 @@ public class ThirdPersonCameraController : MonoBehaviour {
 	public Transform target;
 
 	private Vector3 lookPosition;
-
-	void Start() {
-		characterState = target.gameObject.GetComponent<CharacterState>();
-	}
 
 	void Update() {
 		if(!characterState.isCameraDirectionLocked()){

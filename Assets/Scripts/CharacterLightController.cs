@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterLightController : MonoBehaviour {
 
-	private CharacterState characterState;
+	public CharacterState characterState;
 
 	public float normalLightRadius = 5.0f;
 	public float minLightRadius = 2.0f;
@@ -11,7 +11,6 @@ public class CharacterLightController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		characterState = this.transform.parent.GetComponent<CharacterState>();
 		characterState.setLightRegenRate(normalLightRegenRate);
 		characterState.setLightRadius(normalLightRadius);
 		characterState.setMinLightRadius(minLightRadius);
