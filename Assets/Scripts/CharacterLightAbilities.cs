@@ -106,12 +106,12 @@ public class CharacterLightAbilities : MonoBehaviour {
 			}
 			characterState.setCameraDirectionLocked(false);
 
-			print (hitMarkerLightShardID);
 			// Teleport to a marker if one is selected
 			if(hitMarkerLightShardID != -1) {
 				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
 				this.transform.position = hitLightShard.transform.position;
-
+				// Destroy the lightshard
+				// hitLightShard.GetComponent<LightShardController>().cleanUp();
 			}
 		}
 
