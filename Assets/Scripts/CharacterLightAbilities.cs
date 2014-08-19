@@ -16,6 +16,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private bool wasLeftAxisDown;
 
 	public GameObject lightShardMarker;
+	private int hitMarkerLightShardID = -1;
 	private List<GameObject> lightShardMarkers = new List<GameObject>();
 
 	bool isAxisDown(string axis) {
@@ -82,6 +83,21 @@ public class CharacterLightAbilities : MonoBehaviour {
 			if(characterState.lightShards.getNumberOfLightShards() > 0){
 				List<KeyValuePair<int, Vector3>> directionsToLightShards = characterState.lightShards.getDirectionsToLightShardsFromPosition(this.transform.position);
 				drawMarkers(directionsToLightShards);
+
+				// Do raycasting stuff here (must be after drawing the markers)
+				Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
+				input.Normalize();
+				input = Quaternion.LookRotation(characterState.getCurrentForwardDirection()) * input;
+
+				// Debug.DrawRay(this.transform.position, input, Color.green);
+				int layerMask = 1 << 10;
+				RaycastHit hit;
+				if (Physics.Raycast(this.transform.position, input, out hit, 100, layerMask)){
+            		GameObject hitMarker = hit.transform.gameObject;
+            		hitMarkerLightShardID = hitMarker.GetComponent<LightShardMarker>().lightShardID;
+				} else {
+					hitMarkerLightShardID = -1;
+				}
 			}
 		}
 		else if (Input.GetButtonUp(button)) {
@@ -89,6 +105,14 @@ public class CharacterLightAbilities : MonoBehaviour {
 				Destroy(marker);
 			}
 			characterState.setCameraDirectionLocked(false);
+
+			print (hitMarkerLightShardID);
+			// Teleport to a marker if one is selected
+			if(hitMarkerLightShardID != -1) {
+				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
+				this.transform.position = hitLightShard.transform.position;
+
+			}
 		}
 
 	}
@@ -99,8 +123,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 		}
 		lightShardMarkers.Clear();
 		foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
-
-         	lightShardMarkers.Add(Instantiate(lightShardMarker, transform.position + shardDirection.Value, Quaternion.identity) as GameObject);
+			GameObject marker = Instantiate(lightShardMarker, transform.position + shardDirection.Value, Quaternion.identity) as GameObject;
+			marker.GetComponent<LightShardMarker>().lightShardID = shardDirection.Key;
+         	lightShardMarkers.Add(marker);
 		}
 	}
 	

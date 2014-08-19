@@ -56,6 +56,7 @@ public class CharacterMovement2 : MonoBehaviour {
 				Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
 				movementDirection.y = 0;
 				movementDirection.Normalize ();
+				characterState.setCurrentForwardDirection(movementDirection);
 
 
 				moveVector = Quaternion.LookRotation(movementDirection) * input * speed;

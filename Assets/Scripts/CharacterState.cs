@@ -20,6 +20,8 @@ public class CharacterState : MonoBehaviour {
 
 	private bool cameraDirectionLocked;
 
+	private Vector3 currentForwardDirection;
+
 	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
 
 	public float getLightRadius(){ return lightRadius; }
@@ -42,6 +44,9 @@ public class CharacterState : MonoBehaviour {
 
 	public void setCameraDirectionLocked(bool locked) { cameraDirectionLocked = locked; }
 	public bool isCameraDirectionLocked() {return cameraDirectionLocked; }
+
+	public void setCurrentForwardDirection(Vector3 direction) { currentForwardDirection = direction; }
+	public Vector3 getCurrentForwardDirection() { return currentForwardDirection; }
 
 	public bool canUseAbility(float cost) {
 		return lightRadius - cost >= minLightRadius;

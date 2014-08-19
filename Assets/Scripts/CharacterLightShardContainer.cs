@@ -38,6 +38,10 @@ public class CharacterLightShardContainer{
 		return result;
 	}
 
+	public GameObject getLightShard(int key) {
+		return lightShards[key];
+	}
+
 	public bool removeLightShard(int key) {
 		bool removed = lightShards.Remove(key);
 		if (removed)
