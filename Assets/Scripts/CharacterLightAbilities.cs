@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CharacterLightAbilities : MonoBehaviour {
-	private CharacterState characterState;
+	public CharacterState characterState;
 
 	public GameObject lightShard;
 	public Transform cameraPosition;
@@ -15,14 +15,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private bool wasRightAxisDown;
 	private bool wasLeftAxisDown;
 
-	private bool shouldDrawTeleportOptions = false;
-	private List<KeyValuePair<int, Vector3>> directionsToLightShards = new List<KeyValuePair<int, Vector3>>();
-	
-
-	// Use this for initialization
-	void Start () {
-		characterState = gameObject.GetComponent<CharacterState>();
-	}
+	public GameObject lightShardMarker;
+	private List<GameObject> lightShardMarkers = new List<GameObject>();
 
 	bool isAxisDown(string axis) {
 		return Input.GetAxis (axis) > 0;
@@ -84,29 +78,29 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void handleTeleport(string button){
 		if(Input.GetButton(button)) {
 			characterState.setCameraDirectionLocked(true);
-			shouldDrawTeleportOptions = true;
-			
-			// Direction from the player to the camera
-			Vector3 directionToCamera = cameraPosition.position - this.transform.position;
-			directionToCamera.y = 0;
-			directionToCamera.Normalize();
 
 			if(characterState.lightShards.getNumberOfLightShards() > 0){
-				directionsToLightShards = characterState.lightShards.getDirectionsToLightShards(directionToCamera, this.transform.position);
+				List<KeyValuePair<int, Vector3>> directionsToLightShards = characterState.lightShards.getDirectionsToLightShardsFromPosition(this.transform.position);
+				drawMarkers(directionsToLightShards);
 			}
 		}
 		else if (Input.GetButtonUp(button)) {
+			foreach(GameObject marker in lightShardMarkers){
+				Destroy(marker);
+			}
 			characterState.setCameraDirectionLocked(false);
-			shouldDrawTeleportOptions = false;
 		}
 
 	}
 
-	void OnGUI() {
-		if(shouldDrawTeleportOptions && characterState.lightShards.getNumberOfLightShards() > 0){
-			foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
-				GUI.Box(new Rect(Screen.width/2 + shardDirection.Value.x * 100, Screen.height/2 - shardDirection.Value.z * 100, 10, 10), "X");
-			}		
+	void drawMarkers(List<KeyValuePair<int, Vector3>> directionsToLightShards){
+		foreach(GameObject marker in lightShardMarkers){
+			Destroy(marker);
+		}
+		lightShardMarkers.Clear();
+		foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
+
+         	lightShardMarkers.Add(Instantiate(lightShardMarker, transform.position + shardDirection.Value, Quaternion.identity) as GameObject);
 		}
 	}
 	

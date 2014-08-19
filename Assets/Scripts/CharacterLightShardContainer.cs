@@ -26,14 +26,13 @@ public class CharacterLightShardContainer{
 	}
 
 	// TODO: rename this method to what it actually does
-	public List<KeyValuePair<int, Vector3>> getDirectionsToLightShards(Vector3 directionToCamera, Vector3 characterPosition){
+	public List<KeyValuePair<int, Vector3>> getDirectionsToLightShardsFromPosition(Vector3 position){
 		List<KeyValuePair<int, Vector3>> result = new List<KeyValuePair<int, Vector3>>();
 		foreach(KeyValuePair<int, GameObject> shard in lightShards) {
-			Vector3 directionToLightShard = shard.Value.transform.position - characterPosition;
+			Vector3 directionToLightShard = shard.Value.transform.position - position;
 			directionToLightShard.y = 0;
 			directionToLightShard.Normalize();
 
-			directionToLightShard = Quaternion.LookRotation(directionToCamera) * directionToLightShard;
 			result.Add(new KeyValuePair<int, Vector3>(shard.Key, directionToLightShard));
 		}
 		return result;
