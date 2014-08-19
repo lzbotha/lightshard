@@ -7,6 +7,7 @@ public class CharacterMovement2 : MonoBehaviour {
 	public float gravity;
 	
 	public float speed;
+	private Vector3 moveVector = Vector3.zero;
 
 	public ThirdPersonCameraController script;
 
@@ -44,23 +45,27 @@ public class CharacterMovement2 : MonoBehaviour {
 				velocity.y -= gravity;
 			}
 
-			Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-
-			input.Normalize ();
-
-			// Calculate the forward direction under current camera rotation
-			Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
-			movementDirection.y = 0;
-			movementDirection.Normalize ();
 
 
-			var moveVector = Quaternion.LookRotation(movementDirection) * input * speed;
+			if(!characterState.isMovementDirectionLocked()){
+				Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
 
-			if (Vector3.Magnitude(moveVector) >= 0.1) {
-				Vector3 temp = this.transform.forward;
-				temp.x = moveVector.x;
-				temp.z = moveVector.z;
-				this.transform.forward = temp;
+				input.Normalize ();
+
+				// Calculate the forward direction under current camera rotation
+				Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
+				movementDirection.y = 0;
+				movementDirection.Normalize ();
+
+
+				moveVector = Quaternion.LookRotation(movementDirection) * input * speed;
+
+				if (Vector3.Magnitude(moveVector) >= 0.1) {
+					Vector3 temp = this.transform.forward;
+					temp.x = moveVector.x;
+					temp.z = moveVector.z;
+					this.transform.forward = temp;
+				}
 			}
 
 			controller.Move (Time.deltaTime * (

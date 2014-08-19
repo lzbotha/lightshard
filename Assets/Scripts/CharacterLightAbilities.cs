@@ -65,8 +65,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		ls.rigidbody.AddForce(3000 * throwDirection);
 		ls.rigidbody.AddForce(400 * Vector3.up);
-		// This currently doesn't work because the smearChecker component of the character also has a collider attached to it
-		Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
+		// There is currently no csphere collider on the cahracter
+		// Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
 
 	void updateThrowLightShard() {
