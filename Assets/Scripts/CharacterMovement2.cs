@@ -18,6 +18,8 @@ public class CharacterMovement2 : MonoBehaviour {
 
 	public CharacterState characterState;
 
+
+
 	bool isSmearing() {
 		return smearTimeRemaining > 0;
 	}
@@ -32,6 +34,7 @@ public class CharacterMovement2 : MonoBehaviour {
 
 	void startSmear() {
 		this.smearTimeRemaining = this.smearTime;
+
 		this.smearStartPosition = this.transform.position;
 		this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
 	}
@@ -76,8 +79,10 @@ public class CharacterMovement2 : MonoBehaviour {
 		CharacterController controller = GetComponent<CharacterController> ();
 
 		if (isSmearing()) {
+			gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
 			advanceSmear(controller);
 		} else {
+			gameObject.layer = LayerMask.NameToLayer("Default");
 			if (Input.GetButtonDown("Smear")) {
 				startSmear();
 			} else {
@@ -90,7 +95,7 @@ public class CharacterMovement2 : MonoBehaviour {
 					lookInDirectionOfVector(positionDelta);
 				}
 
-				positionDelta += new Vector3(0.0f, -0.1f, 0.0f);
+				positionDelta += new Vector3(0.0f, -1.0f, 0.0f);
 				
 				controller.Move (positionDelta * Time.deltaTime);
 			}
