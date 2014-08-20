@@ -19,18 +19,20 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private int hitMarkerLightShardID = -1;
 	private List<GameObject> lightShardMarkers = new List<GameObject>();
 
+
 	bool isAxisDown(string axis) {
+		// Return whether the given joystick axis is down.
 		return Input.GetAxis (axis) > 0;
 	}
 
 	void updateFlash() {
-		// If the player activates flash and there is no current flash active
+		// If the player activates flash and there is no current flash active.
 		if(Input.GetButtonDown("Flash") && characterState.isLightRegenPositive() && characterState.canUseAbility(flashCost)){
-			// Set the minimum flash radius to the characters preflash minus flashcost
+			// Set the minimum flash radius to the characters preflash minus flashcost.
 			characterState.setFlashDeactivationRadius(characterState.getLightRadius() - flashCost);
-			// Increase the characters light radius
+			// Increase the characters light radius.
 			characterState.changeLightRadiusBy(flashLightRadiusIncrease);
-			// Apply the debuff to the characters light regen rate
+			// Apply the debuff to the characters light regen rate.
 			characterState.setLightRegenRate(flashLightRegenDebuff);
 		}
 	}
@@ -59,7 +61,11 @@ public class CharacterLightAbilities : MonoBehaviour {
 		lsc.setCharacter(this.gameObject);
 
 		// Don't change the order of this or bad things will happen
-		lsc.setKey(characterState.lightShards.addLightShard(ls));
+		int key = characterState.lightShards.addLightShard (ls);
+		lsc.setKey(key);
+
+		this.characterState.latestLightShardID = key;
+
 		lsc.getThrown(this.transform.position, throwDirection);
 	}
 
@@ -85,20 +91,24 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 				// Do raycasting stuff here (must be after drawing the markers)
 				Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
-				input.Normalize();
-				input = Quaternion.LookRotation(characterState.getCurrentForwardDirection()) * input;
 
-				// Debug.DrawRay(this.transform.position, input, Color.green);
-				int layerMask = 1 << 10;
-				RaycastHit hit;
-				if (Physics.Raycast(this.transform.position, input, out hit, 100, layerMask)){
-            		GameObject hitMarker = hit.transform.gameObject;
-            		hitMarkerLightShardID = hitMarker.GetComponent<LightShardMarker>().lightShardID;
-            		
-            		hitMarker.transform.position = hitMarker.transform.position + new Vector3(0.0f, 0.5f, 0.0f);
-            		hitMarker.renderer.material.color = Color.green;
+
+				input = Quaternion.LookRotation(characterState.getCurrentForwardDirection()) * input;
+				
+				input.Normalize();
+
+				if (input.magnitude <= 0.8) {
+					hitMarkerLightShardID = this.characterState.latestLightShardID;
 				} else {
 					hitMarkerLightShardID = -1;
+					float smallestDifference = 2;
+					foreach(KeyValuePair<int, Vector3> direction in directionsToLightShards) {
+						float difference = (direction.Value - input).magnitude;
+						if (difference <= smallestDifference) {
+							smallestDifference = difference;
+							hitMarkerLightShardID = direction.Key;
+						}
+					}
 				}
 			}
 		}

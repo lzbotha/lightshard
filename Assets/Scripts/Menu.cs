@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour {
 
 	void drawMainMenu(){
 		if (GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 10, mainMenuButtonWidth, mainMenuButtonHeight), "Single Play")){
-            Debug.Log("single play");
+            Application.LoadLevel ("1-tutorial"); 
 		}
 		if(GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 60, mainMenuButtonWidth, mainMenuButtonHeight), "Cooperative Play")){
 			Debug.Log("coop play");

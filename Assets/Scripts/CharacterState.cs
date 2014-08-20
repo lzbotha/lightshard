@@ -25,6 +25,8 @@ public class CharacterState : MonoBehaviour {
 	private Vector3 currentForwardDirection;
 
 	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
+	
+	public int latestLightShardID = -1;
 
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
