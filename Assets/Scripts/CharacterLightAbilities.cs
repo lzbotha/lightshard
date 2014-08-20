@@ -57,11 +57,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// cast it
 		LightShardController lsc = ls.GetComponent<LightShardController>();
 		lsc.setCharacter(this.gameObject);
-		lsc.setKey(characterState.lightShards.addLightShard(ls));
 
+		// Don't change the order of this or bad things will happen
+		lsc.setKey(characterState.lightShards.addLightShard(ls));
 		lsc.getThrown(this.transform.position, throwDirection);
-		// There is currently no csphere collider on the cahracter
-		// Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
 
 	void updateThrowLightShard() {

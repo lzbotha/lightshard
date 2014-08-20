@@ -21,7 +21,9 @@ public class LightShardController : MonoBehaviour {
 
 	public void getThrown(Vector3 position, Vector3 direction){
 		this.transform.position = position;
-		
+		if(direction == Vector3.zero){
+			direction = character.transform.forward;
+		}
 		// Calculate vertical velocity
 		velocity.y = arcHeight/(throwTime * 0.5f) - 0.5f * gravity * (throwTime * 0.5f);
 
