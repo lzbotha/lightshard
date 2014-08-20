@@ -35,7 +35,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		}
 	}
 
-	void updateLockMovement() {
+	void updateLockCamera() {
 		// Lock the character's movement if the Right or Left trigger is down.
 		// characterState.setMovementDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
 		characterState.setCameraDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
@@ -134,11 +134,11 @@ public class CharacterLightAbilities : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// NOTE: do not change the order of these methods else everything will break
-		updateFlash ();
+		updateFlash();
 
-		updateThrowLightShard ();
+		updateThrowLightShard();
 		
-		updateLockMovement ();
+		updateLockCamera();
 
 		handleTeleport("TeleportRight");
 		handleTeleport("TeleportLeft");
