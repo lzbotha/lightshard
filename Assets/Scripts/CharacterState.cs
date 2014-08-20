@@ -14,7 +14,9 @@ public class CharacterState : MonoBehaviour {
 	private float minLightRadius = 2.0f;
 	private float lightRegenRate;	
 	private float flashDeactivationRadius;
-	
+
+	private float verticalSpeed;
+
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
 
@@ -27,6 +29,14 @@ public class CharacterState : MonoBehaviour {
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
 	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
+
+	public float getVerticalSpeed() {
+		return this.verticalSpeed;
+	}
+
+	public void setVerticalSpeed(float verticalSpeed) {
+		this.verticalSpeed = verticalSpeed;
+	}
 
 	public float getMinLightRadius(){ return minLightRadius; }
 	public void setMinLightRadius(float radius){ minLightRadius = radius; }
@@ -47,6 +57,7 @@ public class CharacterState : MonoBehaviour {
 
 	public void setCurrentForwardDirection(Vector3 direction) { currentForwardDirection = direction; }
 	public Vector3 getCurrentForwardDirection() { return currentForwardDirection; }
+
 
 	public bool canUseAbility(float cost) {
 		return lightRadius - cost >= minLightRadius;

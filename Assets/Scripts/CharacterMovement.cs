@@ -2,97 +2,101 @@
 using System.Collections;
 
 public class CharacterMovement : MonoBehaviour {
-	public Transform cameraPosition;
-	public float forceMultiplier;
-	public float jumpForce;
+	public float jumpSpeed;
+	public float gravity;
 	
-	private Vector3 movementDirection;
-	private Vector3 input;
-	private CharacterState characterState;
-	private float normalGravityY = -9.8f;
-	private float heavyGravityY = -70f;
-	private Vector3 normalGravity;
-	private Vector3 heavyGravity;
-	private GameObject smearChecker;
-	
-	// Use this for initialization
-	void Start () {
-		characterState = gameObject.GetComponent<CharacterState>();
-		normalGravity = new Vector3 (0, normalGravityY, 0);
-		heavyGravity = new Vector3 (0, heavyGravityY, 0);
-		smearChecker = transform.Find ("SmearChecker").gameObject;
+	public float speed;
+
+	public ThirdPersonCameraController script;
+
+	private float smearTimeRemaining = 0.0f;
+	public float smearTime = 0.5f;
+
+	private Vector3 smearStartPosition = Vector3.zero;
+	private Vector3 smearEndPosition = Vector3.zero;
+
+	public CharacterState characterState;
+
+	bool isSmearing() {
+		return smearTimeRemaining > 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//		Debug.Log(characterState.inAir+"\n"+this.rigidbody.velocity.y+" => "+Physics.gravity.y);
+
+	void advanceSmear(CharacterController controller) {
+		float fraction = 1 - smearTimeRemaining / smearTime;
 		
-		if (characterState.inAir && this.rigidbody.velocity.y <=0 && Physics.gravity.y > heavyGravityY && this.transform.position.y > 1f) {
-			Debug.Log("gravity = "+Physics.gravity.y);
-			Physics.gravity = Vector3.Lerp(Physics.gravity, heavyGravity, 1f);
-			this.rigidbody.drag = 0;
-		}else if(characterState.inAir && this.rigidbody.velocity.y <=0 && Physics.gravity.y < normalGravityY && this.transform.position.y < 1f){
-			Debug.Log("gravity2 = "+Physics.gravity.y);
-			Physics.gravity = Vector3.Lerp(Physics.gravity, normalGravity, 5f);
-		}
+		controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
 		
-		// If the player presses the jump button apply the jumping force
-		if(Input.GetButtonDown("Jump") && !characterState.inAir){
-			this.rigidbody.AddForce(0, jumpForce, 0);
-			smearChecker.transform.localPosition = new Vector3(0,0,0);
-		}
-		
-		if(Input.GetButtonDown("Smear")){
-			//			this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * 300);
-			Vector3 p1 = transform.position + transform.forward*characterState.lightRadius;
-			Debug.DrawLine(transform.position, p1, Color.cyan);
-		}
+		smearTimeRemaining -= Time.deltaTime;
 	}
-	
-	void FixedUpdate() {
+
+	void startSmear() {
+		this.smearTimeRemaining = this.smearTime;
+
+		this.smearStartPosition = this.transform.position;
+		this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
+	}
+
+	Vector3 getGravityComponent(CharacterController controller) {
+		if (controller.isGrounded) {
+			characterState.setVerticalSpeed(0.0f);
+			if ( Input.GetButtonDown ("Jump")) {
+				characterState.setVerticalSpeed(characterState.getVerticalSpeed() + jumpSpeed);
+			}
+		} else {
+			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - gravity);
+		}
+		return new Vector3 (0.0f, characterState.getVerticalSpeed (), 0.0f);
+	}
+
+	Vector3 getMovementComponent() {
+		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		
+		input.Normalize ();
+		
 		// Calculate the forward direction under current camera rotation
-		movementDirection = cameraPosition.position - this.transform.position;
+		Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
 		movementDirection.y = 0;
 		movementDirection.Normalize ();
+		characterState.setCurrentForwardDirection(movementDirection);
 		
-		
-		// If the characters movementDirection is not locked
-		if(characterState.movementDirectionLocked == false){
-			// Get the input (in world coordinates)
-			//Debug.Log("input axis="+Input.GetAxis ("MovementHorizontal"));
-			input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-			
-			// Rotate the character to face the direction it is moving in
-			if (Vector3.Magnitude(this.rigidbody.velocity) >= 0.1) {
+		return Quaternion.LookRotation(movementDirection) * input * speed;
+	}
 
-			}
+	void lookInDirectionOfVector(Vector3 vector) {
+		if (Vector3.Magnitude(vector) >= 0.3) {
+			this.transform.forward = new Vector3(
+				vector.x,
+				0.0f,
+				vector.z
+			);
+		}
+	}
+
+	void Update() {
+		CharacterController controller = GetComponent<CharacterController> ();
+
+		if (isSmearing()) {
+			gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
+			advanceSmear(controller);
+		} else {
+			gameObject.layer = LayerMask.NameToLayer("Default");
+			if (Input.GetButtonDown("Smear")) {
+				startSmear();
+			} else {
+				Vector3 positionDelta = Vector3.zero;
+
+				positionDelta += this.getGravityComponent(controller);
 			
-		}
-		
-		// Rotate the input from world space to camera space and apply a force in the appropriate direction
-		this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * forceMultiplier);
-		
-		// TODO: add calulation so that the player smears to the edge of their light radius
-		//		if(Input.GetButtonDown("Smear")){
-		//			this.rigidbody.AddForce(Quaternion.LookRotation (movementDirection) * input * 300);
-		//		}
-	}
-	
-	void OnCollisionEnter(Collision collision){
-		if(collision.gameObject.tag == "Floor"){
-			Debug.Log("Touching floor");
-			characterState.inAir = false;
-			this.rigidbody.mass = 60;
-			this.rigidbody.drag = 5;
-			Physics.gravity = normalGravity;
-		}
-	}
-	
-	void OnCollisionExit(Collision collision){
-		if(collision.gameObject.tag == "Floor"){
-			Debug.Log("Not Touching floor");
-			characterState.inAir = true;
-			//this.rigidbody.mass = 0.01f;
+				if(!characterState.isMovementDirectionLocked()){
+					positionDelta += this.getMovementComponent();
+					lookInDirectionOfVector(positionDelta);
+				}
+
+				positionDelta += new Vector3(0.0f, -1.0f, 0.0f);
+				
+				controller.Move (positionDelta * Time.deltaTime);
+			}
+
 		}
 	}
 }
