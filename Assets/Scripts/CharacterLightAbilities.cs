@@ -58,8 +58,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		lsc.setCharacter(this.gameObject);
 		lsc.setKey(characterState.lightShards.addLightShard(ls));
 
-		ls.rigidbody.AddForce(3000 * throwDirection);
-		ls.rigidbody.AddForce(400 * Vector3.up);
+		lsc.getThrown(this.transform.position, throwDirection);
 		// There is currently no csphere collider on the cahracter
 		// Physics.IgnoreCollision(ls.GetComponent<CapsuleCollider>(), this.GetComponentInChildren<SphereCollider>());	
 	}
@@ -110,7 +109,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 			// Teleport to a marker if one is selected
 			if(hitMarkerLightShardID != -1) {
 				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
-				this.transform.position = hitLightShard.transform.position;
+				this.GetComponent<CharacterMovement2>().velocity.y = 0;
+				this.transform.position = hitLightShard.transform.position + new Vector3(0, 1.0f, 0);
 				// Destroy the lightshard
 				// hitLightShard.GetComponent<LightShardController>().cleanUp();
 			}
