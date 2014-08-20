@@ -128,6 +128,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
 			GameObject marker = Instantiate(lightShardMarker, transform.position + shardDirection.Value, Quaternion.identity) as GameObject;
 			marker.GetComponent<LightShardMarker>().lightShardID = shardDirection.Key;
+			marker.transform.forward = shardDirection.Value;
          	lightShardMarkers.Add(marker);
 		}
 	}
