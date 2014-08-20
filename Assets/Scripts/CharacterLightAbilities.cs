@@ -111,7 +111,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 			// Teleport to a marker if one is selected
 			if(hitMarkerLightShardID != -1) {
 				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
-				this.GetComponent<CharacterMovement2>().velocity.y = 0;
+				this.GetComponent<CharacterMovement2>().verticalVelocity.y = 0;
 				this.transform.position = hitLightShard.transform.position + new Vector3(0, 1.0f, 0);
 				// Destroy the lightshard
 				// hitLightShard.GetComponent<LightShardController>().cleanUp();

@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class CharacterMovement2 : MonoBehaviour {
-	public Vector3 velocity;
+	public Vector3 verticalVelocity;
 	public float jumpSpeed;
 	public float gravity;
 	
 	public float speed;
-	private Vector3 moveVector = Vector3.zero;
 
 	public ThirdPersonCameraController script;
 
@@ -19,62 +18,83 @@ public class CharacterMovement2 : MonoBehaviour {
 
 	public CharacterState characterState;
 
+	bool isSmearing() {
+		return smearTimeRemaining > 0;
+	}
+
+	void advanceSmear(CharacterController controller) {
+		float fraction = 1 - smearTimeRemaining / smearTime;
+		
+		controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
+		
+		smearTimeRemaining -= Time.deltaTime;
+	}
+
+	void startSmear() {
+		this.smearTimeRemaining = this.smearTime;
+		this.smearStartPosition = this.transform.position;
+		this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
+	}
+
+	Vector3 getGravityComponent(CharacterController controller) {
+		if (controller.isGrounded) {
+			verticalVelocity.y = 0.0f;
+			if ( Input.GetButtonDown ("Jump")) {
+				verticalVelocity.y += jumpSpeed;
+			}
+		} else {
+			verticalVelocity.y -= gravity;
+		}
+		return verticalVelocity;
+	}
+
+	Vector3 getMovementComponent() {
+		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		
+		input.Normalize ();
+		
+		// Calculate the forward direction under current camera rotation
+		Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
+		movementDirection.y = 0;
+		movementDirection.Normalize ();
+		characterState.setCurrentForwardDirection(movementDirection);
+		
+		return Quaternion.LookRotation(movementDirection) * input * speed;
+	}
+
+	void lookInDirectionOfVector(Vector3 vector) {
+		if (Vector3.Magnitude(vector) >= 0.3) {
+			this.transform.forward = new Vector3(
+				vector.x,
+				0.0f,
+				vector.z
+			);
+		}
+	}
+
 	void Update() {
 		CharacterController controller = GetComponent<CharacterController> ();
 
-		if (smearTimeRemaining > 0) {
-			float fraction = 1 - smearTimeRemaining / smearTime;
-
-			controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
-
-			smearTimeRemaining -= Time.deltaTime;
+		if (isSmearing()) {
+			advanceSmear(controller);
 		} else {
-
 			if (Input.GetButtonDown("Smear")) {
-				this.smearTimeRemaining = this.smearTime;
-				this.smearStartPosition = this.transform.position;
-				this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
-			}
-
-			if (controller.isGrounded) {
-				velocity.y = 0.0f;
-				if ( Input.GetButtonDown ("Jump")) {
-					velocity.y += jumpSpeed;
-				}
+				startSmear();
 			} else {
-				velocity.y -= gravity;
-			}
+				Vector3 positionDelta = Vector3.zero;
 
-
-
-			if(!characterState.isMovementDirectionLocked()){
-				Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
-
-				input.Normalize ();
-
-				// Calculate the forward direction under current camera rotation
-				Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
-				movementDirection.y = 0;
-				movementDirection.Normalize ();
-				characterState.setCurrentForwardDirection(movementDirection);
-
-
-				moveVector = Quaternion.LookRotation(movementDirection) * input * speed;
-
-				if (Vector3.Magnitude(moveVector) >= 0.1) {
-					Vector3 temp = this.transform.forward;
-					temp.x = moveVector.x;
-					temp.z = moveVector.z;
-					this.transform.forward = temp;
+				positionDelta += this.getGravityComponent(controller);
+			
+				if(!characterState.isMovementDirectionLocked()){
+					positionDelta += this.getMovementComponent();
+					lookInDirectionOfVector(positionDelta);
 				}
+
+				positionDelta += new Vector3(0.0f, -0.1f, 0.0f);
+				
+				controller.Move (positionDelta * Time.deltaTime);
 			}
 
-			controller.Move (Time.deltaTime * (
-				moveVector +
-				// Stop from bouncing off floor constantly.
-				new Vector3 (0.0f, -0.01f, 0.0f) +
-				velocity
-			));
 		}
 	}
 }
