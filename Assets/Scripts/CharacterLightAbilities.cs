@@ -37,7 +37,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void updateLockMovement() {
 		// Lock the character's movement if the Right or Left trigger is down.
-		characterState.setMovementDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
+		// characterState.setMovementDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
+		characterState.setCameraDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
 	}
 
 	void throwLightShard() {
@@ -45,7 +46,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		Vector3 throwDirection = cameraPosition.position - this.transform.position;
 		throwDirection.y = 0;
 		throwDirection.Normalize();
-		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
 		throwDirection = Quaternion.LookRotation (throwDirection) * input;
 		
 		GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
