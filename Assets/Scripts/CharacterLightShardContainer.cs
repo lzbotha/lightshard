@@ -42,6 +42,10 @@ public class CharacterLightShardContainer{
 		return lightShards[key];
 	}
 
+	public bool containsKey(int key) {
+		return lightShards.ContainsKey(key);
+	}
+
 	public bool removeLightShard(int key) {
 		bool removed = lightShards.Remove(key);
 		if (removed)
