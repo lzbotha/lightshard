@@ -770,6 +770,7 @@ MonoBehaviour:
   inAir: 0
   lightRadius: 0
   movementDirectionLocked: 0
+  latestLightShardID: -1
 --- !u!143 &1934260622
 CharacterController:
   m_ObjectHideFlags: 0
@@ -799,7 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 20
   gravity: 1
-  speed: 5
+  speed: 10
   script: {fileID: 2078079568}
   smearTime: .300000012
   characterState: {fileID: 1934260621}
@@ -821,6 +822,8 @@ MonoBehaviour:
   flashLightRadiusIncrease: 2
   flashLightRegenDebuff: -.5
   flashCost: 2
+  throwAttractiveLightShardCost: .5
+  throwRepellingLightShardCost: .5
   lightShardMarker: {fileID: 100000, guid: 7a4212d5c3d68e04c934a6bbca0710a1, type: 2}
 --- !u!1 &1982617356
 GameObject:

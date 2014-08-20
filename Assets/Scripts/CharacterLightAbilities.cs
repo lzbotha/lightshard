@@ -12,6 +12,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 	public float flashLightRegenDebuff = -0.5f;
 	public float flashCost = 2.0f;
 
+	public float throwAttractiveLightShardCost = 0.0f;
+	public float throwRepellingLightShardCost = 0.0f;
+
 	private bool wasRightAxisDown;
 	private bool wasLeftAxisDown;
 
@@ -72,10 +75,16 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void updateThrowLightShard() {
 		// If the player has just released the right axis.
 		if (this.wasRightAxisDown && !isAxisDown ("ThrowRight")) {
-			throwLightShard();
+			if(characterState.canUseAbility(throwAttractiveLightShardCost)){
+				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
+				throwLightShard();
+			}
 		}
 		if (this.wasLeftAxisDown && !isAxisDown ("ThrowLeft")) {
-			throwLightShard();
+			if(characterState.canUseAbility(throwRepellingLightShardCost)){
+				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
+				throwLightShard();
+			}
 		}
 		this.wasRightAxisDown = isAxisDown("ThrowRight");
 		this.wasLeftAxisDown = isAxisDown("ThrowLeft");
@@ -84,6 +93,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void handleTeleport(string button){
 		if(Input.GetButton(button)) {
 			characterState.setCameraDirectionLocked(true);
+
+			foreach(GameObject marker in lightShardMarkers){
+				Destroy(marker);
+			}
 
 			if(characterState.lightShards.getNumberOfLightShards() > 0){
 				List<KeyValuePair<int, Vector3>> directionsToLightShards = characterState.lightShards.getDirectionsToLightShardsFromPosition(this.transform.position);
@@ -113,13 +126,14 @@ public class CharacterLightAbilities : MonoBehaviour {
 			}
 		}
 		else if (Input.GetButtonUp(button)) {
+			characterState.setCameraDirectionLocked(false);
+
 			foreach(GameObject marker in lightShardMarkers){
 				Destroy(marker);
 			}
-			characterState.setCameraDirectionLocked(false);
 
 			// Teleport to a marker if one is selected
-			if(hitMarkerLightShardID != -1) {
+			if(hitMarkerLightShardID != -1 && characterState.lightShards.containsKey(hitMarkerLightShardID)) {
 				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
 				characterState.setVerticalSpeed(0.0f);
 				this.transform.position = hitLightShard.transform.position + new Vector3(0, 1.0f, 0);
@@ -131,9 +145,6 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void drawMarkers(List<KeyValuePair<int, Vector3>> directionsToLightShards){
-		foreach(GameObject marker in lightShardMarkers){
-			Destroy(marker);
-		}
 		lightShardMarkers.Clear();
 		foreach(KeyValuePair<int, Vector3> shardDirection in directionsToLightShards){
 			GameObject marker = Instantiate(lightShardMarker, transform.position + shardDirection.Value, Quaternion.identity) as GameObject;
