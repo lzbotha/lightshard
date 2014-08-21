@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour {
 	private const int SETTINGSMENU = 1;
 	private const int CREDITS = 2;
 
+	private int currentFocusId = -1;
+
 	private string[] mainMenuButtons = new string[5] {"Single Play", "Cooperative Play", "Option", "Credits", "Exit"};
 	private string[] mainMenuClicks = new string[5] {"onSinglePlayClick", "onCooperativePlayClick", "onOptionsClick", "onCreditsClick", "onExitClick"};
 
@@ -20,7 +22,7 @@ public class Menu : MonoBehaviour {
 			down += 50;
 		}
 	}
-	
+
 	// TODO: change the last term to a lambda
 	private void drawButton(string name, float x, float y, float width, float height, string onClickMethodName){
 		GUI.SetNextControlName(name);
@@ -38,10 +40,12 @@ public class Menu : MonoBehaviour {
 	}
 
 	private void onOptionsClick(){
+		currentFocusId = -1;
 		currentMenu = SETTINGSMENU;
 	}
 
 	private void onCreditsClick(){
+		currentFocusId = -1;
 		currentMenu = CREDITS;
 	}
 
