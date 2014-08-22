@@ -10,7 +10,14 @@ public class Menu : MonoBehaviour {
 	private const int SETTINGSMENU = 1;
 	private const int CREDITS = 2;
 
-	private int currentFocusId = -1;
+	private int currentFocusId = 0;
+
+	private bool wasUpButtonDown = false;
+	private bool wasDownButtonDown = false;
+	private bool wasLeftButtonDown = false;
+	private bool wasRightButtonDown = false;
+
+	private bool shouldClick = false;
 
 	private string[] mainMenuButtons = new string[5] {"Single Play", "Cooperative Play", "Option", "Credits", "Exit"};
 	private string[] mainMenuClicks = new string[5] {"onSinglePlayClick", "onCooperativePlayClick", "onOptionsClick", "onCreditsClick", "onExitClick"};
@@ -68,6 +75,15 @@ public class Menu : MonoBehaviour {
 	void OnGUI(){
 		if(currentMenu == MAINMENUID){
 			drawMainMenu();
+			
+			currentFocusId += mainMenuButtons.Length;
+			currentFocusId %= mainMenuButtons.Length;
+			GUI.FocusControl(mainMenuButtons[currentFocusId]);
+
+			if(shouldClick){
+				shouldClick = false;
+				Invoke(mainMenuClicks[currentFocusId] ,0);
+			}
 		}
 		else if (currentMenu == SETTINGSMENU){
 			drawSettings();
@@ -75,5 +91,57 @@ public class Menu : MonoBehaviour {
 		else if (currentMenu == CREDITS){
 			drawCredits();
 		}
+	}
+
+	void Update(){
+		if(isUpButtonDown()){
+			currentFocusId--;
+		}
+		if(isDownButtonDown()){
+			currentFocusId++;
+		}
+		if(Input.GetButtonDown("Jump")){
+			shouldClick = true;
+		}
+	}
+
+	bool isUpButtonDown(){
+		if(!wasUpButtonDown && Input.GetAxis("DpadVertical") > 0){
+			wasUpButtonDown = true;
+			return true;
+		} else if (wasUpButtonDown && Input.GetAxis("DpadVertical") <= 0){
+			wasUpButtonDown = false;
+		}
+		return false;
+	}
+
+	bool isDownButtonDown(){
+		if(!wasDownButtonDown && Input.GetAxis("DpadVertical") < 0){
+			wasDownButtonDown = true;
+			return true;
+		} else if (wasDownButtonDown && Input.GetAxis("DpadVertical") >= 0){
+			wasDownButtonDown = false;
+		}
+		return false;
+	}
+
+	bool isRightButtonDown(){
+		if(!wasRightButtonDown && Input.GetAxis("DpadHorizontal") > 0){
+			wasRightButtonDown = true;
+			return true;
+		} else if (wasRightButtonDown && Input.GetAxis("DpadHorizontal") <= 0){
+			wasRightButtonDown = false;
+		}
+		return false;
+	}
+
+	bool isLeftButtonDown(){
+		if(!wasLeftButtonDown && Input.GetAxis("DpadHorizontal") < 0){
+			wasLeftButtonDown = true;
+			return true;
+		} else if (wasLeftButtonDown && Input.GetAxis("DpadHorizontal") >= 0){
+			wasLeftButtonDown = false;
+		}
+		return false;
 	}
 }
