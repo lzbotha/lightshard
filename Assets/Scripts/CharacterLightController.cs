@@ -11,6 +11,7 @@ public class CharacterLightController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// RenderSettings.ambientLight = Color.black;
 		characterState.setLightRegenRate(normalLightRegenRate);
 		characterState.setLightRadius(normalLightRadius);
 		characterState.setMinLightRadius(minLightRadius);
