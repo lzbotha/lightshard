@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	public CharacterState characterState;
 
-	bool isSmearing() {
+	public bool isSmearing() {
 		return smearTimeRemaining > 0;
 	}
 
