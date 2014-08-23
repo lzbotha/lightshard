@@ -63,7 +63,7 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	void lookInDirectionOfVector(Vector3 vector) {
-		if (Vector3.Magnitude(vector) >= 0.3) {
+		if (Vector3.Magnitude(new Vector3(vector.x, 0.0f, vector.z)) >= 0.3) {
 			this.transform.forward = new Vector3(
 				vector.x,
 				0.0f,
