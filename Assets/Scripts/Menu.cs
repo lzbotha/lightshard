@@ -30,7 +30,20 @@ public class Menu : MonoBehaviour {
 		}
 	}
 
-	// TODO: change the last term to a lambda
+	void drawCredits(){
+		if(GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 160, mainMenuButtonWidth, mainMenuButtonHeight), "Back")){
+			// currentMenu = MAINMENUID;
+			print("credits");
+		}
+	}
+
+	void drawSettings(){
+		if(GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 160, mainMenuButtonWidth, mainMenuButtonHeight), "Back")){
+			// currentMenu = MAINMENUID;
+			print("settings");
+		}
+	}
+
 	private void drawButton(string name, float x, float y, float width, float height, string onClickMethodName){
 		GUI.SetNextControlName(name);
 		if (GUI.Button(new Rect(x, y, width, height), name)){
@@ -58,18 +71,6 @@ public class Menu : MonoBehaviour {
 
 	private void onExitClick(){
 		Debug.Log("There is no leaving... your soul is ours");
-	}
-
-	void drawCredits(){
-		if(GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 160, mainMenuButtonWidth, mainMenuButtonHeight), "Back")){
-			currentMenu = MAINMENUID;
-		}
-	}
-
-	void drawSettings(){
-		if(GUI.Button(new Rect(Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, 160, mainMenuButtonWidth, mainMenuButtonHeight), "Back")){
-			currentMenu = MAINMENUID;
-		}
 	}
 
 	void OnGUI(){
