@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	public CharacterState characterState;
 
-	private float dampening = 10;
+	private float dampening = 50;
 	private Vector3 velocity = Vector3.zero;
 
 	public bool isSmearing() {
@@ -46,7 +46,8 @@ public class CharacterMovement : MonoBehaviour {
 				characterState.setVerticalSpeed(characterState.getVerticalSpeed() + jumpSpeed);
 			}
 		} else {
-			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - gravity);
+			// THIS LINE IS FUNDAMENTALLY FUCKED WITHOUT THE TIME.DELTATIME
+			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - gravity * Time.deltaTime);
 		}
 		return new Vector3 (0.0f, characterState.getVerticalSpeed (), 0.0f);
 	}
