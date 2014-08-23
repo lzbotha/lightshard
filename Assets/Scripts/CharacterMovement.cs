@@ -17,6 +17,9 @@ public class CharacterMovement : MonoBehaviour {
 
 	public CharacterState characterState;
 
+	private float dampening = 10;
+	private Vector3 velocity = Vector3.zero;
+
 	public bool isSmearing() {
 		return smearTimeRemaining > 0;
 	}
@@ -37,7 +40,7 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	Vector3 getGravityComponent(CharacterController controller) {
-		if (controller.isGrounded) {
+		if (controller.isGrounded && characterState.getVerticalSpeed() <= 0.0f) {
 			characterState.setVerticalSpeed(0.0f);
 			if ( Input.GetButtonDown ("Jump")) {
 				characterState.setVerticalSpeed(characterState.getVerticalSpeed() + jumpSpeed);
@@ -60,6 +63,25 @@ public class CharacterMovement : MonoBehaviour {
 		characterState.setCurrentForwardDirection(movementDirection);
 		
 		return Quaternion.LookRotation(movementDirection) * input * speed;
+	}
+
+	Vector3 getVelocityComponent(){
+		if(velocity.x > 0)
+			velocity.x = Mathf.Clamp(velocity.x - dampening * Time.deltaTime, 0, Mathf.Infinity);
+		else if (velocity.x < 0)
+			velocity.x = Mathf.Clamp(velocity.x + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
+		if(velocity.z > 0)	
+			velocity.z = Mathf.Clamp(velocity.z - dampening * Time.deltaTime, 0, Mathf.Infinity);
+		else if (velocity.z < 0)
+			velocity.z = Mathf.Clamp(velocity.z + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
+		print(Time.deltaTime * velocity);
+		return Time.deltaTime * velocity;
+	}
+
+	public void applyVelocity(Vector3 velocity){
+		characterState.setVerticalSpeed(characterState.getVerticalSpeed() + velocity.y);
+		velocity.y = 0;
+		this.velocity = velocity;
 	}
 
 	void lookInDirectionOfVector(Vector3 vector) {
@@ -92,9 +114,10 @@ public class CharacterMovement : MonoBehaviour {
 					lookInDirectionOfVector(positionDelta);
 				}
 
+				// Gravity fudge factor
 				positionDelta += new Vector3(0.0f, -1.0f, 0.0f);
 				
-				controller.Move (positionDelta * Time.deltaTime);
+				controller.Move (positionDelta * Time.deltaTime + getVelocityComponent());
 			}
 
 		}
