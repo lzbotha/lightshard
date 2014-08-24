@@ -7,6 +7,8 @@ public abstract class Mine : MonoBehaviour {
 	public float detectionRadius = 3.0f;
 	public SphereCollider detectionTrigger;
 	public float armingRadius = 3.0f;
+	public float XZForce = 30.0f;
+	public float YForce = 10.0f;
 
 	private HashSet<GameObject> objectsInDetectionRange = new HashSet<GameObject>();
 
@@ -34,7 +36,7 @@ public abstract class Mine : MonoBehaviour {
 		foreach(GameObject obj in objectsInDetectionRange){
 			Vector3 direction = obj.transform.position - this.transform.position;
 			direction.Normalize();
-			obj.GetComponent<BasicMovement>().applyForce(direction * 30);
+			obj.GetComponent<BasicMovement>().applyForce(new Vector3(direction.x * XZForce, direction.y * YForce, direction.z * XZForce));
 		}
 		disarm();
 	}
@@ -54,7 +56,6 @@ public abstract class Mine : MonoBehaviour {
 		// TODO: this can now be changed to work with layers, where everything 
 		// that is in this layer has a BasicMovement script
 		if(other.tag == "Player"){
-			print("sup");
 			onDetection();
 			objectsInDetectionRange.Add(other.gameObject);
 		}
