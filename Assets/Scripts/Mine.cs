@@ -25,6 +25,10 @@ public abstract class Mine : MonoBehaviour {
 	// blow up shortly
 	public abstract void onArm();
 
+	// use this method to do things when there are no longer any objects within detection
+	// range, e.g. change colour of mine back to normal
+	public abstract void disarm();
+
 	void detonate(){
 		// For each object in range apply an explosive force
 		foreach(GameObject obj in objectsInDetectionRange){
@@ -32,10 +36,12 @@ public abstract class Mine : MonoBehaviour {
 			direction.Normalize();
 			obj.GetComponent<BasicMovement>().applyForce(direction * 30);
 		}
+		disarm();
 	}
 
 	void Update () {
 		// If any object comes within arming range trigger the mine
+		List<GameObject> toBeRemoved = new List<GameObject>();
 		foreach(GameObject obj in objectsInDetectionRange){
 			if(Vector3.Distance(this.transform.position, obj.transform.position) <= armingRadius){
 				onArm();
@@ -57,6 +63,8 @@ public abstract class Mine : MonoBehaviour {
 	void OnTriggerExit(Collider other){
 		if(other.tag == "Player"){
 			objectsInDetectionRange.Remove(other.gameObject);
+			if(objectsInDetectionRange.Count == 0)
+				disarm();
 		}
 	}
 }

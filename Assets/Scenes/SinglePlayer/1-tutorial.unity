@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detonateDelay: .5
-  detectionRadius: 3
+  detectionRadius: 5
   detectionTrigger: {fileID: 2052478077}
   armingRadius: 3
 --- !u!23 &2052478076
