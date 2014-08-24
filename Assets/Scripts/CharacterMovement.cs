@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterMovement : MonoBehaviour {
-	public float jumpSpeed;
-	public float gravity;
-	
-	public float speed;
+public class CharacterMovement : BasicMovement {
 
 	public ThirdPersonCameraController script;
 
@@ -17,8 +13,6 @@ public class CharacterMovement : MonoBehaviour {
 
 	public CharacterState characterState;
 
-	private float dampening = 50;
-	private Vector3 velocity = Vector3.zero;
 
 	public bool isSmearing() {
 		return smearTimeRemaining > 0;
@@ -47,7 +41,7 @@ public class CharacterMovement : MonoBehaviour {
 			}
 		} else {
 			// THIS LINE IS FUNDAMENTALLY FUCKED WITHOUT THE TIME.DELTATIME
-			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - gravity * Time.deltaTime);
+			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - this.gravity * Time.deltaTime);
 		}
 		return new Vector3 (0.0f, characterState.getVerticalSpeed (), 0.0f);
 	}
@@ -64,25 +58,6 @@ public class CharacterMovement : MonoBehaviour {
 		characterState.setCurrentForwardDirection(movementDirection);
 		
 		return Quaternion.LookRotation(movementDirection) * input * speed;
-	}
-
-	Vector3 getVelocityComponent(){
-		if(velocity.x > 0)
-			velocity.x = Mathf.Clamp(velocity.x - dampening * Time.deltaTime, 0, Mathf.Infinity);
-		else if (velocity.x < 0)
-			velocity.x = Mathf.Clamp(velocity.x + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
-		if(velocity.z > 0)	
-			velocity.z = Mathf.Clamp(velocity.z - dampening * Time.deltaTime, 0, Mathf.Infinity);
-		else if (velocity.z < 0)
-			velocity.z = Mathf.Clamp(velocity.z + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
-		print(Time.deltaTime * velocity);
-		return Time.deltaTime * velocity;
-	}
-
-	public void applyVelocity(Vector3 velocity){
-		characterState.setVerticalSpeed(characterState.getVerticalSpeed() + velocity.y);
-		velocity.y = 0;
-		this.velocity = velocity;
 	}
 
 	void lookInDirectionOfVector(Vector3 vector) {

@@ -25,7 +25,7 @@ public abstract class Mine : MonoBehaviour {
 	void detonate(){
 		Vector3 direction = obj.transform.position - this.transform.position;
 		direction.Normalize();
-		obj.GetComponent<CharacterMovement>().applyVelocity(direction * 30);
+		obj.GetComponent<CharacterMovement>().applyForce(direction * 30);
 	}
 
 	void OnTriggerEnter(Collider other){
