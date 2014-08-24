@@ -1,39 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public abstract class Mine : MonoBehaviour {
 	public float detonateDelay = 0.5f;
 	public float detectionRadius = 3.0f;
+	public SphereCollider detectionTrigger;
 	public float armingRadius = 3.0f;
 
-	private GameObject obj;
+	private HashSet<GameObject> objectsInDetectionRange = new HashSet<GameObject>();
+
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		detectionTrigger.radius = detectionRadius;
 	}
 
-	public abstract void onArm();
-
+	// Use this method to do things when objects come within the mines detection range
+	// e.g. change the colour of the mine to inform the player that it is now active
 	public abstract void onDetection();
 
+	// Use this method to do things when objects come within the mines arming range
+	// e.g. change the colour of the mine to inform the player that it is going to
+	// blow up shortly
+	public abstract void onArm();
+
 	void detonate(){
-		Vector3 direction = obj.transform.position - this.transform.position;
-		direction.Normalize();
-		obj.GetComponent<BasicMovement>().applyForce(direction * 30);
+		// For each object in range apply an explosive force
+		foreach(GameObject obj in objectsInDetectionRange){
+			Vector3 direction = obj.transform.position - this.transform.position;
+			direction.Normalize();
+			obj.GetComponent<BasicMovement>().applyForce(direction * 30);
+		}
+	}
+
+	void Update () {
+		// If any object comes within arming range trigger the mine
+		foreach(GameObject obj in objectsInDetectionRange){
+			if(Vector3.Distance(this.transform.position, obj.transform.position) <= armingRadius){
+				onArm();
+				Invoke("detonate", detonateDelay);
+				break;
+			}
+		}
 	}
 
 	void OnTriggerEnter(Collider other){
 		// TODO: this can now be changed to work with layers, where everything 
 		// that is in this layer has a BasicMovement script
 		if(other.tag == "Player"){
-			obj = other.gameObject;
-			Invoke("detonate", detonateDelay);
+			onDetection();
+			objectsInDetectionRange.Add(other.gameObject);
+		}
+	}
+
+	void OnTriggerExit(Collider other){
+		if(other.tag == "Player"){
+			objectsInDetectionRange.Remove(other.gameObject);
 		}
 	}
 }

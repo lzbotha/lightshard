@@ -842,9 +842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edf18b8abcc08b418c54bc5358ad130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 20
   gravity: 50
+  jumpSpeed: 20
   speed: 10
+  mass: 1
+  dampening: 50
   script: {fileID: 2078079568}
   smearTime: .300000012
   characterState: {fileID: 1934260621}
@@ -986,6 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detonateDelay: .5
   detectionRadius: 3
+  detectionTrigger: {fileID: 2052478077}
   armingRadius: 3
 --- !u!23 &2052478076
 Renderer:
