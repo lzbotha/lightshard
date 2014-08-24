@@ -25,10 +25,12 @@ public abstract class Mine : MonoBehaviour {
 	void detonate(){
 		Vector3 direction = obj.transform.position - this.transform.position;
 		direction.Normalize();
-		obj.GetComponent<CharacterMovement>().applyForce(direction * 30);
+		obj.GetComponent<BasicMovement>().applyForce(direction * 30);
 	}
 
 	void OnTriggerEnter(Collider other){
+		// TODO: this can now be changed to work with layers, where everything 
+		// that is in this layer has a BasicMovement script
 		if(other.tag == "Player"){
 			obj = other.gameObject;
 			Invoke("detonate", detonateDelay);

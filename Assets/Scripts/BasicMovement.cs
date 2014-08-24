@@ -13,14 +13,13 @@ public class BasicMovement : MonoBehaviour {
 
 	public Vector3 getVelocityComponent(){
 		if(velocity.x > 0)
-			velocity.x = Mathf.Clamp(velocity.x - dampening * Time.deltaTime, 0, Mathf.Infinity);
+			velocity.x = Mathf.Clamp(velocity.x - this.dampening * Time.deltaTime, 0, Mathf.Infinity);
 		else if (velocity.x < 0)
-			velocity.x = Mathf.Clamp(velocity.x + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
+			velocity.x = Mathf.Clamp(velocity.x + this.dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
 		if(velocity.z > 0)	
-			velocity.z = Mathf.Clamp(velocity.z - dampening * Time.deltaTime, 0, Mathf.Infinity);
+			velocity.z = Mathf.Clamp(velocity.z - this.dampening * Time.deltaTime, 0, Mathf.Infinity);
 		else if (velocity.z < 0)
-			velocity.z = Mathf.Clamp(velocity.z + dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
-		print(Time.deltaTime * velocity);
+			velocity.z = Mathf.Clamp(velocity.z + this.dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
 		return Time.deltaTime * velocity;
 	}
 
