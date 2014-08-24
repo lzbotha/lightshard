@@ -41,7 +41,6 @@ public abstract class Mine : MonoBehaviour {
 
 	void Update () {
 		// If any object comes within arming range trigger the mine
-		List<GameObject> toBeRemoved = new List<GameObject>();
 		foreach(GameObject obj in objectsInDetectionRange){
 			if(Vector3.Distance(this.transform.position, obj.transform.position) <= armingRadius){
 				onArm();
@@ -55,6 +54,7 @@ public abstract class Mine : MonoBehaviour {
 		// TODO: this can now be changed to work with layers, where everything 
 		// that is in this layer has a BasicMovement script
 		if(other.tag == "Player"){
+			print("sup");
 			onDetection();
 			objectsInDetectionRange.Add(other.gameObject);
 		}
