@@ -6,7 +6,7 @@ public class Trampoline : MonoBehaviour {
 	// all tags that can bounce on this trampoline
 	public string[] bouncableTags;
 
-	void OnTriggerEnter(Collision other){
+	void OnTriggerEnter(Collider other){
 		print("bounce");
 		BasicState state = other.gameObject.GetComponent<BasicState>();
 		Vector3 velocity = state.getVelocity();
