@@ -9,7 +9,7 @@ public abstract class Mine : MonoBehaviour {
 	public float armingRadius = 3.0f;
 
 	private HashSet<GameObject> objectsInDetectionRange = new HashSet<GameObject>();
-
+	private bool canExplode = true;
 
 	// Use this for initialization
 	void Start () {
@@ -33,21 +33,29 @@ public abstract class Mine : MonoBehaviour {
 	public abstract void onDetonate(GameObject obj);
 
 	void detonate(){
+		canExplode = true;
+
 		// For each object in range apply an explosive force
 		foreach(GameObject obj in objectsInDetectionRange){
 			onDetonate(obj);
 		}
+
+		// if this is not done the detonation effect is applied multiple times to an object depending on framerate
 		objectsInDetectionRange.Clear();
 		onDisarm();
 	}
 
 	void Update () {
-		// If any object comes within arming range trigger the mine
-		foreach(GameObject obj in objectsInDetectionRange){
-			if(Vector3.Distance(this.transform.position, obj.transform.position) <= armingRadius){
-				onArm();
-				Invoke("detonate", detonateDelay);
-				break;
+		// if no explosion effect is currently pending
+		if(canExplode){
+			// If any object comes within arming range trigger the mine
+			foreach(GameObject obj in objectsInDetectionRange){
+				if(Vector3.Distance(this.transform.position, obj.transform.position) <= armingRadius){
+					onArm();
+					Invoke("detonate", detonateDelay);
+					canExplode = false;
+					break;
+				}
 			}
 		}
 	}
@@ -64,7 +72,7 @@ public abstract class Mine : MonoBehaviour {
 	void OnTriggerExit(Collider other){
 		if(other.tag == "Player"){
 			objectsInDetectionRange.Remove(other.gameObject);
-			if(objectsInDetectionRange.Count == 0)
+			if(objectsInDetectionRange.Count == 0 && canExplode)
 				onDisarm();
 		}
 	}
