@@ -37,6 +37,7 @@ public abstract class Mine : MonoBehaviour {
 		foreach(GameObject obj in objectsInDetectionRange){
 			onDetonate(obj);
 		}
+		objectsInDetectionRange.Clear();
 		onDisarm();
 	}
 

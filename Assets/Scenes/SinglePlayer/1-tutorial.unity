@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102f9fe753acfcf46a68eeb90992fafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detonateDelay: .5
+  detonateDelay: 2
   detectionRadius: 7
   detectionTrigger: {fileID: 1522453465}
   armingRadius: 4

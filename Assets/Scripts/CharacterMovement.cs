@@ -92,7 +92,6 @@ public class CharacterMovement : BasicMovement {
 
 				// Gravity fudge factor
 				positionDelta += new Vector3(0.0f, -1.0f, 0.0f);
-				
 				controller.Move (positionDelta * Time.deltaTime + getVelocityComponent());
 			}
 
