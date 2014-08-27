@@ -51,6 +51,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 		Vector3 throwDirection = cameraPosition.position - this.transform.position;
 		throwDirection.y = 0;
 		throwDirection.Normalize();
+
+		
 		Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
 		throwDirection = Quaternion.LookRotation (throwDirection) * input;
 		
@@ -69,7 +71,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		this.characterState.latestLightShardID = key;
 
-		lsc.getThrown(this.transform.position, throwDirection);
+		if(throwDirection == Vector3.zero)
+			throwDirection = this.transform.forward;
+		ls.GetComponent<LightShardMovement>().throwLightShard(this.transform.position, throwDirection);
 	}
 
 	void updateThrowLightShard() {
