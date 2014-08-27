@@ -386,6 +386,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
+      propertyPath: gravity
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
   m_RootGameObject: {fileID: 852216517}
@@ -1270,11 +1274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edf18b8abcc08b418c54bc5358ad130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 50
+  gravity: -50
   jumpSpeed: 20
   speed: 10
   mass: 1
-  dampening: 50
   script: {fileID: 2078079568}
   smearTime: .300000012
   characterState: {fileID: 1934260621}

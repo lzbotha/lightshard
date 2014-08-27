@@ -13,15 +13,16 @@ public class CharacterMovement : BasicMovement {
 
 	public CharacterState characterState;
 
+	private Vector3 moveComponent = Vector3.zero;
 
 	public bool isSmearing() {
 		return smearTimeRemaining > 0;
 	}
 
-	void advanceSmear(CharacterController controller) {
+	void updateSmear() {
 		float fraction = 1 - smearTimeRemaining / smearTime;
 		
-		controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
+		this.controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
 		
 		smearTimeRemaining -= Time.deltaTime;
 	}
@@ -33,17 +34,17 @@ public class CharacterMovement : BasicMovement {
 		this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
 	}
 
-	Vector3 getGravityComponent(CharacterController controller) {
-		if (controller.isGrounded && characterState.getVerticalSpeed() <= 0.0f) {
-			characterState.setVerticalSpeed(0.0f);
-			if ( Input.GetButtonDown ("Jump")) {
-				characterState.setVerticalSpeed(characterState.getVerticalSpeed() + jumpSpeed);
+	void updateGravity(){
+		if (this.controller.isGrounded && characterState.getVelocity().y <= 0.0f) {
+			characterState.setVelocityY(0.0f);
+			if (Input.GetButtonDown ("Jump")) {
+				characterState.setVelocityY(characterState.getVelocity().y + jumpSpeed);
 			}
 		} else {
-			// THIS LINE IS FUNDAMENTALLY FUCKED WITHOUT THE TIME.DELTATIME
-			characterState.setVerticalSpeed(characterState.getVerticalSpeed() - this.gravity * Time.deltaTime);
+			characterState.setVelocityY(characterState.getVelocity().y + this.gravity * Time.deltaTime);
 		}
-		return new Vector3 (0.0f, characterState.getVerticalSpeed (), 0.0f);
+		// Gravity fudge factor
+		characterState.setVelocity(characterState.getVelocity() + new Vector3(0.0f, -1.0f, 0.0f));
 	}
 
 	Vector3 getMovementComponent() {
@@ -71,28 +72,27 @@ public class CharacterMovement : BasicMovement {
 	}
 
 	void Update() {
-		CharacterController controller = GetComponent<CharacterController> ();
-
 		if (isSmearing()) {
 			gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
-			advanceSmear(controller);
+			updateSmear();
 		} else {
 			gameObject.layer = LayerMask.NameToLayer("Default");
 			if (Input.GetButtonDown("Smear")) {
 				startSmear();
 			} else {
-				Vector3 positionDelta = Vector3.zero;
 
-				positionDelta += this.getGravityComponent(controller);
+				updateGravity();
 			
 				if(!characterState.isMovementDirectionLocked()){
-					positionDelta += this.getMovementComponent();
-					lookInDirectionOfVector(positionDelta);
+					// Remove movement component from previous update (this must be done so that movement is instantateous)
+					characterState.setVelocity(characterState.getVelocity() - moveComponent);
+					this.moveComponent = this.getMovementComponent();
+					// Update the velocity component to reflect character movement
+					characterState.setVelocity(characterState.getVelocity() + moveComponent);
+					lookInDirectionOfVector(characterState.getVelocity());
 				}
 
-				// Gravity fudge factor
-				positionDelta += new Vector3(0.0f, -1.0f, 0.0f);
-				controller.Move (positionDelta * Time.deltaTime + getVelocityComponent());
+				controller.Move (characterState.getVelocity() * Time.deltaTime);
 			}
 
 		}

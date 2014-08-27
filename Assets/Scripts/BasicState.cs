@@ -4,26 +4,20 @@ using System.Collections;
 public class BasicState : MonoBehaviour {
 
 	private Vector3 currentForwardDirection;
-	private float verticalSpeed;
-	// continuous velocity object is experiencing in the XZ plane
-	private Vector3 continuousVelocity = Vector3.zero;
+	private Vector3 velocity = Vector3.zero;
 
 	public void setCurrentForwardDirection(Vector3 direction) { currentForwardDirection = direction; }
 	public Vector3 getCurrentForwardDirection() { return currentForwardDirection; }
 
-	public float getVerticalSpeed() {
-		return this.verticalSpeed;
+	public Vector3 getVelocity(){
+		return this.velocity;
 	}
 
-	public void setVerticalSpeed(float verticalSpeed) {
-		this.verticalSpeed = verticalSpeed;
+	public void setVelocity(Vector3 velocity){
+		this.velocity = velocity;
 	}
 
-	public Vector3 getContinuousVelocity(){
-		return continuousVelocity;
-	}
-
-	public void setContinuousVelocity(Vector3 velocity){
-		continuousVelocity = velocity;
+	public void setVelocityY(float y){
+		this.velocity.y = y;
 	}
 }
