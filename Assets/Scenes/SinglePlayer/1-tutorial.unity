@@ -705,8 +705,7 @@ MonoBehaviour:
   detectionRadius: 7
   detectionTrigger: {fileID: 1522453465}
   armingRadius: 4
-  XZForce: 30
-  YForce: 10
+  explosiveForce: {x: 10, y: 10, z: 10}
   shroom: {fileID: 88788241}
 --- !u!135 &1522453465
 SphereCollider:

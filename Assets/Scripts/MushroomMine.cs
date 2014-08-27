@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MushroomMine : Mine {
+public class MushroomMine : ExplosiveMine {
 	public GameObject shroom;
 
-	public override void disarm(){
+	public override void onDisarm(){
 		shroom.renderer.material.color = Color.grey;
 	}
 

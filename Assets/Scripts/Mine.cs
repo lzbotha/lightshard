@@ -7,8 +7,6 @@ public abstract class Mine : MonoBehaviour {
 	public float detectionRadius = 3.0f;
 	public SphereCollider detectionTrigger;
 	public float armingRadius = 3.0f;
-	public float XZForce = 30.0f;
-	public float YForce = 10.0f;
 
 	private HashSet<GameObject> objectsInDetectionRange = new HashSet<GameObject>();
 
@@ -29,16 +27,17 @@ public abstract class Mine : MonoBehaviour {
 
 	// use this method to do things when there are no longer any objects within detection
 	// range, e.g. change colour of mine back to normal
-	public abstract void disarm();
+	public abstract void onDisarm();
+
+	// Use this method it implement the detonation behaviour, e.g. make things explode
+	public abstract void onDetonate(GameObject obj);
 
 	void detonate(){
 		// For each object in range apply an explosive force
 		foreach(GameObject obj in objectsInDetectionRange){
-			Vector3 direction = obj.transform.position - this.transform.position;
-			direction.Normalize();
-			obj.GetComponent<BasicMovement>().applyForce(new Vector3(direction.x * XZForce, direction.y * YForce, direction.z * XZForce));
+			onDetonate(obj);
 		}
-		disarm();
+		onDisarm();
 	}
 
 	void Update () {
@@ -65,7 +64,7 @@ public abstract class Mine : MonoBehaviour {
 		if(other.tag == "Player"){
 			objectsInDetectionRange.Remove(other.gameObject);
 			if(objectsInDetectionRange.Count == 0)
-				disarm();
+				onDisarm();
 		}
 	}
 }
