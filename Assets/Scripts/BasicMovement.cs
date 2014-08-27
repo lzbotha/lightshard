@@ -9,9 +9,15 @@ public class BasicMovement : MonoBehaviour {
 	public float mass = 1.0f;
 
 	public float dampening = 50.0f;
-	private Vector3 velocity = Vector3.zero;
+
+	private BasicState associatedState;
+
+	void Start(){
+		associatedState = this.GetComponent<BasicState>();
+	}
 
 	public Vector3 getVelocityComponent(){
+		Vector3 velocity = associatedState.getContinuousVelocity();
 		if(velocity.x > 0)
 			velocity.x = Mathf.Clamp(velocity.x - this.dampening * Time.deltaTime, 0, Mathf.Infinity);
 		else if (velocity.x < 0)
@@ -24,10 +30,9 @@ public class BasicMovement : MonoBehaviour {
 	}
 
 	public void applyForce(Vector3 force){
-		BasicState state = this.GetComponent<BasicState>();
-		state.setVerticalSpeed(state.getVerticalSpeed() + (force.y / this.mass));
+		associatedState.setVerticalSpeed(associatedState.getVerticalSpeed() + (force.y / this.mass));
 		force.y = 0;
-		this.velocity = (1/this.mass) * force;
+		associatedState.setContinuousVelocity((1/this.mass) * force);
 	}
 
 }
