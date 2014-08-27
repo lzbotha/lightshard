@@ -17,7 +17,11 @@ public class BasicState : MonoBehaviour {
 		this.velocity = velocity;
 	}
 
-	public void setVelocityY(float y){
-		this.velocity.y = y;
-	}
+	public void setVelocityX(float x){ this.velocity.x = x; }
+	public void setVelocityY(float y){ this.velocity.y = y;	}
+	public void setVelocityZ(float z){ this.velocity.z = z; }
+
+	public float getVelocityX(){ return this.velocity.x; }
+	public float getVelocityY(){ return this.velocity.y; }
+	public float getVelocityZ(){ return this.velocity.z; }
 }

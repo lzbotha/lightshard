@@ -8,7 +8,7 @@ public class BasicMovement : MonoBehaviour {
 	public float speed;
 	public float mass = 1.0f;
 
-	// public float dampening = 50.0f;
+	public float friction;
 
 	protected CharacterController controller;
 
@@ -19,18 +19,21 @@ public class BasicMovement : MonoBehaviour {
 		this.controller = GetComponent<CharacterController> ();
 	}
 
-	// public Vector3 getVelocityComponent(){
-	// 	Vector3 velocity = associatedState.getContinuousVelocity();
-	// 	if(velocity.x > 0)
-	// 		velocity.x = Mathf.Clamp(velocity.x - this.dampening * Time.deltaTime, 0, Mathf.Infinity);
-	// 	else if (velocity.x < 0)
-	// 		velocity.x = Mathf.Clamp(velocity.x + this.dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
-	// 	if(velocity.z > 0)	
-	// 		velocity.z = Mathf.Clamp(velocity.z - this.dampening * Time.deltaTime, 0, Mathf.Infinity);
-	// 	else if (velocity.z < 0)
-	// 		velocity.z = Mathf.Clamp(velocity.z + this.dampening * Time.deltaTime, Mathf.NegativeInfinity, 0);
-	// 	return Time.deltaTime * velocity;
-	// }
+	public void applyFriction(){
+		if(this.associatedState.getVelocity().x - friction > 0)
+			this.associatedState.setVelocityX(this.associatedState.getVelocityX() - friction);
+		else if(this.associatedState.getVelocity().x + friction < 0)
+			this.associatedState.setVelocityX(this.associatedState.getVelocityX() + friction);
+		else
+			this.associatedState.setVelocityX(0);
+
+		if(this.associatedState.getVelocity().z - friction > 0)
+			this.associatedState.setVelocityZ(this.associatedState.getVelocityZ() - friction);
+		else if(this.associatedState.getVelocity().z + friction < 0)
+			this.associatedState.setVelocityZ(this.associatedState.getVelocityZ() + friction);		
+		else
+			this.associatedState.setVelocityZ(0);
+	}
 
 	public void applyForce(Vector3 force){
 		associatedState.setVelocity(associatedState.getVelocity() + (1/this.mass) * force);

@@ -85,10 +85,12 @@ public class CharacterMovement : BasicMovement {
 			
 				if(!characterState.isMovementDirectionLocked()){
 					// Remove movement component from previous update (this must be done so that movement is instantateous)
-					characterState.setVelocity(characterState.getVelocity() - moveComponent);
+					this.characterState.setVelocity(characterState.getVelocity() - moveComponent);
 					this.moveComponent = this.getMovementComponent();
+					if(this.controller.isGrounded)
+						applyFriction();
 					// Update the velocity component to reflect character movement
-					characterState.setVelocity(characterState.getVelocity() + moveComponent);
+					this.characterState.setVelocity(characterState.getVelocity() + moveComponent);
 					lookInDirectionOfVector(characterState.getVelocity());
 				}
 
