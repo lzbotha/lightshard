@@ -329,10 +329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -50
-  jumpSpeed: 20
+  jumpSpeed: 30
   speed: 10
   mass: 1
-  friction: 0
+  friction: 50
   script: {fileID: 11400004}
   smearTime: .300000012
   characterState: {fileID: 11400002}

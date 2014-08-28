@@ -94,7 +94,7 @@ public class CharacterMovement : BasicMovement {
 					lookInDirectionOfVector(characterState.getVelocity());
 				}
 
-				controller.Move (characterState.getVelocity() * Time.deltaTime);
+				this.controller.Move (characterState.getVelocity() * Time.deltaTime);
 			}
 
 		}

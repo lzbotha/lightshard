@@ -10,9 +10,8 @@ public class BasicMovement : MonoBehaviour {
 
 	public float friction;
 
-	protected CharacterController controller;
-
 	private BasicState associatedState;
+	protected CharacterController controller;
 
 	void Start(){
 		this.associatedState = this.GetComponent<BasicState>();
@@ -20,6 +19,7 @@ public class BasicMovement : MonoBehaviour {
 	}
 
 	public void applyFriction(){
+		float friction = this.friction * Time.deltaTime;
 		if(this.associatedState.getVelocity().x - friction > 0)
 			this.associatedState.setVelocityX(this.associatedState.getVelocityX() - friction);
 		else if(this.associatedState.getVelocity().x + friction < 0)
@@ -36,7 +36,7 @@ public class BasicMovement : MonoBehaviour {
 	}
 
 	public void applyForce(Vector3 force){
-		associatedState.setVelocity(associatedState.getVelocity() + (1/this.mass) * force);
+		this.associatedState.setVelocity(associatedState.getVelocity() + (1/this.mass) * force);
 	}
 
 }
