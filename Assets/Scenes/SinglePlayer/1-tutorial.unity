@@ -428,8 +428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50452805af52ca4b9106d0f015ad9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bouncableTags:
-  - Player
 --- !u!1 &499817020
 GameObject:
   m_ObjectHideFlags: 0

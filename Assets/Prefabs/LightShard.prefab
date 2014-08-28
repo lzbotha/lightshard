@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e546915c25829c48921a9adc582f1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -20
+  gravity: -50
   jumpSpeed: 0
   speed: 0
   mass: 1
-  friction: 0
+  friction: 300
   arcHeight: 2
   throwDistance: 15
   throwTime: 1.5
