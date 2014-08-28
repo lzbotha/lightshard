@@ -3,9 +3,6 @@ using System.Collections;
 
 public class Trampoline : MonoBehaviour {
 
-	// all tags that can bounce on this trampoline
-	public string[] bouncableTags;
-
 	void OnTriggerEnter(Collider other){
 		BasicState state = other.gameObject.GetComponent<BasicState>();
 		
