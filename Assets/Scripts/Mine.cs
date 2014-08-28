@@ -63,14 +63,14 @@ public abstract class Mine : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		// TODO: this can now be changed to work with layers, where everything 
 		// that is in this layer has a BasicMovement script
-		if(other.tag == "Player"){
+		if(other.tag == "Player" || other.tag == "LightShard"){
 			onDetection();
 			objectsInDetectionRange.Add(other.gameObject);
 		}
 	}
 
 	void OnTriggerExit(Collider other){
-		if(other.tag == "Player"){
+		if(other.tag == "Player" || other.tag == "LightShard"){
 			objectsInDetectionRange.Remove(other.gameObject);
 			if(objectsInDetectionRange.Count == 0 && canExplode)
 				onDisarm();

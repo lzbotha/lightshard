@@ -28,9 +28,11 @@ public class LightShardMovement : BasicMovement {
 		CharacterController controller = GetComponent<CharacterController> ();
 		state.setVelocityY(state.getVelocityY() + this.gravity * Time.deltaTime);
 
-		if (controller.isGrounded) {
-				state.setVelocity(Vector3.zero);
+		if (controller.isGrounded && state.getVelocityY() <= 0) {
+			state.setVelocityY(0.0f);
+			applyFriction();
 		}
+
 
 		controller.Move (Time.deltaTime * (
 			// Stop from bouncing off floor constantly.
