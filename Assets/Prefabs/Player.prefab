@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -309,6 +310,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100036
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400036}
+  - 96: {fileID: 9600000}
+  m_Layer: 0
+  m_Name: SmearTrail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -316,7 +333,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.3460083, y: 1, z: 55.3409119}
+  m_LocalPosition: {x: 0, y: .780854225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -374,6 +391,7 @@ Transform:
   - {fileID: 400010}
   - {fileID: 400020}
   - {fileID: 400034}
+  - {fileID: 400036}
   m_Father: {fileID: 400000}
   m_RootOrder: 1
 --- !u!4 &400010
@@ -542,6 +560,18 @@ Transform:
   - {fileID: 400022}
   m_Father: {fileID: 400008}
   m_RootOrder: 3
+--- !u!4 &400036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400008}
+  m_RootOrder: 4
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -586,7 +616,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8ccef721dc229bb40a34575acc7b7ec6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -642,6 +672,47 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
+--- !u!96 &9600000
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 7810b1ec275e94eddad1fb7da993a3aa, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: .699999988
+  m_StartWidth: 1
+  m_EndWidth: .300000012
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4294958848
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4294945536
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4294901779
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4294945536
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 4294958848
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 0
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -732,6 +803,20 @@ MonoBehaviour:
   phiUpperBound: 80
   cameraTargetLocation: {x: 0, y: 0, z: 0}
   target: {fileID: 400008}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1f8e0731a9e4244813a95399c3594b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveScript: {fileID: 11400000}
+  trail1: {fileID: 9600000}
+  afterSmearTime: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Character
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 5d137fcae04b5493ab7dfd2336f23828, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,12 +17,35 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
+          m_Texture: {fileID: 2800000, guid: 77a586be72e334c16b087d8a6ef244d6, type: 3}
+          m_Scale: {x: 5, y: 3}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 3e5939592f4873b42949eba0943abfcf, type: 3}
+          m_Scale: {x: 0, y: 0}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _RimPower
+        second: 1
+      data:
+        first:
+          name: _Factor
+        second: 1
     m_Colors:
       data:
         first:
           name: _Color
         second: {r: .0648788884, g: .367647052, b: .154665306, a: 1}
+      data:
+        first:
+          name: _ColorTint
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .147058845, g: .61176461, b: 1, a: 1}

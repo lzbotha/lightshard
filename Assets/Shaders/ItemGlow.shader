@@ -5,6 +5,7 @@
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 		_RimColor ("Rim Color", Color) = (1,1,1,1)
 		_RimPower ("Rim Power", Range(1.0, 6.0)) = 3.0
+		_Factor ("Factor", float) = 1.0
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -24,6 +25,7 @@
 		sampler2D _BumpMap;
 		float4 _RimColor;
 		float _RimPower;
+		float _Factor;
 
 		void surf (Input IN, inout SurfaceOutput o) {
 			IN.color = _ColorTint;
@@ -31,7 +33,7 @@
 			o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
 			
 			half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
-			o.Emission = _RimColor.rgb * pow(rim, _RimPower);
+			o.Emission = _RimColor.rgb * pow(rim, _RimPower) * _Factor;
 		}
 		ENDCG
 	} 
