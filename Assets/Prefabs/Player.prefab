@@ -616,7 +616,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8ccef721dc229bb40a34575acc7b7ec6, type: 2}
+  - {fileID: 2100000, guid: fd1d748a095c54f668c9572224cb6ff7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -698,19 +698,19 @@ TrailRenderer:
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 4294958848
+      rgba: 4278190335
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4294945536
+      rgba: 4278234879
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4294901779
+      rgba: 4278255614
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4294945536
+      rgba: 4278234879
     m_Color[4]:
       serializedVersion: 2
-      rgba: 4294958848
+      rgba: 4278190335
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
 --- !u!108 &10800000
@@ -768,6 +768,7 @@ MonoBehaviour:
   smearTime: .300000012
   characterState: {fileID: 11400002}
   minYPosition: -50
+  bonfireRespawnOffset: 2
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
