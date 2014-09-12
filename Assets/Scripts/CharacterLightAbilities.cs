@@ -11,6 +11,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 	public float flashLightRadiusIncrease = 2.0f;
 	public float flashLightRegenDebuff = -0.5f;
 	public float flashCost = 2.0f;
+	public ParticleSystem flashEffect;
 
 	public float throwAttractiveLightShardCost = 0.0f;
 	public float throwRepellingLightShardCost = 0.0f;
@@ -22,6 +23,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 	private int hitMarkerLightShardID = -1;
 	private List<GameObject> lightShardMarkers = new List<GameObject>();
 
+	void Start() {
+		this.flashEffect.Stop();
+	}
 
 	bool isAxisDown(string axis) {
 		// Return whether the given joystick axis is down.
@@ -37,6 +41,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 			characterState.changeLightRadiusBy(flashLightRadiusIncrease);
 			// Apply the debuff to the characters light regen rate.
 			characterState.setLightRegenRate(flashLightRegenDebuff);
+			// Play the flash particle effect
+			this.flashEffect.Play();
 		}
 	}
 
