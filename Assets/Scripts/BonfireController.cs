@@ -29,9 +29,8 @@ public class BonfireController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Player"){
-			// TODO: change this to work with distance
-			if(other.transform.position != this.transform.position){
-				characterActivationStart(other.gameObject);
+			if(other.gameObject.GetComponent<CharacterState>().getRespawnPosition() != this.transform.position){
+				this.characterActivationStart(other.gameObject);
 			}
 		}
 	}
