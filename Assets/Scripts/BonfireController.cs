@@ -20,7 +20,14 @@ public class BonfireController : MonoBehaviour {
 		this.characterActivationEffect.Stop();
 	}
 
-	void OnTriggerEnter(Collider other){
+	void OnTriggerStay(Collider other) {
+		if(other.tag == "Player"){
+			other.gameObject.GetComponentInChildren<CharacterLightController>().disableFlash();
+			other.gameObject.GetComponentInChildren<CharacterLightController>().restoreLightRadius();
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Player"){
 			// TODO: change this to work with distance
 			if(other.transform.position != this.transform.position){

@@ -16,6 +16,15 @@ public class CharacterLightController : MonoBehaviour {
 		characterState.setLightRadius(normalLightRadius);
 		characterState.setMinLightRadius(minLightRadius);
 	}
+
+	public void disableFlash() {
+		characterState.setLightRegenRate(normalLightRegenRate);
+		characterState.setFlashDeactivationRadius(0);
+	}
+
+	public void restoreLightRadius() {
+		this.characterState.setLightRadius(this.normalLightRadius);
+	}
 	
 	void Update () {
 		// If a Flash is in progress
@@ -27,8 +36,7 @@ public class CharacterLightController : MonoBehaviour {
 			// If the flash duration is over, or the character is at minimum light 
 			// radius, restore the characters light regen to normal
 			if(characterState.getLightRadius() <= characterState.getFlashDeactivationRadius()){
-				characterState.setLightRegenRate(normalLightRegenRate);
-				characterState.setFlashDeactivationRadius(0);
+				this.disableFlash();
 			}
 		}
 		// If no flash is in progress and the character has a light regen
