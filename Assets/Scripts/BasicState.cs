@@ -11,7 +11,7 @@ public class BasicState : MonoBehaviour {
 	public void setRespawnPosition(Vector3 pos){ this.respawnPosition = pos; }
 
 	// Respawn this component at the respawn position + some small delta
-	public void respawn(Vector3 delta = default(Vector3)) {
+	public virtual void respawn(Vector3 delta = default(Vector3)) {
 		this.setVelocity(Vector3.zero);
 		this.transform.position = respawnPosition + delta;
 	}
