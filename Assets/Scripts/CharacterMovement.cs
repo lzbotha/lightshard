@@ -15,6 +15,8 @@ public class CharacterMovement : BasicMovement {
 
 	private Vector3 moveComponent = Vector3.zero;
 
+	public float minYPosition = -50.0f;
+
 	public bool isSmearing() {
 		return smearTimeRemaining > 0;
 	}
@@ -77,6 +79,10 @@ public class CharacterMovement : BasicMovement {
 			updateSmear();
 		} else {
 			gameObject.layer = LayerMask.NameToLayer("Default");
+
+			if(this.transform.position.y <= minYPosition)
+				this.characterState.respawn(new Vector3(0.0f, 1.0f, 0.0f));
+
 			if (Input.GetButtonDown("Smear")) {
 				startSmear();
 			} else {
