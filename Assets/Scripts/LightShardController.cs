@@ -7,6 +7,8 @@ public class LightShardController : MonoBehaviour {
 	// The radius in which the fear/attract effect takes place
 	public float effectRadius = 5.0f;
 
+	public float minYPosition = -50.0f;
+
 	// The character that cast this LightShard
 	private GameObject character;
 	// The key in the character owning this lightshards lightshard container
@@ -42,5 +44,10 @@ public class LightShardController : MonoBehaviour {
 		// Destroy this LightShard in lifeTime seconds
 		if(lifeTime > 0)
 			Invoke("cleanUp", lifeTime);
+	}
+
+	void Update() {
+		if(this.transform.position.y <= minYPosition)
+			this.cleanUp();
 	}
 }

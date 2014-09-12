@@ -16,6 +16,7 @@ public class CharacterMovement : BasicMovement {
 	private Vector3 moveComponent = Vector3.zero;
 
 	public float minYPosition = -50.0f;
+	public float bonfireRespawnOffset = 2.0f;
 
 	public bool isSmearing() {
 		return smearTimeRemaining > 0;
@@ -80,8 +81,13 @@ public class CharacterMovement : BasicMovement {
 		} else {
 			gameObject.layer = LayerMask.NameToLayer("Default");
 
-			if(this.transform.position.y <= minYPosition)
-				this.characterState.respawn(new Vector3(0.0f, 1.0f, 0.0f));
+			if(this.transform.position.y <= minYPosition){
+				// Respawn the player somewhere on the circle with radius bonfireRespawnOffset
+				Vector2 delta = Random.insideUnitCircle;
+				delta.Normalize();
+				delta *= this.bonfireRespawnOffset;
+				this.characterState.respawn(new Vector3(delta.x, 1.0f, delta.y));
+			}
 
 			if (Input.GetButtonDown("Smear")) {
 				startSmear();
