@@ -1181,7 +1181,7 @@ Transform:
   - {fileID: 649988513}
   - {fileID: 570258250}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!135 &104951917
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3443,7 +3443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &421763657
 GameObject:
   m_ObjectHideFlags: 0
@@ -6704,7 +6704,7 @@ Transform:
   - {fileID: 673770991}
   - {fileID: 1953025734}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &573684629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6764,6 +6764,7 @@ Transform:
   - {fileID: 746264765}
   - {fileID: 963183641}
   - {fileID: 1254612825}
+  - {fileID: 1686963229}
   m_Father: {fileID: 671995986}
   m_RootOrder: 1
 --- !u!114 &579330262
@@ -6804,6 +6805,7 @@ MonoBehaviour:
   smearTime: .300000012
   characterState: {fileID: 579330262}
   minYPosition: -50
+  bonfireRespawnOffset: 2
 --- !u!143 &579330264
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16944,7 +16946,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1298189066
 GameObject:
   m_ObjectHideFlags: 0
@@ -19202,6 +19204,76 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1 &1686963228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100036, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
+  m_PrefabInternal: {fileID: 1015314431}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1686963229}
+  - 96: {fileID: 1686963230}
+  m_Layer: 0
+  m_Name: SmearTrail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1686963229
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400036, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
+  m_PrefabInternal: {fileID: 1015314431}
+  m_GameObject: {fileID: 1686963228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 579330261}
+  m_RootOrder: 4
+--- !u!96 &1686963230
+TrailRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9600000, guid: 4025c4374b0200b4b95acdc047c67470,
+    type: 2}
+  m_PrefabInternal: {fileID: 1015314431}
+  m_GameObject: {fileID: 1686963228}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 7810b1ec275e94eddad1fb7da993a3aa, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: .699999988
+  m_StartWidth: 1
+  m_EndWidth: .300000012
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4294958848
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4294945536
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4294901779
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4294945536
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 4294958848
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 0
 --- !u!1 &1688080078
 GameObject:
   m_ObjectHideFlags: 0
@@ -29075,6 +29147,7 @@ GameObject:
   - 4: {fileID: 2147093736}
   - 33: {fileID: 2147093738}
   - 23: {fileID: 2147093737}
+  - 114: {fileID: 2147093739}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -29108,7 +29181,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8ccef721dc229bb40a34575acc7b7ec6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29124,3 +29197,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1015314431}
   m_GameObject: {fileID: 2147093735}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2147093739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 4025c4374b0200b4b95acdc047c67470,
+    type: 2}
+  m_PrefabInternal: {fileID: 1015314431}
+  m_GameObject: {fileID: 2147093735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1f8e0731a9e4244813a95399c3594b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveScript: {fileID: 579330263}
+  trail1: {fileID: 1686963230}
+  afterSmearTime: 1
