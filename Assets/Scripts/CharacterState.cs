@@ -24,6 +24,13 @@ public class CharacterState : BasicState {
 	
 	public int latestLightShardID = -1;
 
+	public ParticleSystem respawnEffect;
+
+	public override void respawn(Vector3 delta = default(Vector3)) {
+		base.respawn(delta);
+		this.respawnEffect.Play();
+	}
+
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
 	public void changeLightRadiusBy(float amount){ lightRadius += amount;}	
@@ -50,6 +57,7 @@ public class CharacterState : BasicState {
 	}
 
 	void Start() {
+		this.respawnEffect.Stop();
 		movementDirectionLocked = false;
 		flashDeactivationRadius = 0;
 		cameraDirectionLocked = false;
