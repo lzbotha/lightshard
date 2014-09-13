@@ -4,20 +4,42 @@ using System.Collections;
 public class BonfireController : MonoBehaviour {
 
 	public ParticleSystem characterActivationEffect;
+	public ParticleSystem flame;
+
+	public Color notActivated;
+	public Color notCurrentlyActive;
+	public Color active;
 
 	void Start() {
 		this.characterActivationEffect.Stop();
+		this.flame.Stop();
+		this.flame.startColor = notActivated;
+		this.flame.Play();
 	}
 
 	void characterActivationStart(GameObject player) {
 		// Play bonfire activation effect and set the players respawn point to this bonfire
 		this.characterActivationEffect.Play();
 		Invoke("characterActivationStop", 3);
-		player.GetComponent<CharacterState>().setRespawnPosition(this.transform.position);
+		CharacterState cs = player.GetComponent<CharacterState>();
+		cs.setRespawnPosition(this.transform.position);
+		if(cs.getLastTouchedBonfire() != null)
+			cs.getLastTouchedBonfire().GetComponent<BonfireController>().noLongerActive();
+		cs.setLastTouchedBonfire(this.gameObject);
+
+		this.flame.Stop();
+		this.flame.startColor = active;
+		this.flame.Play();
 	}
 
 	void characterActivationStop() {
 		this.characterActivationEffect.Stop();
+	}
+
+	void noLongerActive() {
+		this.flame.Stop();
+		this.flame.startColor = notCurrentlyActive;
+		this.flame.Play();
 	}
 
 	void OnTriggerStay(Collider other) {

@@ -25,6 +25,10 @@ public class CharacterState : BasicState {
 	public int latestLightShardID = -1;
 
 	public ParticleSystem respawnEffect;
+	private GameObject lastTouchedBonfire;
+
+	public void setLastTouchedBonfire(GameObject bonfire){ lastTouchedBonfire = bonfire; }
+	public GameObject getLastTouchedBonfire(){ return lastTouchedBonfire; }
 
 	public override void respawn(Vector3 delta = default(Vector3)) {
 		base.respawn(delta);
