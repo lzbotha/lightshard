@@ -22,6 +22,6 @@ public class AgentState : BasicState {
 
 			return path;
 		}
-		return Vector3.zero;
+		return this.transform.position;
 	}
 }

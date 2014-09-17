@@ -45,7 +45,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		seperation.Normalize();
 
 		Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
-		direction.Normalize ();
 
 		this.alignment = Vector3.zero;
 		this.cohesion = Vector3.zero;
@@ -57,7 +56,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	void Update(){
 		if(this.neighbourCount > 0){
-			print(neighbourCount);
+			//print(neighbourCount);
 			this.agentMovement.moveInDirection(this.calculateFlockVelocity(neighbourCount));
 		}
 		this.agentMovement.move ();

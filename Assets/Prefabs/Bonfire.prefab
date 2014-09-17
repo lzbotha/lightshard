@@ -395,7 +395,7 @@ MonoBehaviour:
   flame: {fileID: 19800004}
   notActivated: {r: .142679527, g: .669117689, b: .64733398, a: .784313738}
   notCurrentlyActive: {r: .511282921, g: .801470578, b: .182688132, a: .784313738}
-  active: {r: .904411793, g: .364149451, b: .27265355, a: .784313738}
+  actives: {r: .95588237, g: .799315453, b: .288170397, a: .784313738}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

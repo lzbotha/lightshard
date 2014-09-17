@@ -13,8 +13,8 @@ public class AgentMovement : BasicMovement {
 		agentState.setVelocity(agentState.getVelocity() - this.movementComponent);
 
 		// if the agent is on the ground apply friction to non movementComponent velocities
-		if (this.controller.isGrounded)
-			applyFriction ();
+		//if (this.controller.isGrounded)
+			//applyFriction ();
 		
 
 		// calculate new movement component
@@ -22,6 +22,7 @@ public class AgentMovement : BasicMovement {
 		direction.Normalize();
 
 		movementComponent = direction * this.speed;
+		print (movementComponent);
 
 		this.agentState.setVelocity (this.agentState.getVelocity () + movementComponent);
 	}
