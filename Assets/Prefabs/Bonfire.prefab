@@ -354,7 +354,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: .117647059, g: .788235307, b: .760784328, a: .784313738}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -393,9 +393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterActivationEffect: {fileID: 19800012}
   flame: {fileID: 19800004}
-  notActivated: {r: 1, g: 0, b: 0, a: 1}
-  notCurrentlyActive: {r: 0, g: 1, b: .0482759476, a: 1}
-  active: {r: .117241383, g: 0, b: 1, a: 1}
+  notActivated: {r: .142679527, g: .669117689, b: .64733398, a: .784313738}
+  notCurrentlyActive: {r: .511282921, g: .801470578, b: .182688132, a: .784313738}
+  active: {r: .904411793, g: .364149451, b: .27265355, a: .784313738}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
