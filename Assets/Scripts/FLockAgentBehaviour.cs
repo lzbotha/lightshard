@@ -13,6 +13,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public float alignmentWeight = 1.0f;
 
 	public int playerChaseThreshold = 3;
+	public float playerLightRunThreshold = 5.5f;
 
 	private Vector3 alignment = Vector3.zero;
 	private Vector3 cohesion = Vector3.zero;
@@ -77,16 +78,15 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		}
 
 		//if this flock is on its own chose a random direction
-		Vector2 rand = Random.insideUnitCircle;
+		Vector2 rand = Random.insideUnitCircle; // <-- this is a bit shite
 
 		return new Vector3 (rand.x, 0.0f, rand.y);
 	}
 
 	private Vector3 calculatePlayerDirectionComponent(){
 		if (this.playerNear) {
-			print (neighbours.Count);
 
-			if(neighbours.Count >= this.playerChaseThreshold){
+			if(neighbours.Count >= this.playerChaseThreshold && this.player.GetComponent<CharacterState>().getLightRadius() < this.playerLightRunThreshold){
 				return player.transform.position - this.transform.position;
 			} else {
 				return this.transform.position - player.transform.position;
