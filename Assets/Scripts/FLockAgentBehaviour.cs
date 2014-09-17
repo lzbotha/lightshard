@@ -18,8 +18,8 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 
 	void OnTriggerStay(Collider other){
-		if (other.tag == "FlockAgent") {
-
+		// if the other collider is a flock agent and its not itself
+		if (other.tag == "FlockAgent" && other.gameObject != this.gameObject) {
 			// alignment
 			neighbourCount++;
 			alignment += other.gameObject.GetComponent<AgentState>().getVelocity();
@@ -46,11 +46,18 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 		Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
 		direction.Normalize ();
+
+		this.alignment = Vector3.zero;
+		this.cohesion = Vector3.zero;
+		this.seperation = Vector3.zero;
+		this.neighbourCount = 0;
+
 		return direction;
 	}
 
 	void Update(){
 		if(this.neighbourCount > 0){
+			print(neighbourCount);
 			this.agentMovement.moveInDirection(this.calculateFlockVelocity(neighbourCount));
 		}
 		this.agentMovement.move ();
