@@ -8,6 +8,7 @@ TagManager:
   - WPPathfinder
   - Waypoint
   - FlockAgent
+  - Obstacle
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

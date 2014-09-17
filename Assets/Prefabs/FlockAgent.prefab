@@ -148,8 +148,8 @@ MonoBehaviour:
   agentState: {fileID: 11400002}
   agentMovement: {fileID: 11400004}
   cohesionWeight: .5
-  seperationWeight: 2
-  alignmentWeight: 3
+  seperationWeight: 1
+  alignmentWeight: 2
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

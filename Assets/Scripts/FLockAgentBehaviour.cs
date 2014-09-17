@@ -12,27 +12,37 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public float seperationWeight = 1.0f;
 	public float alignmentWeight = 1.0f;
 
+	public int playerChaseThreshold = 3;
+
 	private Vector3 alignment = Vector3.zero;
 	private Vector3 cohesion = Vector3.zero;
 	private Vector3 seperation = Vector3.zero;
 
 	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
+	private GameObject player;
+	private bool playerNear = false;
 
 	void OnTriggerEnter(Collider other){
-
-		if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
+		if (other.tag == "Player") {
+			player = other.gameObject;
+			playerNear = true;
+		}
+		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
 			neighbours.Add (other.gameObject);
 		}
 	}
 
 	void OnTriggerExit(Collider other){
-
-		if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
+		if (other.tag == "Player") {
+			playerNear = false;
+		}
+		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
 			neighbours.Remove (other.gameObject);
 		}
 	}
 
-	private Vector3 calculateFlockVelocity(){
+	// Calculates the direction of this agent based on flocking rules (only)
+	private Vector3 calculateFlockDirectionComponent(){
 		if (this.neighbours.Count > 0) {
 			foreach (GameObject obj in neighbours) {
 				// alignment
@@ -58,7 +68,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 			seperation.Normalize ();
 
 			Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
-			direction.Normalize ();
 
 			this.alignment = Vector3.zero;
 			this.cohesion = Vector3.zero;
@@ -66,11 +75,30 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 			return direction;
 		}
+
+		//if this flock is on its own chose a random direction
+		Vector2 rand = Random.insideUnitCircle;
+
+		return new Vector3 (rand.x, 0.0f, rand.y);
+	}
+
+	private Vector3 calculatePlayerDirectionComponent(){
+		if (this.playerNear) {
+			print (neighbours.Count);
+
+			if(neighbours.Count >= this.playerChaseThreshold){
+				return player.transform.position - this.transform.position;
+			} else {
+				return this.transform.position - player.transform.position;
+			}
+		}
 		return Vector3.zero;
 	}
 
 	void Update(){
-		this.agentMovement.moveInDirection(this.calculateFlockVelocity());
+		Vector3 direction = this.calculateFlockDirectionComponent () + this.calculatePlayerDirectionComponent ();
+		direction.Normalize ();
+		this.agentMovement.moveInDirection(direction);
 		this.agentMovement.move ();
 	}
 }
