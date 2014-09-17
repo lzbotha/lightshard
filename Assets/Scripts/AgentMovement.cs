@@ -22,7 +22,6 @@ public class AgentMovement : BasicMovement {
 		direction.Normalize();
 
 		movementComponent = direction * this.speed;
-		print (movementComponent);
 
 		this.agentState.setVelocity (this.agentState.getVelocity () + movementComponent);
 	}

@@ -19,7 +19,6 @@ public class AgentState : BasicState {
 			if (Vector3.Distance (this.transform.position, pf.Path [0]) < this.distToWaypoint) {
 				pf.Path.RemoveAt (0);
 			}
-
 			return path;
 		}
 		return this.transform.position;

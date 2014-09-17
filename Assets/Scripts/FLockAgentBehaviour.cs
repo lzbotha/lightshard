@@ -45,18 +45,20 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		seperation.Normalize();
 
 		Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
+		direction.Normalize ();
 
-		this.alignment = Vector3.zero;
-		this.cohesion = Vector3.zero;
-		this.seperation = Vector3.zero;
-		this.neighbourCount = 0;
+		//this.alignment = Vector3.zero;
+		//this.cohesion = Vector3.zero;
+		//this.seperation = Vector3.zero;
+		//this.neighbourCount = 0;
+
+		//print (direction);
 
 		return direction;
 	}
 
 	void Update(){
 		if(this.neighbourCount > 0){
-			//print(neighbourCount);
 			this.agentMovement.moveInDirection(this.calculateFlockVelocity(neighbourCount));
 		}
 		this.agentMovement.move ();
