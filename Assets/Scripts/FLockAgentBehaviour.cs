@@ -21,7 +21,8 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Player") {
-			player = other.gameObject;
+			if(this.playerNear && Vector3.Distance(this.transform.position, other.transform.position) < Vector3.Distance(this.transform.position, player.transform.position))
+				player = other.gameObject;
 			playerNear = true;
 		}
 		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
