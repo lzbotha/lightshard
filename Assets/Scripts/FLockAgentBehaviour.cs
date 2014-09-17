@@ -15,10 +15,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public int playerChaseThreshold = 3;
 	public float playerLightRunThreshold = 5.5f;
 
-	private Vector3 alignment = Vector3.zero;
-	private Vector3 cohesion = Vector3.zero;
-	private Vector3 seperation = Vector3.zero;
-
 	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
 	private GameObject player;
 	private bool playerNear = false;
@@ -44,6 +40,10 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	// Calculates the direction of this agent based on flocking rules (only)
 	private Vector3 calculateFlockDirectionComponent(){
+		Vector3 alignment = Vector3.zero;
+		Vector3 cohesion = Vector3.zero;
+		Vector3 seperation = Vector3.zero;
+
 		if (this.neighbours.Count > 0) {
 			foreach (GameObject obj in neighbours) {
 				// alignment
@@ -69,10 +69,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 			seperation.Normalize ();
 
 			Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
-
-			this.alignment = Vector3.zero;
-			this.cohesion = Vector3.zero;
-			this.seperation = Vector3.zero;
 
 			return direction;
 		}
