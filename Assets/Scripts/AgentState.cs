@@ -10,7 +10,7 @@ public class AgentState : BasicState {
 		pf.FindPath(this.transform.position, target);
 	}
 
-	public Vector3 getNextWaypoint(){
+	public Vector3 getNextPathSegment(){
 		// if there are waypoints remaining in the path
 		if (pf.Path.Count > 0) {
 			Vector3 path = pf.Path [0];

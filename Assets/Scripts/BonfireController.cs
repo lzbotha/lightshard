@@ -8,7 +8,7 @@ public class BonfireController : MonoBehaviour {
 
 	public Color notActivated;
 	public Color notCurrentlyActive;
-	public Color active;
+	public Color actives;
 
 	void Start() {
 		this.characterActivationEffect.Stop();
@@ -28,7 +28,7 @@ public class BonfireController : MonoBehaviour {
 		cs.setLastTouchedBonfire(this.gameObject);
 
 		this.flame.Stop();
-		this.flame.startColor = active;
+		this.flame.startColor = actives;
 		this.flame.Play();
 	}
 
