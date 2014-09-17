@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
+	
 public class FLockAgentBehaviour : MonoBehaviour {
 	public AgentState agentState;
 	public AgentMovement agentMovement;
@@ -14,52 +15,59 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	private Vector3 alignment = Vector3.zero;
 	private Vector3 cohesion = Vector3.zero;
 	private Vector3 seperation = Vector3.zero;
-	private int neighbourCount = 0;
 
+	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
 
-	void OnTriggerStay(Collider other){
-		// if the other collider is a flock agent and its not itself
+	void OnTriggerEnter(Collider other){
 		if (other.tag == "FlockAgent" && other.gameObject != this.gameObject) {
-			// alignment
-			neighbourCount++;
-			alignment += other.gameObject.GetComponent<AgentState>().getVelocity();
-
-			//cohesion
-			cohesion += other.transform.position;
-
-			//seperation
-			seperation += other.transform.position - this.transform.position;
+			neighbours.Add (other.gameObject);
 		}
 	}
 
-	private Vector3 calculateFlockVelocity(int neighbourcount){
-		alignment /= neighbourCount;
+	void OnTriggerExit(Collider other){
+		if (other.tag == "FlockAgent" && other.gameObject != this.gameObject) {
+			neighbours.Remove (other.gameObject);
+		}
+	}
+
+	private Vector3 calculateFlockVelocity(){
+		foreach (GameObject obj in neighbours) {
+			// alignment
+			alignment += obj.GetComponent<AgentState>().getVelocity();
+			
+			//cohesion
+			cohesion += obj.transform.position;
+			
+			//seperation
+			seperation += obj.transform.position - this.transform.position;
+		}
+
+
+		alignment /= this.neighbours.Count;
 		alignment.Normalize();
 		
-		cohesion /= neighbourCount;
+		cohesion /= this.neighbours.Count;
 		cohesion = cohesion - this.transform.position;
 		cohesion.Normalize();
 		
-		seperation /= neighbourCount;
+		seperation /= this.neighbours.Count;
 		seperation *= -1;
 		seperation.Normalize();
 
 		Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
 		direction.Normalize ();
 
-		//this.alignment = Vector3.zero;
-		//this.cohesion = Vector3.zero;
-		//this.seperation = Vector3.zero;
-		//this.neighbourCount = 0;
-
-		//print (direction);
+		this.alignment = Vector3.zero;
+		this.cohesion = Vector3.zero;
+		this.seperation = Vector3.zero;
 
 		return direction;
 	}
 
 	void Update(){
-		if(this.neighbourCount > 0){
-			this.agentMovement.moveInDirection(this.calculateFlockVelocity(neighbourCount));
+		if(this.neighbours.Count > 0){
+			print (this.neighbours.Count);
+			this.agentMovement.moveInDirection(this.calculateFlockVelocity());
 		}
 		this.agentMovement.move ();
 	}
