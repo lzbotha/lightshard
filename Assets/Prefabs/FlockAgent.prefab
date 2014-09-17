@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68356276, y: 1, z: 3.85793972}
+  m_LocalPosition: {x: -1.55446339, y: 1, z: 5.45821095}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 400000}
@@ -148,7 +148,7 @@ MonoBehaviour:
   agentState: {fileID: 11400002}
   agentMovement: {fileID: 11400004}
   cohesionWeight: .5
-  seperationWeight: 1
+  seperationWeight: 2
   alignmentWeight: 3
 --- !u!135 &13500000
 SphereCollider:
