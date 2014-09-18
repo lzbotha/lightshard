@@ -227,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: 0, z: 58.8115921}
+  m_LocalPosition: {x: -60, y: 0, z: -19.2828655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -394,7 +394,7 @@ MonoBehaviour:
   characterActivationEffect: {fileID: 19800012}
   flame: {fileID: 19800004}
   notActivated: {r: .142679527, g: .669117689, b: .64733398, a: .784313738}
-  notCurrentlyActive: {r: .511282921, g: .801470578, b: .182688132, a: .784313738}
+  notCurrentlyActive: {r: .801470578, g: .182688132, b: .182688132, a: .784313738}
   actives: {r: .95588237, g: .799315453, b: .288170397, a: .784313738}
 --- !u!135 &13500000
 SphereCollider:
