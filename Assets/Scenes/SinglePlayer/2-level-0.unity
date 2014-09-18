@@ -123,25 +123,25 @@ TrailRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .699999988
+  m_Time: .5
   m_StartWidth: 1
   m_EndWidth: .300000012
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 4294958848
+      rgba: 4278190335
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4294945536
+      rgba: 4278234879
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4294901779
+      rgba: 4278255614
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4294945536
+      rgba: 4278234879
     m_Color[4]:
       serializedVersion: 2
-      rgba: 4294958848
+      rgba: 4278190335
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
 --- !u!1 &58042626
@@ -177,6 +177,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &58042628
 Renderer:
   m_ObjectHideFlags: 0
@@ -1368,6 +1369,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &135062587
 Renderer:
   m_ObjectHideFlags: 0
@@ -4971,6 +4973,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 664089262}
+  - 114: {fileID: 664089263}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4992,6 +4995,22 @@ Transform:
   - {fileID: 2037823805}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &664089263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 4025c4374b0200b4b95acdc047c67470,
+    type: 2}
+  m_PrefabInternal: {fileID: 321982473}
+  m_GameObject: {fileID: 664089261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f8a1e2f909f341b9eef5d52ae94a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterState: {fileID: 2037823808}
+  characterCamera: {fileID: 2110551482}
+  player: 1
+  playersInLevel: 1
 --- !u!1 &779163352
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,7 +5131,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 806452366}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
   m_LocalPosition: {x: 0, y: 12.5299997, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
@@ -10631,7 +10650,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1275906713}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalRotation: {x: 0, y: .707106888, z: 0, w: .707106769}
   m_LocalPosition: {x: -0, y: 1.26597023, z: -0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -10683,7 +10702,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8ccef721dc229bb40a34575acc7b7ec6, type: 2}
+  - {fileID: 2100000, guid: fd1d748a095c54f668c9572224cb6ff7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -11819,7 +11838,7 @@ Transform:
   m_GameObject: {fileID: 1694535045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -14006,6 +14025,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1831319294
 Renderer:
   m_ObjectHideFlags: 0
@@ -14316,6 +14336,7 @@ MonoBehaviour:
   movementDirectionLocked: 0
   latestLightShardID: -1
   respawnEffect: {fileID: 74745211}
+  bonfireRespawnOffset: 2
 --- !u!114 &2037823809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14349,7 +14370,6 @@ GameObject:
   - 20: {fileID: 2110551482}
   - 124: {fileID: 2110551481}
   - 92: {fileID: 2110551480}
-  - 81: {fileID: 2110551479}
   - 114: {fileID: 2110551478}
   m_Layer: 0
   m_Name: Camera
@@ -14390,14 +14410,6 @@ MonoBehaviour:
   phiUpperBound: 80
   cameraTargetLocation: {x: 0, y: 0, z: 0}
   target: {fileID: 2037823805}
---- !u!81 &2110551479
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: 4025c4374b0200b4b95acdc047c67470,
-    type: 2}
-  m_PrefabInternal: {fileID: 321982473}
-  m_GameObject: {fileID: 2110551476}
-  m_Enabled: 1
 --- !u!92 &2110551480
 Behaviour:
   m_ObjectHideFlags: 0

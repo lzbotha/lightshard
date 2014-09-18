@@ -9,35 +9,37 @@ public class LightShardMovement : BasicMovement {
 	private Vector3 throwVelocity = Vector3.zero;
 	public LightShardState state;
 
+
 	public void throwLightShard(Vector3 position, Vector3 direction){
 		this.transform.position = position;
 
 		// Calculate vertical velocity
-		throwVelocity.y = arcHeight/(throwTime * 0.5f) - 0.5f * gravity * (throwTime * 0.5f);
+		//throwVelocity.y = this.arcHeight/(this.throwTime * 0.5f) - 0.5f * this.gravity * (this.throwTime * 0.5f);
+		throwVelocity.y = -this.gravity * 0.5f * throwTime;
 
 		// calculate the horizontal components
-		float speed = throwDistance/throwTime;
-		throwVelocity.x = speed * direction.x;
-		throwVelocity.z = speed * direction.z;
+		this.speed = throwDistance/throwTime;
+		throwVelocity.x = this.speed * direction.x;
+		throwVelocity.z = this.speed * direction.z;
 
 		state.setVelocity(throwVelocity);
+		print (state.getVelocityY ());
 	}
 	
 
-	void Update () {
+	void FixedUpdate () {
 		CharacterController controller = GetComponent<CharacterController> ();
-		state.setVelocityY(state.getVelocityY() + this.gravity * Time.deltaTime);
-
-		if (controller.isGrounded && state.getVelocityY() <= 0) {
-			state.setVelocityY(0.0f);
-			applyFriction();
-		}
-
-
 		controller.Move (Time.deltaTime * (
 			// Stop from bouncing off floor constantly.
 			new Vector3 (0.0f, -0.01f, 0.0f) +
 			state.getVelocity()
 		));
+
+		state.setVelocityY(state.getVelocityY() + Time.deltaTime * this.gravity);
+
+		if (controller.isGrounded && state.getVelocityY() <= 0) {
+			state.setVelocityY(0.0f);
+			applyFriction();
+		}
 	}
 }

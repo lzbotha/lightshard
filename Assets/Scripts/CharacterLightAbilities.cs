@@ -79,6 +79,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		if(throwDirection == Vector3.zero)
 			throwDirection = this.transform.forward;
+		throwDirection.Normalize();
+
 		ls.GetComponent<LightShardMovement>().throwLightShard(this.transform.position, throwDirection);
 	}
 
