@@ -23,8 +23,8 @@ public class ThirdPersonCameraController : MonoBehaviour {
 
 	void Update() {
 		if(!characterState.isCameraDirectionLocked()){
-			phi += Input.GetAxis ("CameraVertical") * controllerSensitivity;
-			theta += Input.GetAxis ("CameraHorizontal") * controllerSensitivity;
+			phi += Input.GetAxis (characterState.getPlayerTag() + "CameraVertical") * controllerSensitivity;
+			theta += Input.GetAxis (characterState.getPlayerTag() + "CameraHorizontal") * controllerSensitivity;
 
 			phi = Mathf.Clamp (phi, Mathf.Deg2Rad * phiLowerBound, Mathf.Deg2Rad * phiUpperBound);
 			theta %= Mathf.Deg2Rad * 360;

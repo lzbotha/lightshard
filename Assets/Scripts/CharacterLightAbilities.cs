@@ -34,7 +34,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void updateFlash() {
 		// If the player activates flash and there is no current flash active.
-		if(Input.GetButtonDown("Flash") && characterState.isLightRegenPositive() && characterState.canUseAbility(flashCost)){
+		if(Input.GetButtonDown(characterState.getPlayerTag() + "Flash") && characterState.isLightRegenPositive() && characterState.canUseAbility(flashCost)){
 			// Set the minimum flash radius to the characters preflash minus flashcost.
 			characterState.setFlashDeactivationRadius(characterState.getLightRadius() - flashCost);
 			// Increase the characters light radius.
@@ -49,7 +49,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 	void updateLockCamera() {
 		// Lock the character's movement if the Right or Left trigger is down.
 		// characterState.setMovementDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
-		characterState.setCameraDirectionLocked(isAxisDown("ThrowRight") || isAxisDown("ThrowLeft"));
+		characterState.setCameraDirectionLocked(isAxisDown(characterState.getPlayerTag() + "ThrowRight") || isAxisDown(characterState.getPlayerTag() + "ThrowLeft"));
 	}
 
 	void throwLightShard() {
@@ -59,7 +59,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		throwDirection.Normalize();
 
 		
-		Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
+		Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "CameraHorizontal"), 0.0f, -Input.GetAxis (characterState.getPlayerTag() + "CameraVertical"));
 		throwDirection = Quaternion.LookRotation (throwDirection) * input;
 		
 		GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
@@ -84,20 +84,20 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	void updateThrowLightShard() {
 		// If the player has just released the right axis.
-		if (this.wasRightAxisDown && !isAxisDown ("ThrowRight")) {
+		if (this.wasRightAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowRight")) {
 			if(characterState.canUseAbility(throwAttractiveLightShardCost)){
 				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
 				throwLightShard();
 			}
 		}
-		if (this.wasLeftAxisDown && !isAxisDown ("ThrowLeft")) {
+		if (this.wasLeftAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowLeft")) {
 			if(characterState.canUseAbility(throwRepellingLightShardCost)){
 				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
 				throwLightShard();
 			}
 		}
-		this.wasRightAxisDown = isAxisDown("ThrowRight");
-		this.wasLeftAxisDown = isAxisDown("ThrowLeft");
+		this.wasRightAxisDown = isAxisDown(characterState.getPlayerTag() + "ThrowRight");
+		this.wasLeftAxisDown = isAxisDown(characterState.getPlayerTag() + "ThrowLeft");
 	}
 
 	void handleTeleport(string button){
@@ -113,7 +113,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 				drawMarkers(directionsToLightShards);
 
 				// Do raycasting stuff here (must be after drawing the markers)
-				Vector3 input = new Vector3 (Input.GetAxis ("CameraHorizontal"), 0.0f, -Input.GetAxis ("CameraVertical"));
+				Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "CameraHorizontal"), 0.0f, -Input.GetAxis (characterState.getPlayerTag() + "CameraVertical"));
 
 
 				input = Quaternion.LookRotation(characterState.getCurrentForwardDirection()) * input;
@@ -167,13 +167,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// NOTE: do not change the order of these methods else everything will break
-		updateFlash();
+		this.updateFlash();
 
-		updateThrowLightShard();
+		this.updateThrowLightShard();
 		
-		updateLockCamera();
+		this.updateLockCamera();
 
-		handleTeleport("TeleportRight");
-		handleTeleport("TeleportLeft");
+		this.handleTeleport(characterState.getPlayerTag() + "TeleportRight");
+		this.handleTeleport(characterState.getPlayerTag() + "TeleportLeft");
 	}
 }

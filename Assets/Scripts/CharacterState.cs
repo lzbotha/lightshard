@@ -27,6 +27,13 @@ public class CharacterState : BasicState {
 	public ParticleSystem respawnEffect;
 	private GameObject lastTouchedBonfire;
 
+	private string playerTag = "Player 1 - ";
+
+	public string getPlayerTag(){ return playerTag; }
+	public void setPlayerTag(string tag){ 
+		print (tag);
+		this.playerTag = tag; }
+
 	public void setLastTouchedBonfire(GameObject bonfire){ lastTouchedBonfire = bonfire; }
 	public GameObject getLastTouchedBonfire(){ return lastTouchedBonfire; }
 

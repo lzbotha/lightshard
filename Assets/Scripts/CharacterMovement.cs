@@ -40,7 +40,7 @@ public class CharacterMovement : BasicMovement {
 	void updateGravity(){
 		if (this.controller.isGrounded && characterState.getVelocity().y <= 0.0f) {
 			characterState.setVelocityY(0.0f);
-			if (Input.GetButtonDown ("Jump")) {
+			if (Input.GetButtonDown (characterState.getPlayerTag() + "Jump")) {
 				characterState.setVelocityY(characterState.getVelocity().y + jumpSpeed);
 			}
 		} else {
@@ -51,7 +51,7 @@ public class CharacterMovement : BasicMovement {
 	}
 
 	Vector3 getMovementComponent() {
-		Vector3 input = new Vector3 (Input.GetAxis ("MovementHorizontal"), 0.0f, Input.GetAxis ("MovementVertical"));
+		Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "MovementHorizontal"), 0.0f, Input.GetAxis (characterState.getPlayerTag() + "MovementVertical"));
 		
 		input.Normalize ();
 		
@@ -89,7 +89,7 @@ public class CharacterMovement : BasicMovement {
 				this.characterState.respawn(new Vector3(delta.x, 1.0f, delta.y));
 			}
 
-			if (Input.GetButtonDown("Smear")) {
+			if (Input.GetButtonDown(characterState.getPlayerTag() + "Smear")) {
 				startSmear();
 			} else {
 
