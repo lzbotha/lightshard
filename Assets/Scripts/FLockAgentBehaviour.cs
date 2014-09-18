@@ -49,7 +49,11 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				cohesion += obj.transform.position;
 			
 				//seperation
-				seperation += obj.transform.position - this.transform.position;
+				if(Vector3.Distance(this.transform.position, obj.transform.position) <= 2.0f){
+					Vector3 temp = obj.transform.position - this.transform.position;
+					temp.Normalize();
+					seperation += temp;
+				}
 			}
 
 
