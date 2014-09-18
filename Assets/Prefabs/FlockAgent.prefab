@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.695040226, y: 1, z: 8.58283138}
+  m_LocalPosition: {x: -.695040226, y: 1, z: 3.76196289}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 400000}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 0
   jumpSpeed: 0
-  speed: 3
+  speed: 7
   mass: 1
   friction: 0
   agentState: {fileID: 11400002}
@@ -147,9 +147,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentState: {fileID: 11400002}
   agentMovement: {fileID: 11400004}
-  cohesionWeight: 1
-  seperationWeight: 1
-  alignmentWeight: 1
+  cohesionWeight: .800000012
+  seperationWeight: 1.39999998
+  alignmentWeight: 2
+  seperationThreshold: 2
+  attackRange: .600000024
   playerChaseThreshold: 1
   playerLightRunThreshold: 5.5
 --- !u!135 &13500000

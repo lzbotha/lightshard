@@ -10,6 +10,9 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public float seperationWeight = 1.0f;
 	public float alignmentWeight = 1.0f;
 
+	public float seperationThreshold = 2.0f;
+	public float attackRange = 0.3f;
+
 	public int playerChaseThreshold;
 	public float playerLightRunThreshold = 5.5f;
 
@@ -49,7 +52,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				cohesion += obj.transform.position;
 			
 				//seperation
-				if(Vector3.Distance(this.transform.position, obj.transform.position) <= 2.0f){
+				if(Vector3.Distance(this.transform.position, obj.transform.position) <= seperationThreshold){
 					Vector3 temp = obj.transform.position - this.transform.position;
 					temp.Normalize();
 					seperation += temp;
@@ -100,10 +103,19 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		return direction;
 	}
 
+	private void tryAttackPlayer(){
+		foreach (GameObject player in players) {
+			if(Vector3.Distance(this.transform.position, player.transform.position) <= attackRange){
+				print ("smack dat bitch");
+			}
+		}
+	}
+
 	void Update(){
 		Vector3 direction = this.calculateFlockDirectionComponent () + this.calculatePlayerDirectionComponent ();
 		direction.Normalize ();
 		this.agentMovement.moveInDirection(direction);
 		this.agentMovement.move ();
+		this.tryAttackPlayer ();
 	}
 }
