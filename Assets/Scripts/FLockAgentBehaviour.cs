@@ -64,7 +64,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 			cohesion = cohesion - this.transform.position;
 			cohesion.Normalize ();
 
-			seperation /= this.neighbours.Count;
 			seperation *= -1;
 			seperation.Normalize ();
 
