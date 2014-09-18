@@ -52,7 +52,7 @@ public class CharacterState : BasicState {
 	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
 	public void damage(float damage){
 		// damage the player
-		this.changeLightRadiusBy (damage);
+		this.changeLightRadiusBy (-damage);
 
 		// if the player dies respawn them
 		if (this.lightRadius <= 0)

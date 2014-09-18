@@ -12,7 +12,9 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	public float seperationThreshold = 2.0f;
 	public float attackRange = 0.3f;
-	public float damage = 0.3f;
+	public float attackDamage = 0.3f;
+	public float attackCoolDown = 0.2f;
+	private float cooldown = 0.0f;
 
 	public int playerChaseThreshold;
 	public float playerLightRunThreshold = 5.5f;
@@ -107,7 +109,12 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	private void tryAttackPlayer(){
 		foreach (GameObject player in players) {
 			if(Vector3.Distance(this.transform.position, player.transform.position) <= attackRange){
-				player.GetComponent<CharacterState>().damage(damage);
+				if(cooldown <= 0){
+					player.GetComponent<CharacterState>().damage(attackDamage);
+					this.cooldown = this.attackCoolDown;
+				} else {
+					cooldown -= Time.deltaTime;
+				}
 			}
 		}
 	}

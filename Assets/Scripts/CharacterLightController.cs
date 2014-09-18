@@ -44,7 +44,9 @@ public class CharacterLightController : MonoBehaviour {
 		// 			can't be in an else
 		else if (characterState.isLightRegenPositive()) {
 			// Restore the characters light radius up to the normal value
-			characterState.setLightRadius(Mathf.Clamp(characterState.getLightRadius() + characterState.getLightRegenRate() * Time.deltaTime, characterState.getMinLightRadius(), normalLightRadius));
+			if(characterState.getLightRadius() + characterState.getLightRegenRate() * Time.deltaTime <= normalLightRadius)
+				characterState.changeLightRadiusBy(characterState.getLightRegenRate() * Time.deltaTime);
+			//characterState.setLightRadius(Mathf.Clamp(characterState.getLightRadius() + characterState.getLightRegenRate() * Time.deltaTime, characterState.getMinLightRadius(), normalLightRadius));
 		}
 		gameObject.light.range = characterState.getLightRadius();
 	}
