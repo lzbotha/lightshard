@@ -12,6 +12,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	public float seperationThreshold = 2.0f;
 	public float attackRange = 0.3f;
+	public float damage = 0.3f;
 
 	public int playerChaseThreshold;
 	public float playerLightRunThreshold = 5.5f;
@@ -106,7 +107,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	private void tryAttackPlayer(){
 		foreach (GameObject player in players) {
 			if(Vector3.Distance(this.transform.position, player.transform.position) <= attackRange){
-				print ("smack dat bitch");
+				player.GetComponent<CharacterState>().damage(damage);
 			}
 		}
 	}

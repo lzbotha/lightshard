@@ -50,6 +50,14 @@ public class CharacterState : BasicState {
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
 	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
+	public void damage(float damage){
+		// damage the player
+		this.changeLightRadiusBy (damage);
+
+		// if the player dies respawn them
+		if (this.lightRadius <= 0)
+			this.respawn ();
+	}
 
 	public float getMinLightRadius(){ return minLightRadius; }
 	public void setMinLightRadius(float radius){ minLightRadius = radius; }
