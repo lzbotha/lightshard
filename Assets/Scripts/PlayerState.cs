@@ -3,12 +3,17 @@ using System.Collections;
 
 public class PlayerState : MonoBehaviour {
 	public CharacterState characterState;
+	public Camera characterCamera;
 	public int player = 1;
+	public int playersInLevel = 1;
 
 	void Start(){
-		if(player == 1)
-			characterState.setPlayerTag ("Player 1 - ");
-		else
-			characterState.setPlayerTag ("Player 2 - ");
+		if (player == 1) {
+			this.characterState.setPlayerTag ("Player 1 - ");
+			this.characterCamera.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+		} else {
+			this.characterState.setPlayerTag ("Player 2 - ");
+			this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 0.5f);
+		}
 	}
 }
