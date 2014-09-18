@@ -10,7 +10,11 @@ public class PlayerState : MonoBehaviour {
 	void Start(){
 		if (player == 1) {
 			this.characterState.setPlayerTag ("Player 1 - ");
-			this.characterCamera.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+			if(this.playersInLevel == 2)
+				this.characterCamera.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+			else
+				this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
+
 		} else {
 			this.characterState.setPlayerTag ("Player 2 - ");
 			this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 0.5f);

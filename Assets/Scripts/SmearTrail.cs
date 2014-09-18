@@ -38,7 +38,6 @@ public class SmearTrail : MonoBehaviour {
 //				trail2.enabled = false;
 			}else if(trail1.enabled){
 				timer += Time.deltaTime;
-				trail1.startWidth = 0f;
 			}
 		}
 	}
