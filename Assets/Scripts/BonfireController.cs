@@ -10,6 +10,8 @@ public class BonfireController : MonoBehaviour {
 	public Color notCurrentlyActive;
 	public Color actives;
 
+	private int playersAtThisBonfire = 0;
+
 	void Start() {
 		this.characterActivationEffect.Stop();
 		this.flame.Stop();
@@ -23,13 +25,15 @@ public class BonfireController : MonoBehaviour {
 		Invoke("characterActivationStop", 3);
 		CharacterState cs = player.GetComponent<CharacterState>();
 		cs.setRespawnPosition(this.transform.position);
-		if(cs.getLastTouchedBonfire() != null)
-			cs.getLastTouchedBonfire().GetComponent<BonfireController>().noLongerActive();
+		if (cs.getLastTouchedBonfire () != null)
+			cs.getLastTouchedBonfire ().GetComponent<BonfireController> ().noLongerActive ();
+
 		cs.setLastTouchedBonfire(this.gameObject);
 
 		this.flame.Stop();
 		this.flame.startColor = actives;
 		this.flame.Play();
+		this.playersAtThisBonfire++;
 	}
 
 	void characterActivationStop() {
@@ -37,9 +41,12 @@ public class BonfireController : MonoBehaviour {
 	}
 
 	void noLongerActive() {
-		this.flame.Stop();
-		this.flame.startColor = notCurrentlyActive;
-		this.flame.Play();
+		this.playersAtThisBonfire--;
+		if (this.playersAtThisBonfire == 0) {
+			this.flame.Stop ();
+			this.flame.startColor = notCurrentlyActive;
+			this.flame.Play ();
+		}
 	}
 
 	void OnTriggerStay(Collider other) {
