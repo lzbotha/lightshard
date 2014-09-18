@@ -6,23 +6,19 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public AgentState agentState;
 	public AgentMovement agentMovement;
 
-	private enum states {IDLE, CHASE, AVOID, FLEE, MERGE};
-
 	public float cohesionWeight = 1.0f;
 	public float seperationWeight = 1.0f;
 	public float alignmentWeight = 1.0f;
 
-	public int playerChaseThreshold = 3;
+	public int playerChaseThreshold;
 	public float playerLightRunThreshold = 5.5f;
 
 	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
-	private GameObject player;
-	private bool playerNear = false;
+	private HashSet<GameObject> players = new HashSet<GameObject> ();
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Player") {
-			player = other.gameObject;
-			playerNear = true;
+			players.Add(other.gameObject);
 		}
 		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
 			neighbours.Add (other.gameObject);
@@ -31,7 +27,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		if (other.tag == "Player") {
-			playerNear = false;
+			players.Remove(other.gameObject);
 		}
 		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
 			neighbours.Remove (other.gameObject);
@@ -80,15 +76,25 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	}
 
 	private Vector3 calculatePlayerDirectionComponent(){
-		if (this.playerNear) {
+		Vector3 direction = Vector3.zero;
+		float distanceToNearestPlayer = -1.0f;
+		if (this.players.Count > 0) {
 
-			if(neighbours.Count >= this.playerChaseThreshold && this.player.GetComponent<CharacterState>().getLightRadius() < this.playerLightRunThreshold){
-				return player.transform.position - this.transform.position;
-			} else {
-				return this.transform.position - player.transform.position;
+			foreach(GameObject player in players){
+				// if any player in range has flashed run away from them (TODO: should possible change this to run from the nearest one that has flashed)
+				if(player.GetComponent<CharacterState>().getLightRadius() >= this.playerLightRunThreshold)
+					return this.transform.position - player.transform.position;
+				else if(Vector3.Distance(this.transform.position, player.transform.position) < distanceToNearestPlayer || distanceToNearestPlayer == -1){
+					if(neighbours.Count >= this.playerChaseThreshold){
+						direction = player.transform.position - this.transform.position;
+					} else {
+						direction = this.transform.position - player.transform.position;
+					}
+					distanceToNearestPlayer = Vector3.Distance(this.transform.position, player.transform.position);
+				}
 			}
 		}
-		return Vector3.zero;
+		return direction;
 	}
 
 	void Update(){
