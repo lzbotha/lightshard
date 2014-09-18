@@ -29,6 +29,8 @@ public class CharacterState : BasicState {
 
 	private string playerTag = "Player 1 - ";
 
+	public float bonfireRespawnOffset = 2.0f;
+
 	public string getPlayerTag(){ return playerTag; }
 	public void setPlayerTag(string tag){ this.playerTag = tag; }
 
@@ -36,13 +38,18 @@ public class CharacterState : BasicState {
 	public GameObject getLastTouchedBonfire(){ return lastTouchedBonfire; }
 
 	public override void respawn(Vector3 delta = default(Vector3)) {
-		base.respawn(delta);
+		// Respawn the player somewhere on the circle with radius bonfireRespawnOffset
+		Vector2 delta2 = Random.insideUnitCircle;
+		delta2.Normalize();
+		delta2 *= this.bonfireRespawnOffset;
+
+		base.respawn(new Vector3(delta2.x, 1.0f, delta2.y));
 		this.respawnEffect.Play();
 	}
 
 	public float getLightRadius(){ return lightRadius; }
 	public void setLightRadius(float radius){ lightRadius = radius; }
-	public void changeLightRadiusBy(float amount){ lightRadius += amount;}	
+	public void changeLightRadiusBy(float amount){ lightRadius += amount;}
 
 	public float getMinLightRadius(){ return minLightRadius; }
 	public void setMinLightRadius(float radius){ minLightRadius = radius; }
