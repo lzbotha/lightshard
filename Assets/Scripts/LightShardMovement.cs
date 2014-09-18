@@ -13,6 +13,9 @@ public class LightShardMovement : BasicMovement {
 	public void throwLightShard(Vector3 position, Vector3 direction){
 		this.transform.position = position;
 
+		// read this 
+		// http://en.wikipedia.org/wiki/Trajectory_of_a_projectile
+
 		// Calculate vertical velocity
 		//throwVelocity.y = this.arcHeight/(this.throwTime * 0.5f) - 0.5f * this.gravity * (this.throwTime * 0.5f);
 		throwVelocity.y = -this.gravity * 0.5f * throwTime;
