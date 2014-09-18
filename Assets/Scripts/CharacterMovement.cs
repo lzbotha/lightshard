@@ -36,6 +36,10 @@ public class CharacterMovement : BasicMovement {
 		this.smearEndPosition = this.transform.position + this.transform.forward * characterState.getLightRadius();
 	}
 
+	public void cancelSmear(){
+		smearTimeRemaining = 0.0f;
+	}
+
 	void updateGravity(){
 		if (this.controller.isGrounded && characterState.getVelocity().y <= 0.0f) {
 			characterState.setVelocityY(0.0f);
@@ -75,8 +79,8 @@ public class CharacterMovement : BasicMovement {
 
 	void Update() {
 		if (isSmearing()) {
-			gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
-			updateSmear();
+			this.gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
+			this.updateSmear();
 		} else {
 			gameObject.layer = LayerMask.NameToLayer("Default");
 

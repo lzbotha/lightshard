@@ -38,6 +38,8 @@ public class CharacterState : BasicState {
 	public GameObject getLastTouchedBonfire(){ return lastTouchedBonfire; }
 
 	public override void respawn(Vector3 delta = default(Vector3)) {
+		this.GetComponent<CharacterMovement> ().cancelSmear ();
+
 		// Respawn the player somewhere on the circle with radius bonfireRespawnOffset
 		Vector2 delta2 = Random.insideUnitCircle;
 		delta2.Normalize();
