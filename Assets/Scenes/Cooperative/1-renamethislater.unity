@@ -1292,8 +1292,7 @@ MonoBehaviour:
   friction: 50
   script: {fileID: 1477401230}
   smearTime: .300000012
-  smearCooldown: 0
-  _smearCooldown: 0
+  smearCooldown: .5
   characterState: {fileID: 56083952}
   minYPosition: -50
 --- !u!143 &56083955
@@ -2945,7 +2944,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -6286,7 +6285,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .0149999997
+  m_Intensity: .430000007
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -13176,7 +13175,7 @@ ParticleSystem:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 570449961}
@@ -13197,7 +13196,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.68356276, y: 1, z: 3.85793972}
@@ -13211,7 +13210,7 @@ SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13500000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -13224,7 +13223,7 @@ CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   serializedVersion: 2
   m_Height: 2
@@ -13239,7 +13238,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13254,7 +13253,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13268,7 +13267,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13286,7 +13285,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 570449960}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13299,7 +13298,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -13441,7 +13440,6 @@ MonoBehaviour:
   script: {fileID: 1388210745}
   smearTime: .300000012
   smearCooldown: .400000006
-  _smearCooldown: 0
   characterState: {fileID: 579330262}
   minYPosition: -50
 --- !u!143 &579330264
@@ -14658,55 +14656,11 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
---- !u!1001 &622892985
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.68356276
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.85793972
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_RootGameObject: {fileID: 570449960}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &649988512
 GameObject:
   m_ObjectHideFlags: 0
@@ -17401,7 +17355,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -20737,7 +20691,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -24125,6 +24079,50 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1001 &1028766400
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.68356276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.85793972
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+  m_RootGameObject: {fileID: 570449960}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1064149888
 GameObject:
   m_ObjectHideFlags: 0
@@ -24233,7 +24231,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1161930024}
@@ -24251,7 +24249,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 1161930021}
   m_Enabled: 1
   m_CastShadows: 1
@@ -24272,14 +24270,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 1161930021}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1161930024
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 622892985}
+  m_PrefabInternal: {fileID: 1028766400}
   m_GameObject: {fileID: 1161930021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -29997,7 +29995,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -46976,7 +46974,7 @@ MonoBehaviour:
   seperationWeight: 1.39999998
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: .300000012
+  basicAttackRange: .800000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
