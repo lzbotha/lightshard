@@ -109,7 +109,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	private void tryAttackPlayer(){
 		foreach (GameObject player in players) {
-			print (Vector3.Distance(this.transform.position, player.transform.position));
 			if(Vector3.Distance(this.transform.position, player.transform.position) <= this.basicAttackRange){
 				if(this._basicAttackCooldown <= 0){
 					player.GetComponent<CharacterState>().damage(basicAttackDamage);
