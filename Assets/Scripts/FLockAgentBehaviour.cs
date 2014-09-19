@@ -78,10 +78,11 @@ public class FLockAgentBehaviour : MonoBehaviour {
 			return direction;
 		}
 
-		//if this flock is on its own chose a random direction
-		Vector2 rand = Random.insideUnitCircle; // <-- this is a bit shite
+		//if this flock is on its own head back to its respawn position
+		Vector3 dir =  this.agentState.getRespawnPosition () - this.transform.position;
+		dir.Normalize();
 
-		return new Vector3 (rand.x, 0.0f, rand.y);
+		return dir;
 	}
 
 	private Vector3 calculatePlayerDirectionComponent(){

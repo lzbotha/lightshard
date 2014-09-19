@@ -23,4 +23,8 @@ public class AgentState : BasicState {
 		}
 		return this.transform.position;
 	}
+
+	void Start(){
+		this.setRespawnPosition (this.transform.position);
+	}
 }
