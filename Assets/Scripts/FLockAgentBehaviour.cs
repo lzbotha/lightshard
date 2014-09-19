@@ -10,14 +10,15 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public float seperationWeight;
 	public float alignmentWeight;
 
-	public float seperationThreshold = 2.0f;
+	// Agents will attempt to steer away from other agents within this distance
+	public float seperationDistance = 2.0f;
 
 	public float attackRange = 0.3f;
 	public float basicAttackDamage = 0.3f;
 	public float basicAttackCoolDown = 0.2f;
 	private float _basicAttackCooldown = 0.0f;
 
-	public int playerChaseThreshold;
+	public int agentsNeededToChasePlayer;
 	public float playerLightRunThreshold = 5.5f;
 
 	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
@@ -56,15 +57,13 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				cohesion += obj.transform.position;
 			
 				//seperation
-				if(Vector3.Distance(this.transform.position, obj.transform.position) <= seperationThreshold){
+				if(Vector3.Distance(this.transform.position, obj.transform.position) <= this.seperationDistance){
 					Vector3 temp = obj.transform.position - this.transform.position;
 					temp.Normalize();
 					seperation += temp;
 				}
 			}
 
-
-			alignment /= this.neighbours.Count;
 			alignment.Normalize ();
 
 			cohesion /= this.neighbours.Count;
@@ -75,7 +74,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 			seperation.Normalize ();
 
 			Vector3 direction = (alignmentWeight * alignment + cohesionWeight * cohesion + seperationWeight * seperation);
-
+			direction.Normalize ();
 			return direction;
 		}
 
@@ -95,7 +94,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				if(player.GetComponent<CharacterState>().getLightRadius() >= this.playerLightRunThreshold)
 					return this.transform.position - player.transform.position;
 				else if(Vector3.Distance(this.transform.position, player.transform.position) < distanceToNearestPlayer || distanceToNearestPlayer == -1){
-					if(neighbours.Count >= this.playerChaseThreshold){
+					if(neighbours.Count >= this.agentsNeededToChasePlayer - 1){
 						direction = player.transform.position - this.transform.position;
 					} else {
 						direction = this.transform.position - player.transform.position;
@@ -104,6 +103,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				}
 			}
 		}
+		direction.Normalize ();
 		return direction;
 	}
 

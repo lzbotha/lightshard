@@ -152,9 +152,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!135 &13500000
 SphereCollider:

@@ -2944,9 +2944,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!1001 &278523509
 Prefab:
@@ -6317,50 +6317,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
---- !u!1001 &398253103
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -.695040226
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.76196289
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_RootGameObject: {fileID: 904581534}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &401492627
 GameObject:
   m_ObjectHideFlags: 0
@@ -13338,9 +13294,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!1 &573684627
 GameObject:
@@ -14695,9 +14651,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!1001 &622892985
 Prefab:
@@ -17294,6 +17250,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1001 &804403534
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.695040226
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.76196289
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
+  m_RootGameObject: {fileID: 904581534}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &805097660
 GameObject:
   m_ObjectHideFlags: 0
@@ -17394,9 +17394,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!143 &805097666
 CharacterController:
@@ -20619,7 +20619,7 @@ ParticleSystem:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 904581541}
@@ -20641,7 +20641,7 @@ SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13500000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -20654,7 +20654,7 @@ CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   serializedVersion: 2
   m_Height: 2
@@ -20669,7 +20669,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -20684,7 +20684,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -20698,7 +20698,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -20716,7 +20716,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -20730,15 +20730,15 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!4 &904581541
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 904581534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.695040226, y: 1, z: 3.76196289}
@@ -29990,9 +29990,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!1 &1298189066
 GameObject:
@@ -32390,7 +32390,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1456350626}
@@ -32407,7 +32407,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 1456350625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32420,7 +32420,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 1456350625}
   m_Enabled: 1
   m_CastShadows: 1
@@ -32441,7 +32441,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 68f30cde337ccab4293e33ebeef455fd,
     type: 2}
-  m_PrefabInternal: {fileID: 398253103}
+  m_PrefabInternal: {fileID: 804403534}
   m_GameObject: {fileID: 1456350625}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1477401228
@@ -46969,9 +46969,9 @@ MonoBehaviour:
   alignmentWeight: 2
   seperationThreshold: 2
   attackRange: .800000012
-  attackDamage: .300000012
-  attackCoolDown: .200000003
-  playerChaseThreshold: 1
+  basicAttackDamage: .300000012
+  basicAttackCoolDown: .200000003
+  agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 5.5
 --- !u!1 &1953025733
 GameObject:
