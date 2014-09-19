@@ -11,9 +11,9 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public float alignmentWeight;
 
 	// Agents will attempt to steer away from other agents within this distance
-	public float seperationDistance = 2.0f;
+	public float agentSeperationDistance = 2.0f;
 
-	public float attackRange = 0.3f;
+	public float basicAttackRange = 0.3f;
 	public float basicAttackDamage = 0.3f;
 	public float basicAttackCoolDown = 0.2f;
 	private float _basicAttackCooldown = 0.0f;
@@ -26,19 +26,19 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Player") {
-			players.Add(other.gameObject);
+			this.players.Add(other.gameObject);
 		}
 		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
-			neighbours.Add (other.gameObject);
+			this.neighbours.Add (other.gameObject);
 		}
 	}
 
 	void OnTriggerExit(Collider other){
 		if (other.tag == "Player") {
-			players.Remove(other.gameObject);
+			this.players.Remove(other.gameObject);
 		}
 		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
-			neighbours.Remove (other.gameObject);
+			this.neighbours.Remove (other.gameObject);
 		}
 	}
 
@@ -57,7 +57,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 				cohesion += obj.transform.position;
 			
 				//seperation
-				if(Vector3.Distance(this.transform.position, obj.transform.position) <= this.seperationDistance){
+				if(Vector3.Distance(this.transform.position, obj.transform.position) <= this.agentSeperationDistance){
 					Vector3 temp = obj.transform.position - this.transform.position;
 					temp.Normalize();
 					seperation += temp;
@@ -110,7 +110,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	private void tryAttackPlayer(){
 		foreach (GameObject player in players) {
-			if(Vector3.Distance(this.transform.position, player.transform.position) <= attackRange){
+			if(Vector3.Distance(this.transform.position, player.transform.position) <= this.basicAttackRange){
 				if(this._basicAttackCooldown <= 0){
 					player.GetComponent<CharacterState>().damage(basicAttackDamage);
 					this._basicAttackCooldown = this.basicAttackCoolDown;
@@ -124,6 +124,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	void Update(){
 		Vector3 direction = this.calculateFlockDirectionComponent () + this.calculatePlayerDirectionComponent ();
 		direction.Normalize ();
+
 		this.agentMovement.moveInDirection(direction);
 		this.agentMovement.move ();
 		this.tryAttackPlayer ();
