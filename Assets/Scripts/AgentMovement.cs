@@ -12,9 +12,9 @@ public class AgentMovement : BasicMovement {
 		// remove previous iterations movement component
 		agentState.setVelocity(agentState.getVelocity() - this.movementComponent);
 
-		// if the agent is on the ground apply friction to non movementComponent velocities
-		//if (this.controller.isGrounded)
-			//applyFriction ();
+		///if the agent is on the ground apply friction to non movementComponent velocities
+		if (this.controller.isGrounded)
+			applyFriction ();
 		
 
 		// calculate new movement component

@@ -58,7 +58,8 @@ public class BonfireController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Player"){
-			if(other.gameObject.GetComponent<CharacterState>().getRespawnPosition() != this.transform.position){
+			// if the charater has yet to activate a bonfire or activates a new bonfire
+			if(other.gameObject.GetComponent<CharacterState>().getLastTouchedBonfire() == null || other.gameObject.GetComponent<CharacterState>().getLastTouchedBonfire() != this.gameObject){
 				this.characterActivationStart(other.gameObject);
 			}
 		}
