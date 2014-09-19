@@ -81,7 +81,6 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		//if this flock is on its own head back to its respawn position
 		Vector3 dir =  this.agentState.getRespawnPosition () - this.transform.position;
 		dir.Normalize();
-
 		return dir;
 	}
 
@@ -121,7 +120,14 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		}
 	}
 
-	void Update(){
+	void Start() {
+		// This is required otherwise the agents don't start moving until another moving component comes within trigger range
+		// i.e. OnTriggerEnter is disabled for static objects so the flocks don't start moving by themselves.
+		this.agentMovement.moveInDirection(Vector3.right);
+		this.agentMovement.move ();
+	}
+
+	void Update() {
 		Vector3 direction = this.calculateFlockDirectionComponent () + this.calculatePlayerDirectionComponent ();
 		direction.Normalize ();
 
