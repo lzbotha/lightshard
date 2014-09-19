@@ -32,6 +32,7 @@ public class AgentMovement : BasicMovement {
 
 	public void move(){
 		this.controller.Move (this.agentState.getVelocity() * Time.deltaTime);
-		this.transform.forward = this.agentState.getVelocity ();
+		if(this.agentState.getVelocity() != Vector3.zero)
+			this.transform.forward = this.agentState.getVelocity ();
 	}
 }

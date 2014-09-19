@@ -164,7 +164,7 @@ MonoBehaviour:
   agentState: {fileID: 11400002}
   agentMovement: {fileID: 11400004}
   cohesionWeight: .800000012
-  seperationWeight: 1.39999998
+  seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
   basicAttackRange: 1
@@ -182,7 +182,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &14300000
 CharacterController:
