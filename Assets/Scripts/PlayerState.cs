@@ -12,11 +12,14 @@ public class PlayerState : MonoBehaviour {
 			this.characterState.setPlayerTag ("Player 1 - ");
 			if(this.playersInLevel == 2)
 				this.characterCamera.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+				//this.characterCamera.rect = new Rect(0.5f, 0.0f, 0.5f, 1.0f);
 			else
 				this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
+				//this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
 
 		} else {
 			this.characterState.setPlayerTag ("Player 2 - ");
+			//this.characterCamera.rect = new Rect(0.0f, 0.0f, 0.5f, 1.0f);
 			this.characterCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 0.5f);
 		}
 	}
