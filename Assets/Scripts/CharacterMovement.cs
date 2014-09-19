@@ -7,6 +7,8 @@ public class CharacterMovement : BasicMovement {
 
 	private float smearTimeRemaining = 0.0f;
 	public float smearTime = 0.5f;
+	public float smearCooldown;
+	private float _smearCooldown = 0.0f;
 
 	private Vector3 smearStartPosition = Vector3.zero;
 	private Vector3 smearEndPosition = Vector3.zero;
@@ -78,6 +80,9 @@ public class CharacterMovement : BasicMovement {
 	}
 
 	void Update() {
+
+		this._smearCooldown -= Time.deltaTime;
+
 		if (isSmearing()) {
 			this.gameObject.layer = LayerMask.NameToLayer("SmearingPlayer");
 			this.updateSmear();
@@ -88,7 +93,8 @@ public class CharacterMovement : BasicMovement {
 				this.characterState.respawn();
 			}
 
-			if (Input.GetButtonDown(characterState.getPlayerTag() + "Smear")) {
+			if (Input.GetButtonDown(characterState.getPlayerTag() + "Smear") && this._smearCooldown <= 0.0f) {
+				this._smearCooldown = this.smearCooldown;
 				startSmear();
 			} else {
 

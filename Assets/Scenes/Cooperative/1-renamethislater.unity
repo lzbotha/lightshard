@@ -1292,6 +1292,8 @@ MonoBehaviour:
   friction: 50
   script: {fileID: 1477401230}
   smearTime: .300000012
+  smearCooldown: 0
+  _smearCooldown: 0
   characterState: {fileID: 56083952}
   minYPosition: -50
 --- !u!143 &56083955
@@ -2942,8 +2944,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -2994,6 +2996,10 @@ Prefab:
     - target: {fileID: 11400012, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
       propertyPath: player
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
+      propertyPath: smearCooldown
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025c4374b0200b4b95acdc047c67470, type: 2}
@@ -13292,8 +13298,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -13434,6 +13440,8 @@ MonoBehaviour:
   friction: 50
   script: {fileID: 1388210745}
   smearTime: .300000012
+  smearCooldown: .400000006
+  _smearCooldown: 0
   characterState: {fileID: 579330262}
   minYPosition: -50
 --- !u!143 &579330264
@@ -14649,8 +14657,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -17392,8 +17400,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -20728,8 +20736,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -29988,8 +29996,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -46967,8 +46975,8 @@ MonoBehaviour:
   cohesionWeight: .800000012
   seperationWeight: 1.39999998
   alignmentWeight: 2
-  seperationThreshold: 2
-  attackRange: .800000012
+  agentSeperationDistance: 2
+  basicAttackRange: .300000012
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
