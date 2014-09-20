@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.9183655, y: .100000001, z: 1.69731927}
+  m_LocalPosition: {x: -43.2980042, y: .100000001, z: 1.46165872}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 400000}
@@ -150,7 +150,7 @@ MonoBehaviour:
   speed: 7
   mass: 1
   friction: 0
-  agentState: {fileID: 0}
+  agentState: {fileID: 11400002}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2702e68189cc804aacfa371e8e6c4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentState: {fileID: 11400002}
+  flockAgentState: {fileID: 11400002}
   agentMovement: {fileID: 11400004}
   cohesionWeight: .800000012
   seperationWeight: 1.60000002
