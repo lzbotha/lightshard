@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 	
 public class FLockAgentBehaviour : MonoBehaviour {
-	public AgentState agentState;
+	public FlockAgentState flockAgentState;
 	public AgentMovement agentMovement;
 
 	public float cohesionWeight;
@@ -28,7 +28,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		if (other.tag == "Player") {
 			this.players.Add(other.gameObject);
 		}
-		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
+		else if (this.isAgentInThisFlock(other)) {
 			this.neighbours.Add (other.gameObject);
 		}
 	}
@@ -37,9 +37,13 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		if (other.tag == "Player") {
 			this.players.Remove(other.gameObject);
 		}
-		else if (other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false) {
+		else if (this.isAgentInThisFlock(other)) {
 			this.neighbours.Remove (other.gameObject);
 		}
+	}
+
+	private bool isAgentInThisFlock(Collider other) {
+		return other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false && other.GetComponent<FlockAgentState> ().flockID == this.flockAgentState.flockID;
 	}
 
 	// Calculates the direction of this agent based on flocking rules (only)
@@ -79,7 +83,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		}
 
 		//if this flock is on its own head back to its respawn position
-		Vector3 dir =  this.agentState.getRespawnPosition () - this.transform.position;
+		Vector3 dir =  this.flockAgentState.getRespawnPosition () - this.transform.position;
 		dir.Normalize();
 		return dir;
 	}

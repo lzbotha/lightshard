@@ -27,8 +27,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400006}
-  - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   - 114: {fileID: 11400000}
   - 143: {fileID: 14300000}
   - 135: {fileID: 13500000}
@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68356276, y: 0, z: 3.85793972}
+  m_LocalPosition: {x: -44.9183655, y: .100000001, z: 1.69731927}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 400000}
@@ -128,11 +128,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d6a7d945ce59c40b28a8cda83a3bd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c7368c1fd9992245aea607dc465f83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pf: {fileID: 11400000}
   distToWaypoint: .100000001
+  flockID: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +150,7 @@ MonoBehaviour:
   speed: 7
   mass: 1
   friction: 0
-  agentState: {fileID: 11400002}
+  agentState: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
