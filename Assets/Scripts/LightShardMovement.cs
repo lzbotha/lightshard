@@ -37,8 +37,9 @@ public class LightShardMovement : BasicMovement {
 		state.setVelocityY(state.getVelocityY() + Time.deltaTime * this.gravity);
 
 		if (controller.isGrounded && state.getVelocityY() <= 0) {
-			state.setVelocityY(0.0f);
-			applyFriction();
+			this.state.setVelocityY(0.0f);
+			this.applyFriction();
+			this.state.setLanded(true);
 		}
 	}
 }
