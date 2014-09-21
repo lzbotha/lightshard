@@ -20,7 +20,7 @@ public class AgressiveChaseAgentBehaviour : ChaseAgentBehaviour {
 	}
 
 	void Update(){
-		_basicAttackCooldown -= Time.deltaTime;
+		this._basicAttackCooldown -= Time.deltaTime;
 		this.tryChase ();
 		this.tryAttack ();
 	}
