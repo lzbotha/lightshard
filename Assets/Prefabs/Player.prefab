@@ -316,8 +316,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.062271, y: 0, z: -1.64267254}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: -1.31636381, y: .886477351, z: -1.52491426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -738,6 +738,7 @@ MonoBehaviour:
   numLightShards: 3
   latestLightShardID: -1
   respawnEffect: {fileID: 19800022}
+  respawnSound: {fileID: 8300000, guid: 1f84ae542240ad746b7b0e91001ccdee, type: 3}
   bonfireRespawnOffset: 2
 --- !u!114 &11400004
 MonoBehaviour:
@@ -792,6 +793,8 @@ MonoBehaviour:
   flashEffect: {fileID: 19800008}
   throwAttractiveLightShardCost: .5
   throwRepellingLightShardCost: .5
+  lightShardShortDistance: 7.5
+  lightShardFarDistance: 15
   lightShardMarker: {fileID: 100000, guid: 7a4212d5c3d68e04c934a6bbca0710a1, type: 2}
 --- !u!114 &11400010
 MonoBehaviour:
