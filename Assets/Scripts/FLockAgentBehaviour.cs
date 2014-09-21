@@ -84,6 +84,8 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 		//if this flock is on its own head back to its respawn position
 		Vector3 dir =  this.flockAgentState.getRespawnPosition () - this.transform.position;
+		if (Vector3.Magnitude (dir) < 0.5f)
+			return Vector3.zero;
 		dir.Normalize();
 		return dir;
 	}
