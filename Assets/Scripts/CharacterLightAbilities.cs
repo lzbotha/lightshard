@@ -15,6 +15,8 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 	public float throwAttractiveLightShardCost = 0.0f;
 	public float throwRepellingLightShardCost = 0.0f;
+	public float lightShardShortDistance = 7.5f;
+	public float lightShardFarDistance = 15.0f;
 
 	private bool wasRightAxisDown;
 	private bool wasLeftAxisDown;
@@ -52,7 +54,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		characterState.setCameraDirectionLocked(isAxisDown(characterState.getPlayerTag() + "ThrowRight") || isAxisDown(characterState.getPlayerTag() + "ThrowLeft"));
 	}
 
-	void throwLightShard() {
+	void throwLightShard(float distance) {
 		// Calculate the direction to throw the lightshard
 		Vector3 throwDirection = cameraPosition.position - this.transform.position;
 		throwDirection.y = 0;
@@ -70,6 +72,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 		// cast it
 		LightShardController lsc = ls.GetComponent<LightShardController>();
 		lsc.setCharacter(this.gameObject);
+		lsc.GetComponent<LightShardMovement> ().throwDistance = distance;
 
 		// Don't change the order of this or bad things will happen
 		int key = characterState.lightShards.addLightShard (ls);
@@ -89,13 +92,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 		if (this.wasRightAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowRight")) {
 			if(characterState.canUseAbility(throwAttractiveLightShardCost)){
 				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
-				throwLightShard();
+				this.throwLightShard(this.lightShardShortDistance);
 			}
 		}
 		if (this.wasLeftAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowLeft")) {
 			if(characterState.canUseAbility(throwRepellingLightShardCost)){
 				characterState.changeLightRadiusBy(-throwAttractiveLightShardCost);
-				throwLightShard();
+				this.throwLightShard(this.lightShardFarDistance);
 			}
 		}
 		this.wasRightAxisDown = isAxisDown(characterState.getPlayerTag() + "ThrowRight");
