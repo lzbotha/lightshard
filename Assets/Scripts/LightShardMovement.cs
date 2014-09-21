@@ -22,7 +22,6 @@ public class LightShardMovement : BasicMovement {
 		throwVelocity.z = this.speed * direction.z;
 
 		state.setVelocity(throwVelocity);
-		print (state.getVelocityY ());
 	}
 	
 
