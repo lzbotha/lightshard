@@ -14,7 +14,7 @@ public class AgentMovement : BasicMovement {
 
 		///if the agent is on the ground apply friction to non movementComponent velocities
 		if (this.controller.isGrounded)
-			applyFriction ();
+			this.applyFriction ();
 		
 
 		// calculate new movement component
