@@ -317,7 +317,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.37246394, y: 0, z: -1.64267254}
+  m_LocalPosition: {x: -125.062271, y: 0, z: -1.64267254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -718,7 +718,7 @@ MonoBehaviour:
   friction: 50
   script: {fileID: 11400004}
   smearTime: .300000012
-  smearCooldown: 0
+  smearCooldown: .600000024
   characterState: {fileID: 11400002}
   minYPosition: -50
 --- !u!114 &11400002
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterState: {fileID: 11400002}
-  normalLightRadius: 5
+  normalLightRadius: 8
   minLightRadius: 2
   normalLightRegenRate: .5
 --- !u!114 &11400012
