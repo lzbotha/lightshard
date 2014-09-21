@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Trampoline : MonoBehaviour {
 
+	public float boost = 1.0f;
+
 	void OnTriggerEnter(Collider other){
 		BasicState state = other.gameObject.GetComponent<BasicState>();
 		
@@ -10,7 +12,7 @@ public class Trampoline : MonoBehaviour {
 		Vector3 up = this.transform.up;
 
 		// Calculate the projection of velocity in the direction of up
-		Vector3 deltaVelocity = Vector3.Dot(velocity, up)/Vector3.Dot(up, up) * up;
+		Vector3 deltaVelocity = boost * Vector3.Dot(velocity, up)/Vector3.Dot(up, up) * up;
 
 		// invert the above calculated component
 		state.setVelocity(state.getVelocity() - 2 * deltaVelocity);
