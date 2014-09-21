@@ -15721,7 +15721,7 @@ MonoBehaviour:
   HeuristicAggression: 0
   HighestPoint: 100
   LowestPoint: -50
-  MapStartPosition: {x: -20, y: -20}
+  MapStartPosition: {x: -5, y: -20}
   MapEndPosition: {x: 150, y: 20}
   DisallowedTags:
   - Obstacle
@@ -15729,7 +15729,7 @@ MonoBehaviour:
   - Player
   - Agent
   MoveDiagonal: 1
-  DrawMapInEditor: 1
+  DrawMapInEditor: 0
   CheckFullTileSize: 0
 --- !u!4 &808941902
 Transform:
@@ -40760,7 +40760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: efdf155e29b063e48a1a315326175481, type: 2}
       propertyPath: MapStartPosition.x
-      value: -20
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: efdf155e29b063e48a1a315326175481, type: 2}
       propertyPath: MapStartPosition.y
@@ -40780,7 +40780,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: efdf155e29b063e48a1a315326175481, type: 2}
       propertyPath: DrawMapInEditor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: efdf155e29b063e48a1a315326175481, type: 2}
       propertyPath: Tilesize
