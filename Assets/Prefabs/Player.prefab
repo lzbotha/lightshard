@@ -317,7 +317,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 2.02006149}
+  m_LocalPosition: {x: 1.37246394, y: 0, z: -1.64267254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -821,8 +821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: {fileID: 11400002}
   characterCamera: {fileID: 2000000}
-  player: 2
-  playersInLevel: 2
+  player: 1
+  playersInLevel: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -837,7 +837,7 @@ CharacterController:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   serializedVersion: 2
-  m_Height: 1.5
+  m_Height: 1.70000005
   m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
