@@ -20,7 +20,8 @@ public class CharacterState : BasicState {
 
 	private bool cameraDirectionLocked;
 
-	public CharacterLightShardContainer lightShards = new CharacterLightShardContainer(10);
+	public int numLightShards = 3;
+	public CharacterLightShardContainer lightShards;
 	
 	public int latestLightShardID = -1;
 
@@ -83,6 +84,7 @@ public class CharacterState : BasicState {
 	}
 
 	void Start() {
+		this.lightShards = new CharacterLightShardContainer(this.numLightShards);
 		this.respawnEffect.Stop();
 		movementDirectionLocked = false;
 		flashDeactivationRadius = 0;

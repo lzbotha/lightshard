@@ -184,7 +184,7 @@ MonoBehaviour:
   friction: 300
   arcHeight: 2
   throwDistance: 15
-  throwTime: 1.5
+  throwTime: .699999988
   state: {fileID: 11400004}
 --- !u!114 &11400004
 MonoBehaviour:
