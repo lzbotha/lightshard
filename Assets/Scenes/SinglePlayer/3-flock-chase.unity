@@ -336,6 +336,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &123370539
 Renderer:
   m_ObjectHideFlags: 0
@@ -8474,7 +8475,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -8540,6 +8541,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &357509318
 Renderer:
   m_ObjectHideFlags: 0
@@ -9649,6 +9651,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &406949423
 Renderer:
   m_ObjectHideFlags: 0
@@ -10823,6 +10826,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &426917483
 Renderer:
   m_ObjectHideFlags: 0
@@ -10912,6 +10916,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &451623171
 Renderer:
   m_ObjectHideFlags: 0
@@ -11081,7 +11086,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -12219,6 +12224,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &499565680
 Renderer:
   m_ObjectHideFlags: 0
@@ -12293,6 +12299,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &504736165
 Renderer:
   m_ObjectHideFlags: 0
@@ -14733,8 +14740,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14907,6 +14913,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &598094177
 Renderer:
   m_ObjectHideFlags: 0
@@ -18355,7 +18362,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -21744,7 +21751,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -21797,6 +21804,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &931290144
 Renderer:
   m_ObjectHideFlags: 0
@@ -21886,6 +21894,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &939595207
 Renderer:
   m_ObjectHideFlags: 0
@@ -25345,7 +25354,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -27573,7 +27582,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -27626,6 +27635,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1073846350
 Renderer:
   m_ObjectHideFlags: 0
@@ -31196,6 +31206,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1315169363
 Renderer:
   m_ObjectHideFlags: 0
@@ -32393,7 +32404,7 @@ GameObject:
   - 114: {fileID: 1387294865}
   m_Layer: 9
   m_Name: AgressiveChaseAgent
-  m_TagString: Agent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32460,7 +32471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pf: {fileID: 1387294865}
   distToWaypoint: .100000001
-  maxChaseSeperation: 20
+  maxChaseSeperation: 6
 --- !u!114 &1387294869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32476,7 +32487,7 @@ MonoBehaviour:
   chaseAgentState: {fileID: 1387294868}
   agentMovement: {fileID: 1387294867}
   basicAttackRange: 1.5
-  basicAttackDamage: 4
+  basicAttackDamage: 1
   basicAttackCooldown: 1
 --- !u!135 &1387294870
 SphereCollider:
@@ -32489,7 +32500,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1387294871
 Transform:
@@ -32499,7 +32510,7 @@ Transform:
   m_GameObject: {fileID: 1387294864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.6043854, y: 0, z: 3.39036894}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2078759221}
   m_Father: {fileID: 0}
@@ -32514,7 +32525,7 @@ GameObject:
   - 4: {fileID: 1404030106}
   - 114: {fileID: 1404030107}
   m_Layer: 0
-  m_Name: PlayerOld
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36019,6 +36030,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1519531906
 Renderer:
   m_ObjectHideFlags: 0
@@ -37263,7 +37275,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -38433,6 +38445,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1576027747
 Renderer:
   m_ObjectHideFlags: 0
@@ -38499,6 +38512,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1604813660
 Renderer:
   m_ObjectHideFlags: 0
@@ -38588,6 +38602,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1617973300
 Renderer:
   m_ObjectHideFlags: 0
@@ -38710,6 +38725,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1676630603
 Renderer:
   m_ObjectHideFlags: 0
@@ -40946,7 +40962,7 @@ GameObject:
   - 4: {fileID: 1766389957}
   - 114: {fileID: 1766389958}
   m_Layer: 0
-  m_Name: PlayerOld
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45771,6 +45787,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2001316006
 Renderer:
   m_ObjectHideFlags: 0
@@ -45908,6 +45925,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2069308690
 Renderer:
   m_ObjectHideFlags: 0
@@ -45994,6 +46012,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2078759223
 Renderer:
   m_ObjectHideFlags: 0
@@ -46100,6 +46119,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2102084714
 Renderer:
   m_ObjectHideFlags: 0
@@ -46256,7 +46276,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
@@ -46472,7 +46492,7 @@ MonoBehaviour:
   seperationWeight: 1.60000002
   alignmentWeight: 2
   agentSeperationDistance: 2
-  basicAttackRange: 1.5
+  basicAttackRange: 1
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
