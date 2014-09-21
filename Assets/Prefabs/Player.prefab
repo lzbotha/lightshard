@@ -317,7 +317,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 2.02006149}
+  m_LocalPosition: {x: -125.062271, y: 0, z: -1.64267254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -331,8 +331,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
   m_Children: []
   m_Father: {fileID: 400008}
   m_RootOrder: 0
@@ -355,7 +355,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -711,14 +711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edf18b8abcc08b418c54bc5358ad130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -50
-  jumpSpeed: 30
+  gravity: -30
+  jumpSpeed: 20
   speed: 10
   mass: 1
   friction: 50
   script: {fileID: 11400004}
   smearTime: .300000012
-  smearCooldown: 0
+  smearCooldown: .600000024
   characterState: {fileID: 11400002}
   minYPosition: -50
 --- !u!114 &11400002
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterState: {fileID: 11400002}
-  normalLightRadius: 5
+  normalLightRadius: 8
   minLightRadius: 2
   normalLightRegenRate: .5
 --- !u!114 &11400012
@@ -822,7 +822,7 @@ MonoBehaviour:
   characterState: {fileID: 11400002}
   characterCamera: {fileID: 2000000}
   player: 1
-  playersInLevel: 2
+  playersInLevel: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -837,13 +837,13 @@ CharacterController:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: .5
+  m_Height: 1.20000005
+  m_Radius: .300000012
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .00999999978
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: -.25, z: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
