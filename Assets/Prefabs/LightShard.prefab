@@ -182,7 +182,7 @@ MonoBehaviour:
   speed: 0
   mass: 1
   friction: 300
-  throwDistance: 10
+  throwDistance: 15
   throwTime: .5
   state: {fileID: 11400004}
 --- !u!114 &11400004
