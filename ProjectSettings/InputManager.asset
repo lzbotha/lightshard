@@ -133,7 +133,7 @@ InputManager:
     axis: 1
     joyNum: 2
   - serializedVersion: 3
-    m_Name: MovementHorizontal
+    m_Name: Player 1 - MovementHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -149,7 +149,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: MovementVertical
+    m_Name: Player 1 - MovementVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
