@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &100000
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +17,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> 85d4d6a985dd9f05adffb7cbf25dadd436cfe959
 --- !u!1 &100008
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,6 +54,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -63,6 +67,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400014}
   m_RootOrder: 1
+=======
+>>>>>>> 85d4d6a985dd9f05adffb7cbf25dadd436cfe959
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -86,7 +92,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
+<<<<<<< HEAD
   - {fileID: 400000}
+=======
+>>>>>>> 85d4d6a985dd9f05adffb7cbf25dadd436cfe959
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2300000
@@ -143,6 +152,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+<<<<<<< HEAD
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -178,6 +188,9 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+=======
+  m_AllowConstantClipSamplingOptimization: 1
+>>>>>>> 85d4d6a985dd9f05adffb7cbf25dadd436cfe959
 --- !u!108 &10800008
 Light:
   m_ObjectHideFlags: 1
@@ -188,7 +201,11 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 0, g: .875862122, b: 1, a: 1}
+<<<<<<< HEAD
   m_Intensity: 8
+=======
+  m_Intensity: 1.79999995
+>>>>>>> 85d4d6a985dd9f05adffb7cbf25dadd436cfe959
   m_Range: 12
   m_SpotAngle: 32
   m_CookieSize: 10
