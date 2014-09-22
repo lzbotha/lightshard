@@ -15,7 +15,7 @@ public class BasicMovement : MonoBehaviour {
 
 	void Start(){
 		this.associatedState = this.GetComponent<BasicState>();
-		this.controller = GetComponent<CharacterController> ();
+		this.controller = this.GetComponent<CharacterController> ();
 	}
 
 	public void applyFriction(){

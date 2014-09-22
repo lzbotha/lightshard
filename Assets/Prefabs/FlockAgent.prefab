@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.8720264, y: 0, z: 4.5720911}
+  m_LocalPosition: {x: 55.4052544, y: .100000001, z: -6.71455765}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 400000}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pf: {fileID: 11400000}
   distToWaypoint: .100000001
-  flockID: 0
+  flockID: 2
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,9 +147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 0
   jumpSpeed: 0
-  speed: 7
+  speed: 51.4612617
   mass: 1
-  friction: 0
+  friction: 5
   agentState: {fileID: 11400002}
 --- !u!114 &11400006
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   basicAttackDamage: .300000012
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
-  playerLightRunThreshold: 5.5
+  playerLightRunThreshold: 8.10000038
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

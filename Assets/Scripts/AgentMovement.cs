@@ -7,6 +7,7 @@ public class AgentMovement : BasicMovement {
 	private Vector3 movementComponent = Vector3.zero;
 
 	public void chaseTarget(Vector3 targetPosition){
+
 		this.agentState.findPathTo (targetPosition);
 
 		// remove previous iterations movement component
@@ -14,7 +15,7 @@ public class AgentMovement : BasicMovement {
 
 		///if the agent is on the ground apply friction to non movementComponent velocities
 		if (this.controller.isGrounded)
-			applyFriction ();
+			this.applyFriction ();
 		
 
 		// calculate new movement component
@@ -36,3 +37,4 @@ public class AgentMovement : BasicMovement {
 			this.transform.forward = this.agentState.getVelocity ();
 	}
 }
+

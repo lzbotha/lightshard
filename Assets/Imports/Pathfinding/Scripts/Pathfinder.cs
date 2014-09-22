@@ -344,7 +344,8 @@ public class Pathfinder : MonoBehaviour
     }
 
     private Node FindClosestNode(Vector3 pos)
-    {      
+    {   
+		try {
         int x = (MapStartPosition.x < 0F) ? Mathf.FloorToInt(((pos.x + Mathf.Abs(MapStartPosition.x)) / Tilesize)) :  Mathf.FloorToInt((pos.x - MapStartPosition.x) / Tilesize);
         int z = (MapStartPosition.y < 0F) ? Mathf.FloorToInt(((pos.z + Mathf.Abs(MapStartPosition.y)) / Tilesize)) : Mathf.FloorToInt((pos.z - MapStartPosition.y) / Tilesize);
 
@@ -376,6 +377,9 @@ public class Pathfinder : MonoBehaviour
             }
             return null;
         }
+		} catch (System.IndexOutOfRangeException) {
+			return null;
+		}
     }
 
     private void FindEndNode(Vector3 pos)
@@ -383,34 +387,39 @@ public class Pathfinder : MonoBehaviour
         int x = (MapStartPosition.x < 0F) ? Mathf.FloorToInt(((pos.x + Mathf.Abs(MapStartPosition.x)) / Tilesize)) : Mathf.FloorToInt((pos.x - MapStartPosition.x) / Tilesize);
         int z = (MapStartPosition.y < 0F) ? Mathf.FloorToInt(((pos.z + Mathf.Abs(MapStartPosition.y)) / Tilesize)) : Mathf.FloorToInt((pos.z - MapStartPosition.y) / Tilesize);
 
-        Node closestNode = Map[x, z];
-        List<Node> walkableNodes = new List<Node>();
+		try {
+        	Node closestNode = Map[x, z];
 
-        int turns = 1;
-
-        while(walkableNodes.Count < 1 && maxSearchRounds < (int)10/Tilesize)
-        {
-            walkableNodes = EndNodeNeighbourCheck(x, z, turns);
-            turns++;
-            maxSearchRounds++;
-        }
-
-        if (walkableNodes.Count > 0) //If we found some walkable tiles we will then return the nearest
-        {
-            int lowestDist = 99999999;
-            Node n = null;
-
-            foreach (Node node in walkableNodes)
-            {
-                int i = GetHeuristics(closestNode, node);
-                if (i < lowestDist)
-                {
-                    lowestDist = i;
-                    n = node;
-                }
-            }
-            endNode = new Node(n.x, n.y, n.yCoord, n.ID, n.xCoord, n.zCoord, n.walkable);
-        }
+			List<Node> walkableNodes = new List<Node>();
+			
+			int turns = 1;
+			
+			while(walkableNodes.Count < 1 && maxSearchRounds < (int)10/Tilesize)
+			{
+				walkableNodes = EndNodeNeighbourCheck(x, z, turns);
+				turns++;
+				maxSearchRounds++;
+			}
+			
+			if (walkableNodes.Count > 0) //If we found some walkable tiles we will then return the nearest
+			{
+				int lowestDist = 99999999;
+				Node n = null;
+				
+				foreach (Node node in walkableNodes)
+				{
+					int i = GetHeuristics(closestNode, node);
+					if (i < lowestDist)
+					{
+						lowestDist = i;
+						n = node;
+					}
+				}
+				endNode = new Node(n.x, n.y, n.yCoord, n.ID, n.xCoord, n.zCoord, n.walkable);
+			}
+		} catch (System.IndexOutOfRangeException) {
+			return;
+		} 
     }
 
     private List<Node> EndNodeNeighbourCheck(int x, int z, int r)
