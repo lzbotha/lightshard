@@ -49,8 +49,6 @@ public class CharacterState : BasicState {
 
 		base.respawn(new Vector3(delta2.x, 1.0f, delta2.y));
 		this.audio.PlayOneShot (this.respawnSound);
-
-		this.respawnEffect.Play();
 	}
 
 	public float getLightRadius(){ return lightRadius; }
