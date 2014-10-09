@@ -27,7 +27,6 @@ public class CharacterState : BasicState {
 
 	public ParticleSystem respawnEffect;
 	private GameObject lastTouchedBonfire;
-	public AudioClip respawnSound;
 
 	private string playerTag = "Player 1 - ";
 
@@ -48,7 +47,6 @@ public class CharacterState : BasicState {
 		delta2 *= this.bonfireRespawnOffset;
 
 		base.respawn(new Vector3(delta2.x, 1.0f, delta2.y));
-		this.audio.PlayOneShot (this.respawnSound);
 	}
 
 	public float getLightRadius(){ return lightRadius; }
