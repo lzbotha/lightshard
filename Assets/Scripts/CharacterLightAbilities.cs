@@ -88,6 +88,9 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void updateThrowLightShard() {
+		if (Time.timeScale == 0)
+			return;
+
 		// If the player has just released the right axis.
 		if (this.wasRightAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowRight")) {
 			if(characterState.canUseAbility(throwAttractiveLightShardCost)){
@@ -106,6 +109,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void handleTeleport(string button){
+
+		if (Time.timeScale == 0)
+			return;
+		
 		if(Input.GetButton(button)) {
 			characterState.setCameraDirectionLocked(true);
 

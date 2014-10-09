@@ -24,6 +24,7 @@ public class CharacterMovement : BasicMovement {
 	}
 
 	void updateSmear() {
+
 		float fraction = 1 - smearTimeRemaining / smearTime;
 		
 		this.controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
@@ -94,8 +95,11 @@ public class CharacterMovement : BasicMovement {
 			}
 
 			if (Input.GetButtonDown(characterState.getPlayerTag() + "Smear") && this._smearCooldown <= 0.0f) {
-				this._smearCooldown = this.smearCooldown;
-				startSmear();
+
+				if (!(Time.timeScale == 0)){
+					this._smearCooldown = this.smearCooldown;
+					startSmear();
+				}
 			} else {
 
 				updateGravity();
