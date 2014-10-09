@@ -58,7 +58,7 @@ public class CharacterMovement : BasicMovement {
 	Vector3 getMovementComponent() {
 		Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "MovementHorizontal"), 0.0f, Input.GetAxis (characterState.getPlayerTag() + "MovementVertical"));
 		
-		input.Normalize ();
+		//input.Normalize ();
 		
 		// Calculate the forward direction under current camera rotation
 		Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
