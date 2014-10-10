@@ -3892,7 +3892,7 @@ Transform:
   - {fileID: 2057738304}
   - {fileID: 885902133}
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 52
 --- !u!1 &35741288
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,7 +8400,7 @@ Transform:
   m_Children:
   - {fileID: 395821387}
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 60
 --- !u!135 &149621320
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23988,7 +23988,7 @@ Transform:
   m_Children:
   - {fileID: 887410234}
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 75
 --- !u!135 &684876265
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30401,7 +30401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 50
 --- !u!1 &885902132
 GameObject:
   m_ObjectHideFlags: 0
@@ -37224,7 +37224,7 @@ Transform:
   - {fileID: 1103380007}
   - {fileID: 364031379}
   m_Father: {fileID: 0}
-  m_RootOrder: 58
+  m_RootOrder: 63
 --- !u!1 &1062546017
 GameObject:
   m_ObjectHideFlags: 0
@@ -38439,7 +38439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 44
 --- !u!1 &1079191001
 GameObject:
   m_ObjectHideFlags: 0
@@ -38860,7 +38860,7 @@ Transform:
   m_LocalScale: {x: 10, y: .200000003, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 45
 --- !u!1001 &1095861776
 Prefab:
   m_ObjectHideFlags: 0
@@ -41424,7 +41424,6 @@ GameObject:
   - 4: {fileID: 1166793955}
   - 33: {fileID: 1166793958}
   - 65: {fileID: 1166793957}
-  - 23: {fileID: 1166793956}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -41444,26 +41443,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 28310205}
   m_RootOrder: 12
---- !u!23 &1166793956
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1166793954}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1166793957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41769,7 +41748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 43
 --- !u!1 &1211134151
 GameObject:
   m_ObjectHideFlags: 0
@@ -43459,7 +43438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 51
 --- !u!1 &1289739195
 GameObject:
   m_ObjectHideFlags: 0
@@ -50862,7 +50841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 77
 --- !u!1 &1463822339
 GameObject:
   m_ObjectHideFlags: 0
@@ -52758,7 +52737,7 @@ Transform:
   - {fileID: 2113669323}
   - {fileID: 2068817592}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
 --- !u!1001 &1559856716
 Prefab:
   m_ObjectHideFlags: 0
@@ -57725,7 +57704,7 @@ Transform:
   m_Children:
   - {fileID: 1082099605}
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 62
 --- !u!1 &1648378665
 GameObject:
   m_ObjectHideFlags: 0
@@ -59960,7 +59939,7 @@ Transform:
   - {fileID: 1777232068}
   - {fileID: 1022925238}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
 --- !u!64 &1658205359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61553,7 +61532,7 @@ Transform:
   m_Children:
   - {fileID: 559902694}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 58
 --- !u!1 &1697326223
 GameObject:
   m_ObjectHideFlags: 0
@@ -62304,7 +62283,7 @@ Transform:
   m_Children:
   - {fileID: 235936263}
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 61
 --- !u!135 &1756106539
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -72676,7 +72655,7 @@ Transform:
   m_Children:
   - {fileID: 954995480}
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 59
 --- !u!135 &2046012523
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -74146,7 +74125,7 @@ Transform:
   m_Children:
   - {fileID: 1211134152}
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 76
 --- !u!1 &2072251303
 GameObject:
   m_ObjectHideFlags: 0
