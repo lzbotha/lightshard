@@ -20,11 +20,12 @@ public class InGameMenu : MonoBehaviour {
 			}
 
 			if(GUI.Button(new Rect((Screen.width - buttonWidth) * 0.5f , Screen.height * 0.5f - (buttonHeight + gap), buttonWidth, buttonHeight), "Quit to Main Menu")){
-
+				Application.LoadLevel ("Menu");
 			}
 
 			if(GUI.Button(new Rect((Screen.width - buttonWidth) * 0.5f , Screen.height * 0.5f, buttonWidth, buttonHeight), "Quit to Desktop")){
-				
+				// NOTE: "Quit is ignored in the editor or the web player"  from Unity scripting API
+				Application.Quit();	
 			}
 		}
 	}

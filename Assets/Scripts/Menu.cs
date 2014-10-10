@@ -53,7 +53,8 @@ public class Menu : MonoBehaviour {
 	}
 
 	private void onExitClick(){
-		Debug.Log("There is no leaving... your soul is ours");
+		// NOTE: "Quit is ignored in the editor or the web player"  from Unity scripting API
+		Application.Quit();
 	}
 
 	void drawCredits(){
