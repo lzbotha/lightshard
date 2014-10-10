@@ -13,13 +13,18 @@ public class InGameMenu : MonoBehaviour {
 				Debug.Log("Button working");
 				Time.timeScale = 1;
 			}
+
+			if (Input.GetButtonDown("Pause")) {
+				Time.timeScale = 1;
+			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Pause")) {
+		if (Input.GetButtonDown("Pause") && !isPaused())
 			Time.timeScale = 0;
-		}
+		else if(Input.GetButtonDown("Pause"))
+			Time.timeScale = 1;
 	}
 }
