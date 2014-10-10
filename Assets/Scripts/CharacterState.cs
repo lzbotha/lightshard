@@ -46,6 +46,8 @@ public class CharacterState : BasicState {
 		delta2.Normalize();
 		delta2 *= this.bonfireRespawnOffset;
 
+		respawnEffect.Play ();
+
 		base.respawn(new Vector3(delta2.x, 1.0f, delta2.y));
 	}
 
