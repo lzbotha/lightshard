@@ -24,7 +24,7 @@ Material:
       data:
         first:
           name: _LineWidth
-        second: .00499999989
+        second: 1
     m_Colors:
       data:
         first:
@@ -33,7 +33,7 @@ Material:
       data:
         first:
           name: _LineColor
-        second: {r: .191176474, g: .163643956, b: .0913711041, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _GridColor

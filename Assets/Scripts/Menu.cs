@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour {
 	private string[] mainMenuClicks = new string[5] {"onSinglePlayClick", "onCooperativePlayClick", "onOptionsClick", "onCreditsClick", "onExitClick"};
 
 	void drawMainMenu(){
-		int down = 10;
+		int down = 250;
 		for(int i = 0; i < mainMenuButtons.Length; i++){
 			drawButton(
 				mainMenuButtons[i],
@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour {
 				mainMenuButtonHeight,
 				mainMenuClicks[i]
 			);
-			down += 50;
+			down += 60;
 		}
 	}
 	
