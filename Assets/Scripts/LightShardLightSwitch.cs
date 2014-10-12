@@ -3,16 +3,30 @@ using System.Collections;
 
 public class LightShardLightSwitch : MonoBehaviour {
 
-	public Light spotLight;
+	public Light[] spotLights;
+	public GameObject[] hiddenPlatforms;
 	private bool isOn = false;
+
+	void Start(){
+		foreach(GameObject platform in this.hiddenPlatforms){
+			platform.renderer.enabled = false;
+			platform.collider.enabled = false;
+		}
+	}
 
 	void OnTriggerEnter(Collider other){
 		if (!this.isOn){
-			print (other.tag);
 			if (other.tag == "LightShard") {
-				print("Lights on");
-				spotLight.intensity = 8.0f;
 				this.isOn = true;
+
+				foreach(Light spot in spotLights){
+					spot.intensity = 8.0f;
+				}
+
+				foreach(GameObject platform in this.hiddenPlatforms){
+					platform.renderer.enabled = true;
+					platform.collider.enabled = true;
+				}
 			}
 		}
 	}
