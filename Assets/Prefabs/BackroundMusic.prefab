@@ -95,15 +95,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b9df2848a9f6a4f906107f404e5f55, type: 3}
+  m_Script: {fileID: 11500000, guid: d604b549f0547764bb8163b78f4619b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 081ec3b72813a1249b4c2f8bfb0eab52, type: 3}
-  - {fileID: 8300000, guid: 7fe182018f1ae154a9b0eed39655298b, type: 3}
-  - {fileID: 8300000, guid: f48c95d7e7d94a6439fdab46239c2213, type: 3}
-  - {fileID: 8300000, guid: add5e19cc7ee30648acf88293035390c, type: 3}
-  - {fileID: 8300000, guid: 2961acb8f0bd15c4aa71c076fa54b13d, type: 3}
+  - {fileID: 8300000, guid: 5eabe27cb1e75f848b78c8ba571ea7d3, type: 3}
+  - {fileID: 8300000, guid: d01e03d28237b1644962b9bbcd8c38a6, type: 3}
+  - {fileID: 8300000, guid: 1a9aa140ba9b7504d96693d9a072ba44, type: 3}
+  - {fileID: 8300000, guid: 4df5a0e923ab60f48bcc600311359b12, type: 3}
+  - {fileID: 8300000, guid: 4a02c28324fd6c442ba45fc0b3dd1870, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

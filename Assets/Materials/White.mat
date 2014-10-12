@@ -19,7 +19,7 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: a60ea5933c2a04bc78fd37a63eba2440, type: 3}
           m_Scale: {x: 200, y: 200}
-          m_Offset: {x: 0, y: 0}
+          m_Offset: {x: 1, y: 1}
       data:
         first:
           name: _BumpMap
@@ -51,6 +51,10 @@ Material:
     m_Floats:
       data:
         first:
+          name: _LineWidth
+        second: .00999999978
+      data:
+        first:
           name: _Shininess
         second: .00999999978
       data:
@@ -67,10 +71,6 @@ Material:
         second: 1
       data:
         first:
-          name: _LineWidth
-        second: .00999999978
-      data:
-        first:
           name: _Parallax
         second: .0199999996
     m_Colors:
@@ -78,6 +78,14 @@ Material:
         first:
           name: _Color
         second: {r: .372350782, g: .453915894, b: .522058845, a: 1}
+      data:
+        first:
+          name: _LineColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _GridColor
+        second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
           name: _Emission
@@ -90,11 +98,3 @@ Material:
         first:
           name: _RimColor
         second: {r: .25999999, g: .189999998, b: .159999996, a: 0}
-      data:
-        first:
-          name: _LineColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _GridColor
-        second: {r: 1, g: 1, b: 1, a: 0}
