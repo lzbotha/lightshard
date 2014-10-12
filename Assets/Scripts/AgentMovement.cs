@@ -6,8 +6,6 @@ public class AgentMovement : BasicMovement {
 	public NavMeshAgent navmesh;
 
 	private Vector3 target;
-	private Vector3 movementComponent = Vector3.zero;
-
 
 	void Start(){
 		this.navmesh.speed = this.speed;
