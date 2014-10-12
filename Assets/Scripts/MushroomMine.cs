@@ -15,4 +15,9 @@ public class MushroomMine : ExplosiveMine {
 	public override void onArm(){
 		shroom.renderer.material.color = Color.red;
 	}
+
+	public override void onDetonate(GameObject obj){
+		base.onDetonate (obj);
+
+	}
 }
