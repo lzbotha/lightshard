@@ -3,16 +3,18 @@ using System.Collections;
 
 public class EffectTrigger : MonoBehaviour {
 
-	public ParticleSystem effect;
+	public ParticleSystem[] effects;
 
 	void Start(){
-		effect.Stop ();
+		foreach(ParticleSystem effect in effects)
+			effect.Stop ();
 	}
 
 	void OnTriggerEnter(Collider other){
 
 		if(other.tag == "Player"){
-			effect.Play();
+			foreach(ParticleSystem effect in effects)
+				effect.Play ();
 		}
 	}
 }
