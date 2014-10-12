@@ -22,7 +22,7 @@ public class Menu : MonoBehaviour {
 		}
 	}
 	private void drawLevelMenu() {
-		int down = 20;
+		int down = 250;
 
 		drawButton(
 			"Tutorial",
@@ -32,6 +32,7 @@ public class Menu : MonoBehaviour {
 			mainMenuButtonHeight,
 			"onTutorialClick"
 		);
+
 		down += 50;
 		drawButton(
 			"Level 1",
@@ -115,7 +116,7 @@ public class Menu : MonoBehaviour {
 		float creditsTopLeftX = creditsCenter - creditsWidth / 2;
 		
 		float creditsHeight = Screen.height * 0.4f;
-		float creditsHeightCenter = Screen.height * 0.3f;
+		float creditsHeightCenter = 300f;
 		float creditsTopLeftY = creditsHeightCenter - creditsHeight / 2;
 
 		var rect = new Rect (creditsTopLeftX, creditsTopLeftY, creditsWidth, creditsHeight);
@@ -130,7 +131,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	void drawMainMenu(){
-		int down = 20;
+		int down = 250;
 		for(int i = 0; i < mainMenuButtons.Length; i++){
 			drawButton(
 				mainMenuButtons[i],
