@@ -15,6 +15,8 @@ public class CharacterState : BasicState {
 	private float lightRegenRate;	
 	private float flashDeactivationRadius;
 
+	public AudioSource respawnAudioSource;
+
 	// Can the character currently change direction in the XZ plane
 	public bool movementDirectionLocked;
 
@@ -40,6 +42,8 @@ public class CharacterState : BasicState {
 
 	public override void respawn(Vector3 delta = default(Vector3)) {
 		this.GetComponent<CharacterMovement> ().cancelSmear ();
+
+		this.respawnAudioSource.Play ();
 
 		// Respawn the player somewhere on the circle with radius bonfireRespawnOffset
 		Vector2 delta2 = Random.insideUnitCircle;

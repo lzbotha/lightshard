@@ -22,18 +22,20 @@ public class Menu : MonoBehaviour {
 		}
 	}
 	private void drawLevelMenu() {
-		int down = 250;
+		int down = 350;
 
-		drawButton(
-			"Tutorial",
-		    Screen.width * 0.5f - mainMenuButtonWidth * 0.5f,
-			down,
-			mainMenuButtonWidth,
-			mainMenuButtonHeight,
-			"onTutorialClick"
-		);
-
-		down += 50;
+		if (PlayerPrefs.GetInt ("isCoop") == 0) {
+			drawButton(
+				"Tutorial",
+			    Screen.width * 0.5f - mainMenuButtonWidth * 0.5f,
+				down,
+				mainMenuButtonWidth,
+				mainMenuButtonHeight,
+				"onTutorialClick"
+			);
+			
+			down += 50;
+		}
 		drawButton(
 			"Level 1",
 			Screen.width * 0.5f - mainMenuButtonWidth * 0.5f,
@@ -116,7 +118,7 @@ public class Menu : MonoBehaviour {
 		float creditsTopLeftX = creditsCenter - creditsWidth / 2;
 		
 		float creditsHeight = Screen.height * 0.4f;
-		float creditsHeightCenter = 300f;
+		float creditsHeightCenter = Screen.height * 0.4f;
 		float creditsTopLeftY = creditsHeightCenter - creditsHeight / 2;
 
 		var rect = new Rect (creditsTopLeftX, creditsTopLeftY, creditsWidth, creditsHeight);
@@ -131,7 +133,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	void drawMainMenu(){
-		int down = 250;
+		int down = 350;
 		for(int i = 0; i < mainMenuButtons.Length; i++){
 			drawButton(
 				mainMenuButtons[i],
