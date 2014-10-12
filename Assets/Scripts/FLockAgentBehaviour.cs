@@ -43,7 +43,10 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	}
 
 	private bool isAgentInThisFlock(Collider other) {
-		return other.tag == "FlockAgent" && other.gameObject != this.gameObject && other.isTrigger == false && other.GetComponent<FlockAgentState> ().flockID == this.flockAgentState.flockID;
+		return other.tag == "FlockAgent" && 
+			other.gameObject != this.gameObject && 
+				other.isTrigger == false && 
+				other.GetComponent<FlockAgentState> ().flockID == this.flockAgentState.flockID;
 	}
 
 	// Calculates the direction of this agent based on flocking rules (only)
