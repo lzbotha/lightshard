@@ -3,15 +3,20 @@ using System.Collections;
 
 public class AgentMovement : BasicMovement {
 	public AgentState agentState;
-	public NavMeshAgent agent;
+	public NavMeshAgent navmesh;
 
 	private Vector3 target;
-
 	private Vector3 movementComponent = Vector3.zero;
+
+
+	void Start(){
+		this.navmesh.speed = this.speed;
+		this.navmesh.acceleration = 2 * this.speed;
+		this.navmesh.angularSpeed = 360;
+	}
 
 	public void chaseTarget(Vector3 targetPosition){
 		this.target = targetPosition;
-		//agent.SetDestination(transform.position);
 	}
 
 	public void moveInDirection(Vector3 direction){
@@ -19,12 +24,7 @@ public class AgentMovement : BasicMovement {
 	}
 
 	public void move(){
-		//this.controller.Move (this.agentState.getVelocity() * Time.deltaTime);
-
-		this.agent.SetDestination(this.target);
-
-		//if(this.agentState.getVelocity() != Vector3.zero)
-		//	this.transform.forward = this.agentState.getVelocity ();
+		this.navmesh.SetDestination(this.target);		
 	}
 }
 
