@@ -3,28 +3,18 @@ using System.Collections;
 
 public class AgentMovement : BasicMovement {
 	public AgentState agentState;
+	public NavMeshAgent navmesh;
 
-	private Vector3 movementComponent = Vector3.zero;
+	private Vector3 target;
+
+	void Start(){
+		this.navmesh.speed = this.speed;
+		this.navmesh.acceleration = 2 * this.speed;
+		this.navmesh.angularSpeed = 360;
+	}
 
 	public void chaseTarget(Vector3 targetPosition){
-
-		this.agentState.findPathTo (targetPosition);
-
-		// remove previous iterations movement component
-		agentState.setVelocity(agentState.getVelocity() - this.movementComponent);
-
-		///if the agent is on the ground apply friction to non movementComponent velocities
-		if (this.controller.isGrounded)
-			this.applyFriction ();
-		
-
-		// calculate new movement component
-		Vector3 direction = (this.agentState.getNextPathSegment () - this.transform.position);
-		direction.Normalize();
-
-		movementComponent = direction * this.speed;
-
-		this.agentState.setVelocity (this.agentState.getVelocity () + movementComponent);
+		this.target = targetPosition;
 	}
 
 	public void moveInDirection(Vector3 direction){
@@ -32,9 +22,7 @@ public class AgentMovement : BasicMovement {
 	}
 
 	public void move(){
-		this.controller.Move (this.agentState.getVelocity() * Time.deltaTime);
-		if(this.agentState.getVelocity() != Vector3.zero)
-			this.transform.forward = this.agentState.getVelocity ();
+		this.navmesh.SetDestination(this.target);		
 	}
 }
 
