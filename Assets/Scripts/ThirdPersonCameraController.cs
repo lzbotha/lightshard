@@ -51,7 +51,5 @@ public class ThirdPersonCameraController : MonoBehaviour {
 		lookPosition += (target.position - this.lookPosition) * targetChaseFactor;
 		
 		this.transform.LookAt (lookPosition);
-		
-				transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, 0.0f, transform.rotation.w);
 	}
 }
