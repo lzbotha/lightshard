@@ -62,10 +62,14 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		
 		Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "CameraHorizontal"), 0.0f, -Input.GetAxis (characterState.getPlayerTag() + "CameraVertical"));
+
 		throwDirection = Quaternion.LookRotation (throwDirection) * input;
-		
+
+		if(Mathf.Approximately(input.magnitude, 0.0f))
+			throwDirection = this.transform.forward;
+		throwDirection.Normalize();
+
 		GameObject ls = Instantiate(lightShard, transform.position, Quaternion.identity) as GameObject;
-		
 
 		// Set the character which cast this LightShard on the LightShardController script
 		// this allows the LightShard access to the characterState of the character that 
@@ -80,14 +84,13 @@ public class CharacterLightAbilities : MonoBehaviour {
 
 		this.characterState.latestLightShardID = key;
 
-		if(throwDirection == Vector3.zero)
-			throwDirection = this.transform.forward;
-		throwDirection.Normalize();
-
 		ls.GetComponent<LightShardMovement>().throwLightShard(this.transform.position, throwDirection);
 	}
 
 	void updateThrowLightShard() {
+		if (Time.timeScale == 0)
+			return;
+
 		// If the player has just released the right axis.
 		if (this.wasRightAxisDown && !isAxisDown (characterState.getPlayerTag() + "ThrowRight")) {
 			if(characterState.canUseAbility(throwAttractiveLightShardCost)){
@@ -106,6 +109,10 @@ public class CharacterLightAbilities : MonoBehaviour {
 	}
 
 	void handleTeleport(string button){
+
+		if (Time.timeScale == 0)
+			return;
+		
 		if(Input.GetButton(button)) {
 			characterState.setCameraDirectionLocked(true);
 

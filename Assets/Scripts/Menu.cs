@@ -16,7 +16,14 @@ public class Menu : MonoBehaviour {
 	void drawMainMenu(){
 		int down = 10;
 		for(int i = 0; i < mainMenuButtons.Length; i++){
-			drawButton(mainMenuButtons[i], Screen.width * 0.5f - mainMenuButtonWidth * 0.5f, down, mainMenuButtonWidth, mainMenuButtonHeight, mainMenuClicks[i]);
+			drawButton(
+				mainMenuButtons[i],
+				Screen.width * 0.5f - mainMenuButtonWidth * 0.5f,
+				down,
+				mainMenuButtonWidth,
+				mainMenuButtonHeight,
+				mainMenuClicks[i]
+			);
 			down += 50;
 		}
 	}
@@ -46,7 +53,8 @@ public class Menu : MonoBehaviour {
 	}
 
 	private void onExitClick(){
-		Debug.Log("There is no leaving... your soul is ours");
+		// NOTE: "Quit is ignored in the editor or the web player"  from Unity scripting API
+		Application.Quit();
 	}
 
 	void drawCredits(){

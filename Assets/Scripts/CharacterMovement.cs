@@ -24,6 +24,7 @@ public class CharacterMovement : BasicMovement {
 	}
 
 	void updateSmear() {
+
 		float fraction = 1 - smearTimeRemaining / smearTime;
 		
 		this.controller.Move(Vector3.Lerp (smearStartPosition, smearEndPosition, fraction) - this.transform.position);
@@ -58,7 +59,7 @@ public class CharacterMovement : BasicMovement {
 	Vector3 getMovementComponent() {
 		Vector3 input = new Vector3 (Input.GetAxis (characterState.getPlayerTag() + "MovementHorizontal"), 0.0f, Input.GetAxis (characterState.getPlayerTag() + "MovementVertical"));
 		
-		input.Normalize ();
+		//input.Normalize ();
 		
 		// Calculate the forward direction under current camera rotation
 		Vector3 movementDirection = script.cameraTargetLocation - this.transform.position;
@@ -94,8 +95,11 @@ public class CharacterMovement : BasicMovement {
 			}
 
 			if (Input.GetButtonDown(characterState.getPlayerTag() + "Smear") && this._smearCooldown <= 0.0f) {
-				this._smearCooldown = this.smearCooldown;
-				startSmear();
+
+				if (!(Time.timeScale == 0)){
+					this._smearCooldown = this.smearCooldown;
+					startSmear();
+				}
 			} else {
 
 				updateGravity();
