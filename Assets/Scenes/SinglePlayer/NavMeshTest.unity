@@ -2478,6 +2478,7 @@ GameObject:
   - 124: {fileID: 146173664}
   - 92: {fileID: 146173663}
   - 114: {fileID: 146173661}
+  - 54: {fileID: 146173665}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2566,6 +2567,21 @@ Behaviour:
   m_PrefabInternal: {fileID: 515797291}
   m_GameObject: {fileID: 146173659}
   m_Enabled: 1
+--- !u!54 &146173665
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146173659}
+  serializedVersion: 2
+  m_Mass: 1.00000001e-07
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 64
+  m_CollisionDetection: 0
 --- !u!1 &153185332
 GameObject:
   m_ObjectHideFlags: 0
@@ -7279,6 +7295,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 284d5e4bf8f434c89b8258085a1de405, type: 2}
+      propertyPath: lightRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 284d5e4bf8f434c89b8258085a1de405, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 284d5e4bf8f434c89b8258085a1de405, type: 2}
   m_RootGameObject: {fileID: 503785459}
@@ -10970,7 +10994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inAir: 0
-  lightRadius: 0
+  lightRadius: 1
   movementDirectionLocked: 0
   numLightShards: 3
   latestLightShardID: -1

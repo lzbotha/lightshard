@@ -9,8 +9,8 @@ public class ThirdPersonCameraController : MonoBehaviour {
 	private float radius = 5.0f;
 	public float controllerSensitivity = 0.05f;
 
-	public float chaseFactor = 0.08f;
-	public float targetChaseFactor = 0.12f;
+	public float chaseFactor = 1f;
+	public float targetChaseFactor = 1f;
 
 	public float phiLowerBound = 10.0f;
 	public float phiUpperBound = 80.0f;
@@ -25,11 +25,11 @@ public class ThirdPersonCameraController : MonoBehaviour {
 		if(!characterState.isCameraDirectionLocked()){
 			phi += Input.GetAxis (characterState.getPlayerTag() + "CameraVertical") * controllerSensitivity;
 			theta += Input.GetAxis (characterState.getPlayerTag() + "CameraHorizontal") * controllerSensitivity;
-
+			
 			phi = Mathf.Clamp (phi, Mathf.Deg2Rad * phiLowerBound, Mathf.Deg2Rad * phiUpperBound);
 			theta %= Mathf.Deg2Rad * 360;
 		}
-
+		
 		// Calculate offset of camera from player.
 		/* The camera is on the surface of a sphere of radius r with 
 		 * inclination theta and azimuth phi.
@@ -41,15 +41,17 @@ public class ThirdPersonCameraController : MonoBehaviour {
 			radius * Mathf.Cos (theta) * Mathf.Sin (phi),
 			radius * Mathf.Cos (phi),
 			radius * Mathf.Sin (theta) * Mathf.Sin (phi)
-		);
-
+			);
+		
 		// Where the chase camera 'wants' to be.
 		cameraTargetLocation = target.position + offset;
-
+		
 		this.transform.position += (cameraTargetLocation - this.transform.position) * chaseFactor;
-
+		
 		lookPosition += (target.position - this.lookPosition) * targetChaseFactor;
-
+		
 		this.transform.LookAt (lookPosition);
+		
+				transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, 0.0f, transform.rotation.w);
 	}
 }
