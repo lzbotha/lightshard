@@ -5,7 +5,6 @@ public class NavMeshAgentChase : MonoBehaviour {
 	[SerializeField]
 	Transform target;
 	NavMeshAgent agent;
-	bool targetSet = false;
 	// Use this for initialization
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();
