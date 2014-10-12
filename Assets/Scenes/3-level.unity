@@ -4619,6 +4619,62 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1261917491}
   m_GameObject: {fileID: 290742992}
   m_Mesh: {fileID: 4300000, guid: 5b9095d492d4dac419a4453e5230098b, type: 3}
+--- !u!1 &294852927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+  m_PrefabInternal: {fileID: 687689586}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 294852929}
+  - 135: {fileID: 294852928}
+  - 114: {fileID: 294852930}
+  m_Layer: 0
+  m_Name: LevelTransitionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &294852928
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 80ba03c54c09b19408f00ea513e07384,
+    type: 2}
+  m_PrefabInternal: {fileID: 687689586}
+  m_GameObject: {fileID: 294852927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &294852929
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+  m_PrefabInternal: {fileID: 687689586}
+  m_GameObject: {fileID: 294852927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.2110748, y: -20, z: 123.664444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+--- !u!114 &294852930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 80ba03c54c09b19408f00ea513e07384,
+    type: 2}
+  m_PrefabInternal: {fileID: 687689586}
+  m_GameObject: {fileID: 294852927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbe9803a4830ba43a7c6a30142ca868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Menu
+  delay: 1.5
 --- !u!1001 &296732813
 Prefab:
   m_ObjectHideFlags: 0
@@ -6187,6 +6243,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68f30cde337ccab4293e33ebeef455fd, type: 2}
   m_RootGameObject: {fileID: 1120675926}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &687689586
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 17.2110748
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 123.664444
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+      propertyPath: delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 80ba03c54c09b19408f00ea513e07384, type: 2}
+  m_RootGameObject: {fileID: 294852927}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1001 &687783881
