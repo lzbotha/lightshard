@@ -3041,6 +3041,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!4 &192246304
 Transform:
   m_ObjectHideFlags: 0
@@ -4484,6 +4485,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &289267253
 GameObject:
   m_ObjectHideFlags: 0
@@ -7379,6 +7381,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &464439952
 GameObject:
   m_ObjectHideFlags: 0
@@ -8995,6 +8998,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!4 &595306575
 Transform:
   m_ObjectHideFlags: 0
@@ -11554,6 +11558,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &756028571
 GameObject:
   m_ObjectHideFlags: 0
@@ -14510,6 +14515,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &908287117
 GameObject:
   m_ObjectHideFlags: 0
@@ -16563,6 +16569,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1103785005
 GameObject:
   m_ObjectHideFlags: 0
@@ -16820,6 +16827,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1125379272
 GameObject:
   m_ObjectHideFlags: 0
@@ -17220,6 +17228,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1185312556
 Prefab:
   m_ObjectHideFlags: 0
@@ -17402,6 +17411,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1191721739
 Prefab:
   m_ObjectHideFlags: 0
@@ -18007,6 +18017,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!4 &1287905684
 Transform:
   m_ObjectHideFlags: 0
@@ -18158,6 +18169,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1366855445
 GameObject:
   m_ObjectHideFlags: 0
@@ -18296,6 +18308,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1381691226
 GameObject:
   m_ObjectHideFlags: 0
@@ -18434,6 +18447,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1390907534
 GameObject:
   m_ObjectHideFlags: 0
@@ -20787,6 +20801,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1425912896
 GameObject:
   m_ObjectHideFlags: 0
@@ -22061,6 +22076,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1452035902
 Prefab:
   m_ObjectHideFlags: 0
@@ -22247,6 +22263,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1493571949
 GameObject:
   m_ObjectHideFlags: 0
@@ -22466,6 +22483,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1501750828
 Prefab:
   m_ObjectHideFlags: 0
@@ -24140,6 +24158,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1590072901
 GameObject:
   m_ObjectHideFlags: 0
@@ -27195,6 +27214,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1818956039
 GameObject:
   m_ObjectHideFlags: 0
@@ -27333,6 +27353,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &1820768182
 GameObject:
   m_ObjectHideFlags: 0
@@ -27546,6 +27567,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1855214225
 Prefab:
   m_ObjectHideFlags: 0
@@ -29037,6 +29059,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1001 &1925174240
 Prefab:
   m_ObjectHideFlags: 0
@@ -30842,6 +30865,7 @@ MonoBehaviour:
   basicAttackCoolDown: .200000003
   agentsNeededToChasePlayer: 2
   playerLightRunThreshold: 8.10000038
+  runDuration: 3
 --- !u!1 &2120198851
 GameObject:
   m_ObjectHideFlags: 0
