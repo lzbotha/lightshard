@@ -7,10 +7,12 @@ public class AgentState : BasicState {
 	public float distToWaypoint = 0.1f;
 
 	public void findPathTo(Vector3 target){
+		print ("findPathTo method called");
 		pf.FindPath(this.transform.position, target);
 	}
 
 	public Vector3 getNextPathSegment(){
+		print ("getNextPathSegment method called");
 		// if there are waypoints remaining in the path
 		if (pf.Path.Count > 0) {
 			Vector3 path = pf.Path [0];

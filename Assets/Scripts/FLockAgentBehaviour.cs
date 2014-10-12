@@ -135,7 +135,10 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 	void Update() {
 		Vector3 direction = this.calculateFlockDirectionComponent () + this.calculatePlayerDirectionComponent ();
+
 		direction.Normalize ();
+		direction = new Vector3 (direction.x, 0.0f, direction.z);
+		//print (direction);
 
 		this.agentMovement.moveInDirection(direction);
 		this.agentMovement.move ();
