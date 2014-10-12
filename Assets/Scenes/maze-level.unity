@@ -106,7 +106,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -192,7 +191,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &16285292
 Renderer:
   m_ObjectHideFlags: 0
@@ -1322,7 +1320,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1452,7 +1449,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 88
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -1496,7 +1493,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &35333701
 Renderer:
   m_ObjectHideFlags: 0
@@ -1575,7 +1571,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 112
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -1647,7 +1643,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2785,7 +2780,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -2841,7 +2836,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &51421433
 Renderer:
   m_ObjectHideFlags: 0
@@ -3958,7 +3952,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4185,7 +4178,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4311,7 +4303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 84
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -4398,7 +4390,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5632,7 +5623,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5718,7 +5708,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &118841767
 Renderer:
   m_ObjectHideFlags: 0
@@ -6038,7 +6027,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6172,7 +6160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 89
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -6402,7 +6390,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &186449366
 Renderer:
   m_ObjectHideFlags: 0
@@ -6481,7 +6468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 169
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -6524,7 +6511,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7686,7 +7672,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &214034418
 Renderer:
   m_ObjectHideFlags: 0
@@ -7886,7 +7871,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7972,7 +7956,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &254075955
 Renderer:
   m_ObjectHideFlags: 0
@@ -8034,7 +8017,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8107,7 +8089,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8181,7 +8162,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &270900850
 Renderer:
   m_ObjectHideFlags: 0
@@ -9527,7 +9507,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9738,7 +9717,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9824,7 +9802,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &314028235
 Renderer:
   m_ObjectHideFlags: 0
@@ -10085,7 +10062,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &340950118
 Renderer:
   m_ObjectHideFlags: 0
@@ -11350,7 +11326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -11406,7 +11382,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &357843187
 Renderer:
   m_ObjectHideFlags: 0
@@ -11473,7 +11448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -11521,7 +11496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 139
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -11569,7 +11544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -11673,7 +11648,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &382256515
 Renderer:
   m_ObjectHideFlags: 0
@@ -11886,7 +11860,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &393476593
 Renderer:
   m_ObjectHideFlags: 0
@@ -11948,7 +11921,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12172,7 +12144,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &403650326
 Renderer:
   m_ObjectHideFlags: 0
@@ -12300,7 +12271,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &412756588
 Renderer:
   m_ObjectHideFlags: 0
@@ -12379,7 +12349,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 111
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -12427,7 +12397,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 157
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -12471,7 +12441,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &421692321
 Renderer:
   m_ObjectHideFlags: 0
@@ -13924,7 +13893,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 163
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -14055,7 +14024,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14300,7 +14268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 57
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -14482,7 +14450,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &471344046
 Renderer:
   m_ObjectHideFlags: 0
@@ -14556,7 +14523,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14634,7 +14600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 143
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -14678,7 +14644,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &479421552
 Renderer:
   m_ObjectHideFlags: 0
@@ -14890,7 +14855,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15097,7 +15061,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &484645928
 Renderer:
   m_ObjectHideFlags: 0
@@ -15216,7 +15179,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &487672772
 Renderer:
   m_ObjectHideFlags: 0
@@ -15386,7 +15348,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15464,7 +15425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 136
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -16706,7 +16667,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &512164257
 Renderer:
   m_ObjectHideFlags: 0
@@ -16845,7 +16805,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16918,7 +16877,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17039,7 +16997,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17113,7 +17070,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &537164267
 Renderer:
   m_ObjectHideFlags: 0
@@ -17287,7 +17243,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &555531976
 Renderer:
   m_ObjectHideFlags: 0
@@ -17409,7 +17364,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18586,7 +18540,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18660,7 +18613,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &588096971
 Renderer:
   m_ObjectHideFlags: 0
@@ -18734,7 +18686,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18981,7 +18932,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &601786042
 Renderer:
   m_ObjectHideFlags: 0
@@ -19056,7 +19006,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &603895051
 Renderer:
   m_ObjectHideFlags: 0
@@ -19123,7 +19072,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 98
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -19166,7 +19115,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19268,7 +19216,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19402,7 +19349,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19528,7 +19474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 113
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -19820,7 +19766,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19906,7 +19851,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &677889728
 Renderer:
   m_ObjectHideFlags: 0
@@ -20107,7 +20051,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &680016307
 Renderer:
   m_ObjectHideFlags: 0
@@ -20311,7 +20254,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20385,7 +20327,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &684850926
 Renderer:
   m_ObjectHideFlags: 0
@@ -20557,7 +20498,7 @@ Transform:
   - {fileID: 900105281}
   - {fileID: 71429040}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!195 &698602949
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20688,7 +20629,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21004,7 +20944,7 @@ Transform:
   m_Children:
   - {fileID: 51421431}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
 --- !u!1 &709309135
 GameObject:
   m_ObjectHideFlags: 0
@@ -21037,7 +20977,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21144,7 +21083,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 71
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -21192,7 +21131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 133
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -22438,7 +22377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -22481,7 +22420,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -22607,7 +22545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 64
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -22655,7 +22593,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -23771,7 +23709,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &768610614
 Renderer:
   m_ObjectHideFlags: 0
@@ -26104,7 +26041,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -26290,7 +26227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 93
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -26386,7 +26323,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 187
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -26521,7 +26458,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -26594,7 +26530,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -27895,7 +27830,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -28018,7 +27952,7 @@ Transform:
   - {fileID: 1130124745}
   - {fileID: 713079617}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!195 &832263017
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -28149,7 +28083,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -28292,7 +28225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 141
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -29400,7 +29333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 176
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -29576,7 +29509,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29649,7 +29581,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30948,7 +30879,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -31022,7 +30952,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &886921741
 Renderer:
   m_ObjectHideFlags: 0
@@ -31161,7 +31090,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -31235,7 +31163,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &900105279
 Renderer:
   m_ObjectHideFlags: 0
@@ -31314,7 +31241,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 129
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -31548,7 +31475,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 127
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -31596,7 +31523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 59
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -33204,7 +33131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 158
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -33252,7 +33179,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -33295,7 +33222,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -33369,7 +33295,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &974724875
 Renderer:
   m_ObjectHideFlags: 0
@@ -33634,7 +33559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 171
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -33872,7 +33797,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1003133528
 Renderer:
   m_ObjectHideFlags: 0
@@ -33947,7 +33871,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1025461374
 Renderer:
   m_ObjectHideFlags: 0
@@ -34143,7 +34066,7 @@ Transform:
   m_Children:
   - {fileID: 484645930}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
 --- !u!195 &1039680868
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -34293,7 +34216,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1043339305
 Renderer:
   m_ObjectHideFlags: 0
@@ -35696,7 +35618,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -35782,7 +35703,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1055310773
 Renderer:
   m_ObjectHideFlags: 0
@@ -35844,7 +35764,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -36100,7 +36019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -36148,7 +36067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 185
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -36247,7 +36166,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -37567,7 +37485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 63
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -37623,7 +37541,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1130124747
 Renderer:
   m_ObjectHideFlags: 0
@@ -37823,7 +37740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 66
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -37871,7 +37788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 148
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -38048,7 +37965,7 @@ Transform:
   m_Children:
   - {fileID: 1697289586}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
 --- !u!195 &1148536355
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -38186,7 +38103,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1151164073
 Renderer:
   m_ObjectHideFlags: 0
@@ -38260,7 +38176,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -39356,7 +39271,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1153301654
 Renderer:
   m_ObjectHideFlags: 0
@@ -40737,7 +40651,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -40788,7 +40702,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -40866,7 +40779,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 150
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -41047,7 +40960,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -41125,7 +41037,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 107
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -41168,7 +41080,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -42588,7 +42499,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -42767,7 +42677,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -42840,7 +42749,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -42962,7 +42870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 142
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -43034,7 +42942,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43112,7 +43019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 96
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -43306,7 +43213,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1251718731
 Renderer:
   m_ObjectHideFlags: 0
@@ -45592,7 +45498,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -45856,7 +45761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 109
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -45947,7 +45852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 190
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -45995,7 +45900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 135
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -46043,7 +45948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 186
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -46224,7 +46129,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -47427,7 +47331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 91
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -47475,7 +47379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 153
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -47531,7 +47435,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1321523100
 Renderer:
   m_ObjectHideFlags: 0
@@ -47593,7 +47496,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -47666,7 +47568,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49002,7 +48903,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49189,7 +49089,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1354368543
 Renderer:
   m_ObjectHideFlags: 0
@@ -49268,7 +49167,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 99
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -49312,7 +49211,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1366842232
 Renderer:
   m_ObjectHideFlags: 0
@@ -49399,7 +49297,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1369833234
 Renderer:
   m_ObjectHideFlags: 0
@@ -49462,7 +49359,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1372448482
 Renderer:
   m_ObjectHideFlags: 0
@@ -49565,54 +49461,6 @@ Transform:
   - {fileID: 1958153415}
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!1001 &1383661683
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 865844476}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-  m_RootGameObject: {fileID: 1584838622}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1386435414
 GameObject:
   m_ObjectHideFlags: 0
@@ -49645,7 +49493,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49718,7 +49565,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49839,7 +49685,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49913,7 +49758,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1398523138
 Renderer:
   m_ObjectHideFlags: 0
@@ -49992,7 +49836,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 54
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -50178,7 +50022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 183
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -51329,7 +51173,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -51863,7 +51706,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 90
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -51954,7 +51797,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -53092,7 +52934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 83
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -53318,7 +53160,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1472520543
 Renderer:
   m_ObjectHideFlags: 0
@@ -53393,7 +53234,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1474755640
 Renderer:
   m_ObjectHideFlags: 0
@@ -53472,7 +53312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 87
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -54580,7 +54420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 110
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -54774,7 +54614,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1481877735
 Renderer:
   m_ObjectHideFlags: 0
@@ -54892,7 +54731,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -54965,7 +54803,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56127,7 +55964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 73
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -56309,7 +56146,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1523668251
 Renderer:
   m_ObjectHideFlags: 0
@@ -56383,7 +56219,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56594,7 +56429,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -56654,7 +56489,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1536412096
 Renderer:
   m_ObjectHideFlags: 0
@@ -56718,7 +56552,7 @@ Transform:
   - {fileID: 768610612}
   - {fileID: 1727663239}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!195 &1538691325
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -56988,7 +56822,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1546865573
 Renderer:
   m_ObjectHideFlags: 0
@@ -57305,7 +57138,7 @@ Transform:
   m_Children:
   - {fileID: 1055310771}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1565120987
 GameObject:
   m_ObjectHideFlags: 0
@@ -59484,7 +59317,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1571279723
 Renderer:
   m_ObjectHideFlags: 0
@@ -59563,7 +59395,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 65
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -59578,7 +59410,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-  m_PrefabInternal: {fileID: 1383661683}
+  m_PrefabInternal: {fileID: 1886815948}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1584838626}
@@ -59597,7 +59429,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 364cf79a0d008d14f8d4f8cbb116defa,
     type: 2}
-  m_PrefabInternal: {fileID: 1383661683}
+  m_PrefabInternal: {fileID: 1886815948}
   m_GameObject: {fileID: 1584838622}
   m_Enabled: 1
   m_CastShadows: 1
@@ -59606,7 +59438,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -59619,7 +59450,7 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500000, guid: 364cf79a0d008d14f8d4f8cbb116defa,
     type: 2}
-  m_PrefabInternal: {fileID: 1383661683}
+  m_PrefabInternal: {fileID: 1886815948}
   m_GameObject: {fileID: 1584838622}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -59632,14 +59463,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 364cf79a0d008d14f8d4f8cbb116defa,
     type: 2}
-  m_PrefabInternal: {fileID: 1383661683}
+  m_PrefabInternal: {fileID: 1886815948}
   m_GameObject: {fileID: 1584838622}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1584838626
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
-  m_PrefabInternal: {fileID: 1383661683}
+  m_PrefabInternal: {fileID: 1886815948}
   m_GameObject: {fileID: 1584838622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -59679,7 +59510,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -60956,7 +60786,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1617161027
 Renderer:
   m_ObjectHideFlags: 0
@@ -61023,7 +60852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -61079,7 +60908,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1631044841
 Renderer:
   m_ObjectHideFlags: 0
@@ -61141,7 +60969,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61214,7 +61041,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61287,7 +61113,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61360,7 +61185,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61433,7 +61257,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61551,7 +61374,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1670395044
 Renderer:
   m_ObjectHideFlags: 0
@@ -61625,7 +61447,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -61703,7 +61524,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 68
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -61751,7 +61572,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 85
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -61940,7 +61761,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1682201145
 Renderer:
   m_ObjectHideFlags: 0
@@ -63048,7 +62868,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1697289584
 Renderer:
   m_ObjectHideFlags: 0
@@ -63122,7 +62941,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -64281,7 +64099,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1706485466
 Renderer:
   m_ObjectHideFlags: 0
@@ -64355,7 +64172,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -64477,7 +64293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 192
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -64832,7 +64648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 82
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -64880,7 +64696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 108
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65066,7 +64882,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 101
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65114,7 +64930,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 134
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65162,7 +64978,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 155
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65218,7 +65034,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1744561750
 Renderer:
   m_ObjectHideFlags: 0
@@ -65285,7 +65100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 166
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65341,7 +65156,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1757406854
 Renderer:
   m_ObjectHideFlags: 0
@@ -65408,7 +65222,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 167
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -65888,7 +65702,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -66014,7 +65827,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -66062,7 +65875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -66110,7 +65923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 159
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -66154,7 +65967,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1819411697
 Renderer:
   m_ObjectHideFlags: 0
@@ -66233,7 +66045,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 191
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -67445,7 +67257,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -67531,7 +67342,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1866849373
 Renderer:
   m_ObjectHideFlags: 0
@@ -68994,7 +68804,7 @@ Transform:
   m_Children:
   - {fileID: 1366842234}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 34
 --- !u!195 &1880090588
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -70134,6 +69944,50 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1001 &1886815948
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 865844476}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
+  m_RootGameObject: {fileID: 1584838622}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1891389768
 GameObject:
   m_ObjectHideFlags: 0
@@ -71365,7 +71219,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1900556779
 Renderer:
   m_ObjectHideFlags: 0
@@ -71452,7 +71305,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1903550153
 Renderer:
   m_ObjectHideFlags: 0
@@ -71514,7 +71366,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -72652,7 +72503,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 162
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -72846,7 +72697,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1922909092
 Renderer:
   m_ObjectHideFlags: 0
@@ -72908,7 +72758,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -72986,7 +72835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 119
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -73129,7 +72978,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -73202,7 +73050,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -73280,7 +73127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -73336,7 +73183,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1958153417
 Renderer:
   m_ObjectHideFlags: 0
@@ -73398,7 +73244,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -73610,7 +73455,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1965273816
 Renderer:
   m_ObjectHideFlags: 0
@@ -73693,7 +73537,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -74934,7 +74778,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 125
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -76321,7 +76165,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1990131264
 Renderer:
   m_ObjectHideFlags: 0
@@ -76626,7 +76469,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -76748,7 +76590,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 165
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -76896,7 +76738,7 @@ Transform:
   m_Children:
   - {fileID: 2098138323}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &2029710755
 GameObject:
   m_ObjectHideFlags: 0
@@ -76929,7 +76771,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77141,7 +76982,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2041247103
 Renderer:
   m_ObjectHideFlags: 0
@@ -77220,7 +77060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 164
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -77276,7 +77116,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2049240200
 Renderer:
   m_ObjectHideFlags: 0
@@ -77338,7 +77177,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77459,7 +77297,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77814,7 +77651,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77887,7 +77723,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77961,7 +77796,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2090060120
 Renderer:
   m_ObjectHideFlags: 0
@@ -78282,7 +78116,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2098138325
 Renderer:
   m_ObjectHideFlags: 0
@@ -78344,7 +78177,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 597d78870acee2546b89c26f112fae34, type: 2}
-  - {fileID: 2100000, guid: a0675224f1116524591bcf2dae157368, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -78422,7 +78254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 160
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -78470,7 +78302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 178
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -78518,7 +78350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 105
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -80799,7 +80631,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_RootOrder
-      value: 161
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 364cf79a0d008d14f8d4f8cbb116defa, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -80855,7 +80687,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2147041664
 Renderer:
   m_ObjectHideFlags: 0
