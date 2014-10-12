@@ -10,6 +10,8 @@ public class BonfireController : MonoBehaviour {
 	public Color notCurrentlyActive;
 	public Color actives;
 
+	public AudioSource audio;
+
 	private int playersAtThisBonfire = 0;
 
 	void Start() {
@@ -58,6 +60,7 @@ public class BonfireController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Player"){
+			this.audio.Play();
 			// if the charater has yet to activate a bonfire or activates a new bonfire
 			if(other.gameObject.GetComponent<CharacterState>().getLastTouchedBonfire() == null || other.gameObject.GetComponent<CharacterState>().getLastTouchedBonfire() != this.gameObject){
 				this.characterActivationStart(other.gameObject);
