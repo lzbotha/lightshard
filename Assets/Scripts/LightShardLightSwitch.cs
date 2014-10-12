@@ -16,7 +16,7 @@ public class LightShardLightSwitch : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (!this.isOn){
-			if (other.tag == "LightShard") {
+			if (other.tag == "LightShard" || other.tag == "Player") {
 				this.isOn = true;
 
 				foreach(Light spot in spotLights){
