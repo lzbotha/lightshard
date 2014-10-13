@@ -1,0 +1,712 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 540M (ID=0xdf4)
+    Vendor:   NVIDIA
+    VRAM:     1998 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\bzl\Documents\lightshard\build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\bzl\Documents\lightshard\build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\bzl\Documents\lightshard\build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\bzl\Documents\lightshard\build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\bzl\Documents\lightshard\build_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\bzl\Documents\lightshard\build_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.070 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\bzl\Documents\lightshard\build_Data\Managed\System.Core.dll (this message is harmless)
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+UnloadTime: 0.306493 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2066.
+Total: 1.139203 ms (FindLiveObjects: 0.089568 ms CreateObjectMapping: 0.024258 ms MarkObjects: 0.453442 ms  DeleteObjects: 0.013528 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 12.182294 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 225 unused Assets to reduce memory usage. Loaded Objects now: 153.
+Total: 6.850149 ms (FindLiveObjects: 0.037320 ms CreateObjectMapping: 0.033588 ms MarkObjects: 0.246314 ms  DeleteObjects: 4.990662 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+UnloadTime: 0.347545 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2068.
+Total: 1.637896 ms (FindLiveObjects: 0.117092 ms CreateObjectMapping: 0.034521 ms MarkObjects: 0.731478 ms  DeleteObjects: 0.017260 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Joystick disconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
+ 
+(Filename:  Line: 707)
+
+Joystick disconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
+ 
+(Filename:  Line: 707)
+
+Joystick reconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
+ 
+(Filename:  Line: 1316)
+
+Joystick reconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
+ 
+(Filename:  Line: 1316)
+
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 5.106822 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 1522.
+Total: 1.003450 ms (FindLiveObjects: 0.061112 ms CreateObjectMapping: 0.025191 ms MarkObjects: 0.374136 ms  DeleteObjects: 0.091434 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Platform assembly: C:\Users\bzl\Documents\lightshard\build_Data\Managed\System.dll (this message is harmless)
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+UnloadTime: 4.052056 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 55 unused Assets to reduce memory usage. Loaded Objects now: 901.
+Total: 2.329255 ms (FindLiveObjects: 0.034054 ms CreateObjectMapping: 0.022858 ms MarkObjects: 1.633231 ms  DeleteObjects: 0.205261 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 57)
+
+UnloadTime: 6.258155 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 185 unused Assets to reduce memory usage. Loaded Objects now: 151.
+Total: 13.096174 ms (FindLiveObjects: 0.034521 ms CreateObjectMapping: 0.048982 ms MarkObjects: 4.293238 ms  DeleteObjects: 7.335313 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+UnloadTime: 0.268239 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2072.
+Total: 3.360696 ms (FindLiveObjects: 0.122224 ms CreateObjectMapping: 0.043384 ms MarkObjects: 2.475271 ms  DeleteObjects: 0.016794 ms)
+
+Single Player
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Button working
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 11.857606 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 224 unused Assets to reduce memory usage. Loaded Objects now: 156.
+Total: 11.147586 ms (FindLiveObjects: 0.069975 ms CreateObjectMapping: 0.048516 ms MarkObjects: 4.620258 ms  DeleteObjects: 4.910424 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+UnloadTime: 0.334483 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 615.
+Total: 2.037690 ms (FindLiveObjects: 0.026124 ms CreateObjectMapping: 0.020992 ms MarkObjects: 1.545995 ms  DeleteObjects: 0.010729 ms)
+
+Single Player
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 3.408280 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 175 unused Assets to reduce memory usage. Loaded Objects now: 156.
+Total: 10.067163 ms (FindLiveObjects: 0.034521 ms CreateObjectMapping: 0.047583 ms MarkObjects: 4.242856 ms  DeleteObjects: 4.311899 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 0.343813 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1530.
+Total: 1.445230 ms (FindLiveObjects: 0.089102 ms CreateObjectMapping: 0.039186 ms MarkObjects: 0.569135 ms  DeleteObjects: 0.015394 ms)
+
+Single Player
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 2.751442 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 228 unused Assets to reduce memory usage. Loaded Objects now: 157.
+Total: 3.763290 ms (FindLiveObjects: 0.010729 ms CreateObjectMapping: 0.017260 ms MarkObjects: 1.431701 ms  DeleteObjects: 1.894940 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 0.292498 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 909.
+Total: 3.140506 ms (FindLiveObjects: 0.054114 ms CreateObjectMapping: 0.034521 ms MarkObjects: 2.282605 ms  DeleteObjects: 0.014928 ms)
+
+Single Player
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 4.809192 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 184 unused Assets to reduce memory usage. Loaded Objects now: 157.
+Total: 10.936726 ms (FindLiveObjects: 0.035920 ms CreateObjectMapping: 0.055514 ms MarkObjects: 4.305834 ms  DeleteObjects: 4.968270 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+UnloadTime: 0.381600 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2071.
+Total: 3.512777 ms (FindLiveObjects: 0.117092 ms CreateObjectMapping: 0.049449 ms MarkObjects: 2.616156 ms  DeleteObjects: 0.018193 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 12.036742 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 225 unused Assets to reduce memory usage. Loaded Objects now: 156.
+Total: 10.315809 ms (FindLiveObjects: 0.037786 ms CreateObjectMapping: 0.060645 ms MarkObjects: 4.230727 ms  DeleteObjects: 4.547950 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 0.261708 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1529.
+Total: 1.000651 ms (FindLiveObjects: 0.058779 ms CreateObjectMapping: 0.031255 ms MarkObjects: 0.403059 ms  DeleteObjects: 0.015394 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 9.185936 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 229 unused Assets to reduce memory usage. Loaded Objects now: 156.
+Total: 11.463409 ms (FindLiveObjects: 0.037786 ms CreateObjectMapping: 0.063911 ms MarkObjects: 4.254985 ms  DeleteObjects: 5.685287 ms)
+
+Shader 'Custom/WireFrameBase': fallback shader 'Vertex Colored' not found
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 0.257043 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 908.
+Total: 2.224292 ms (FindLiveObjects: 0.035454 ms CreateObjectMapping: 0.027523 ms MarkObjects: 1.678015 ms  DeleteObjects: 0.013062 ms)
+
+Coop
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
