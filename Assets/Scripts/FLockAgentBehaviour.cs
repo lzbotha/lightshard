@@ -21,6 +21,10 @@ public class FLockAgentBehaviour : MonoBehaviour {
 	public int agentsNeededToChasePlayer;
 	public float playerLightRunThreshold = 5.5f;
 
+	private GameObject runningFrom;
+	public float runDuration = 3.0f;
+	private float runDurationRemaining = 0.0f;
+
 	private HashSet<GameObject> neighbours = new HashSet<GameObject> ();
 	private HashSet<GameObject> players = new HashSet<GameObject> ();
 
@@ -93,6 +97,23 @@ public class FLockAgentBehaviour : MonoBehaviour {
 		return dir;
 	}
 
+	private bool shouldRunFromPlayer(GameObject player){
+		// if the player is not currenty running
+		if(player == runningFrom && runDurationRemaining > 0.0f){
+			this.runDurationRemaining -= Time.deltaTime;
+			return true;
+		}
+
+		if(player.GetComponent<CharacterState> ().getLightRadius () >= this.playerLightRunThreshold){
+			this.runningFrom = player;
+			this.runDurationRemaining = this.runDuration;
+			return true;
+		}
+
+		return false;
+
+	}
+
 	private Vector3 calculatePlayerDirectionComponent(){
 		Vector3 direction = Vector3.zero;
 		float distanceToNearestPlayer = -1.0f;
@@ -100,7 +121,7 @@ public class FLockAgentBehaviour : MonoBehaviour {
 
 			foreach(GameObject player in players){
 				// if any player in range has flashed run away from them (TODO: should possible change this to run from the nearest one that has flashed)
-				if(player.GetComponent<CharacterState>().getLightRadius() >= this.playerLightRunThreshold)
+				if(this.shouldRunFromPlayer(player))
 					return this.transform.position - player.transform.position;
 				else if(Vector3.Distance(this.transform.position, player.transform.position) < distanceToNearestPlayer || distanceToNearestPlayer == -1){
 					if(neighbours.Count >= this.agentsNeededToChasePlayer - 1){

@@ -158,7 +158,7 @@ public class CharacterLightAbilities : MonoBehaviour {
 			if(hitMarkerLightShardID != -1 && characterState.lightShards.containsKey(hitMarkerLightShardID)) {
 				GameObject hitLightShard = characterState.lightShards.getLightShard(hitMarkerLightShardID);
 				if(hitLightShard.GetComponent<LightShardState>().hasLanded()){
-					characterState.setVelocityY(0);
+					characterState.setVelocity(Vector3.zero);
 					this.transform.position = hitLightShard.transform.position + new Vector3(0, 1.0f, 0);
 					// Destroy the lightshard
 					// hitLightShard.GetComponent<LightShardController>().cleanUp();
